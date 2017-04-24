@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js test</title>
+<style>
+body, html {
+    margin: 0;
+    height: 100%;
+}
+#box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    background: yellow;
+}
+button {
+    
+}
+#select {
+    width: 300px;
+    height: 200px;
+    border: 10px solid #888;
+    margin: auto;
+    z-index: 3;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+.red {
+    background: red;
+    color: white;
+}
+.green {
+    background: green;
+    color: white;
+}
+.blue {
+    background: blue;
+    color: white;
+}
+.space {
+    border: 1px solid #333;
+    width: 30px;
+    height: 20px;
+    background: #eee;
+}
+#btn {
+    width: 110px;
+    height: 30px;
+    margin: 0 auto;
+}
+.btn {
+    
+}
+#bottom {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    display: none;
+}
+</style>
+</head>
+<body>
+    <div id="bottom"></div>
+    <p>请为下面的div设置样式：<button id="btn3">点击设置</button></p>
+    <div id="box"></div>   
+    <div id="select">
+        <p>请选择背景颜色:<span class="red">红</span><span class="green">绿</span><span class="blue">蓝</span></p>
+        <p>请选择宽度(px):<span class="space">200</span><span class="space">300</span><span class="space">400</span></p>
+        <p class="">请选择高度(px):<span class="space">200</span><span class="space">300</span><span class="space">400</span></p>
+        <div id="btn">
+            <button class="btn" id="btn1">恢复</button>
+            <button class="btn" id="btn2">确定</button>
+        </div>
+    </div>
+<script>
+
+    var box = document.getElementById('box');
+    var btn3 = document.getElementById('btn3');
+    var btn1 = document.getElementById('btn1');
+    var btn2 = document.getElementById('btn2');
+
+    btn3.onclick = function(){
+        show();
+        changeStyle();
+    }
+    btn2.onclick = hide;
+    btn1.onclick = refresh;
+
+    function refresh(){
+        window.location.reload();
+    }
+    function hide(){
+        var select = document.getElementById("select");
+        select.style.display = "none";
+        var bottom = document.getElementById("bottom");
+        bottom.style.display = "none";
+    } 
+    function show(){
+        var select = document.getElementById("select");
+        select.style.display = "block";
+        var bottom = document.getElementById("bottom");
+        bottom.style.display = "block";
+    }
+
+    function changeStyle() {
+        changeBg();
+        changeWidth();
+        changeHeight();
+    }
+
+    function changeBg(){
+        var r = document.getElementsByClassName("red");
+        var g = document.getElementsByClassName("green");
+        var b = document.getElementsByClassName("blue");
+        r[0].onclick = function(){
+        box.style.background = 'red';
+        }
+        g[0].onclick = function(){
+        box.style.background = 'green';
+        }
+        b[0].onclick = function(){
+        box.style.background = 'blue';
+        }
+    }
+
+    function changeWidth(){
+        var w = document.getElementsByClassName("space");
+        w[0].onclick = function(){
+        box.style.width = '200px';
+        }    
+        w[1].onclick = function(){
+        box.style.width = '300px';
+        }    
+        w[2].onclick = function(){
+        box.style.width = '400px';
+        }    
+    }
+
+    function changeHeight(){
+        var w = document.getElementsByClassName("space");
+        w[3].onclick = function(){
+        box.style.height = '200px';
+        }    
+        w[4].onclick = function(){
+        box.style.height = '300px';
+        }    
+        w[5].onclick = function(){
+        box.style.height = '400px';
+        }    
+    }
+    
+</script>
+</body>
+</html>
