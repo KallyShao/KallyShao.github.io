@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>send text</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#wrap {
+    width: 268px;
+    height: 436px;
+    border: 1px solid green;
+    background: url(images/iphone.jpg);
+}
+#screen {
+    width: 180px;
+    height: 260px;
+    border: 1px solid red;
+    margin: 72px auto 0;
+}
+#iform {
+    width: 180px;
+    height: 32px;
+    margin: auto;
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+#text {
+    width: 96px;
+    line-height: 28px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 34px;
+}
+#sub {
+    width: 36px;
+    height: 32px;
+    background: none;
+    border: none;
+    font-family: "黑体";
+    font-size: 14px;
+    font-weight: bold;
+    color: #999;
+    position: absolute;
+    top: 0;
+    right: 4px;
+    text-align: center;
+}
+#img1 {
+    z-index: 2;
+}
+#img2 {
+    z-index: 1;
+}
+</style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="screen"></div>
+        <div id="iform">
+            <img id="img1" src="images/1.jpg" alt="1">
+            <img id="img2" src="images/2.jpg" alt="2">
+            <input type="text" value="" id="text">
+            <input type="submit" value="发送" id="sub">
+        </div>
+    </div>
+<script>
+    var screen = document.getElementById("screen");
+    var img = document.getElementsByTagName("img");
+    var text = document.getElementById("text");
+    var sub = document.getElementById("sub");
+    var toggle = true;
+
+    sub.onclick = function (){
+        if(toggle){
+            screen.innerHTML += "<img src=" + "img[0].src" + "alt='1'>" + ":" + text.value + "<br/>";
+            toggle = false;
+        }
+        else{
+        screen.innerHTML += "<img src=" + "img[0].src" + "alt='1'>" + ":" + text.value + "<br/>";
+            toggle = true;
+        }
+    }
+    img[0].onclick = changeImg;
+    function changeImg(){
+        if(toggle) {
+                img[0].src = "images/2.jpg";
+                toggle = false;
+        }
+        else {
+                img[0].src = "images/1.jpg";
+                toggle = true;
+        }
+    }
+</script>
+</body>
+</html>
