@@ -8,23 +8,19 @@ body {
     margin: 0;
     padding: 0;
 }
-img {
-    border: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
 #wrap {
     width: 268px;
     height: 436px;
-    border: 1px solid green;
-    background: url(images/iphone.jpg);
+    border: 1px solid white;
+    background: #fff url(images/iphone.jpg) 0 0 no-repeat;
 }
 #screen {
     width: 180px;
     height: 260px;
-    border: 1px solid red;
+    line-height: 32px;
     margin: 72px auto 0;
+    overflow: hidden;
+    overflow-y: visible;
 }
 #iform {
     width: 180px;
@@ -43,63 +39,63 @@ img {
     left: 34px;
 }
 #sub {
-    width: 36px;
-    height: 32px;
-    background: none;
-    border: none;
-    font-family: "黑体";
-    font-size: 14px;
-    font-weight: bold;
-    color: #999;
     position: absolute;
-    top: 0;
-    right: 4px;
-    text-align: center;
+    top: 2px;
+    right: 2px;
+    width: 40px;
 }
-#img1 {
-    z-index: 2;
+.fl {
+    float: left; 
 }
-#img2 {
-    z-index: 1;
+.fr {
+    float: right; 
+}
+span {
+    background-color: #6cc;
+    padding: 0 4px;
 }
 </style>
 </head>
 
 <body>
     <div id="wrap">
-        <div id="screen"></div>
+        <div id="screen">
+        </div>
         <div id="iform">
-            <img id="img1" src="images/1.jpg" alt="1">
-            <img id="img2" src="images/2.jpg" alt="2">
+            <img id="img0" src="images/1.jpg" alt="1">
             <input type="text" value="" id="text">
-            <input type="submit" value="发送" id="sub">
+            <input type="button" value="发送" id="sub">
         </div>
     </div>
 <script>
     var screen = document.getElementById("screen");
-    var img = document.getElementsByTagName("img");
+    var img = document.getElementById("img0");
     var text = document.getElementById("text");
     var sub = document.getElementById("sub");
+
     var toggle = true;
 
     sub.onclick = function (){
-        if(toggle){
-            screen.innerHTML += "<img src=" + "img[0].src" + "alt='1'>" + ":" + text.value + "<br/>";
-            toggle = false;
+        if(text.value == ""){
+            alert("请输入消息!");
+        }
+        else if(toggle){
+            screen.innerHTML = '<div class = "fl">' + '<img src="images/1.jpg" class="fl"/>' + ':' + '<span>' + text.value + '</span>' + '</div>' + '<br/>' + screen.innerHTML;
+            text.value = "";
         }
         else{
-        screen.innerHTML += "<img src=" + "img[0].src" + "alt='1'>" + ":" + text.value + "<br/>";
-            toggle = true;
+            screen.innerHTML = '<div class = "fr">' + '<span>' + text.value + '</span>' + ':' + '<img class="fr" src="images/2.jpg"/>' + '</div>' + '<br/>' + screen.innerHTML;
+            text.value = "";
         }
     }
-    img[0].onclick = changeImg;
+    img.onclick = changeImg;
     function changeImg(){
         if(toggle) {
-                img[0].src = "images/2.jpg";
+                img.src = "images/2.jpg";
                 toggle = false;
         }
         else {
-                img[0].src = "images/1.jpg";
+                img.src = "images/1.jpg";
                 toggle = true;
         }
     }
