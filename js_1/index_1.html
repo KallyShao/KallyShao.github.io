@@ -112,8 +112,8 @@ h2 {
         </div>
     </div>
 <script>
-    var imgSrc = ['images/02.jpg', 'images/03.jpg', 'images/04.jpg', 'images/05.jpg'];
-    var title = ['另一盏灯', '下午茶', '友谊', '萝莉'];
+    var imgSrc = ['images/01.jpg', 'images/02.jpg', 'images/03.jpg', 'images/04.jpg', 'images/05.jpg'];
+    var title = ['灯', '另一盏灯', '下午茶', '友谊', '萝莉'];
     var pre = document.getElementById("pre");
     var next = document.getElementById("next");
     var img = document.getElementById("img");
@@ -127,54 +127,62 @@ h2 {
     var isCircle = true;
 
     function init(){
+        img.src = imgSrc[num];
+        imgNum.innerHTML = num + 1 + "/" + imgSrc.length;
+        imgTitle.innerHTML = title[num];
         main.style.background = "none";
-
+        img.style.border = "10px solid #eee";
     }
     init();
     orderBtn.onclick = function (){
+        note.innerHTML = "图片只能从第一张到最后一张或从最后一张到第一张";
         isCircle = false;
-        toggle();
     }
     circleBtn.onclick = function (){
+        note.innerHTML = "图片可从最后一张跳转到第一张循环切换";
         isCircle = true;
-        toggle();
     }
+    toggle();
     function toggle(){
         next.onclick = function (){
             if(!isCircle){
-                if(num > imgSrc.length - 1){
+                if(num > imgSrc.length - 2){
                     alert("已经是最后一张了");
-                    return;
+                    num = imgSrc.length -1;
+                    return num;
                 }
             }
             else if(isCircle){
-                if(num > imgSrc.length - 1){
-                    img.src = firstSrc[0];
+                if(num > imgSrc.length - 2){
                     num = 0;
+                    init();
+                    return num;
                 }
             }
-            img.src = imgSrc[num];
-            imgNum.innerHTML = num+2 + "/" + (imgSrc.length + 1);
-            imgTitle.innerHTML = title[num];
             num++;
+            img.src = imgSrc[num];
+            imgNum.innerHTML = num+1 + "/" + imgSrc.length;
+            imgTitle.innerHTML = title[num];
         }
         pre.onclick = function (){
             if(!isCircle){
-                if(num < 0){
+                if(num < 1){
                     alert("已经是第一张");
                     num = 0;
-                    return;
+                    return num;
                 }
             }
             else if(isCircle){
-                if(num < 0){
-                    num = imgSrc.length -1;
+                if(num < 1){
+                    num = imgSrc.length - 1;
+                    init();
+                    return num;
                 }
             }
-            img.src = imgSrc[num];
-            imgNum.innerHTML = num+2 + "/" + (imgSrc.length + 1);
-            imgTitle.innerHTML = title[num];
             num--;
+            img.src = imgSrc[num];
+            imgNum.innerHTML = num+1 + "/" + imgSrc.length;
+            imgTitle.innerHTML = title[num];
         }
     }
 
