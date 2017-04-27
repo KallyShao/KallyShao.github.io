@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片切换</title>
+    <style>
+html, body, h2 {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+#cover {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+a {
+    text-decoration: none;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #333;
+    opacity: 0.5;
+    filter:alpaha(opacity=50);
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+a:hover {
+    opacity: 1;
+    filter:alpaha(opacity=100);
+}
+#pre {
+    top: 280px;
+    left: 20px;
+}
+#next {
+    top: 280px;
+    right: 20px;
+}
+h2 {
+    position: absolute;
+    color: #fff;
+}
+#num, #title {
+    width: 900px;
+    line-height: 40px;
+    left: 10px;
+    background-color: #333;
+    opacity: 0.5;
+    filter:alpaha(opacity=50);
+}
+#num {
+    top: 10px;
+}
+#title {
+    bottom: 10px;
+}
+#wrap {
+    width: 940px;
+    height: 720px;
+    background: #fff;
+    margin: 20px auto;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+#tip {
+    width: 500px;
+    height: 80px;
+    margin: 0 auto;
+    padding-top: 10px;
+    text-align: center;
+}
+#main {
+    width: 920px;
+    height: 620px;
+    background: #000;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+#img {
+    /* border: 10px solid #eee; */
+}
+    </style>
+</head>
+<body>
+    <div id="cover"></div>
+    <div id="wrap">
+        <div id="tip">
+            <input type="button" value="顺序切换">
+            <input type="button" value="循环切换">
+            <p id="note">图片只能从第一张到最后一张或从最后一张到第一张</p>
+        </div>
+        <div id="main">
+            <img id="img" src="images/01.jpg">
+            <a href="#" id="pre"> < </a>
+            <a href="#" id="next"> > </a>
+            <h2 id="num">1 / 4</h2>
+            <h2 id="title">灯</h2>
+        </div>
+    </div>
+<script>
+    var imgSrc = ['images/02.jpg', 'images/03.jpg', 'images/04.jpg', 'images/05.jpg'];
+    var title = ['另一盏灯', '下午茶', '友谊', '萝莉'];
+    var pre = document.getElementById("pre");
+    var next = document.getElementById("next");
+    var img = document.getElementById("img");
+    var main = document.getElementById("main");
+    var imgNum = document.getElementById("num");
+    var imgTitle = document.getElementById("title");
+    var num = -1;
+
+
+    next.onclick = nextToggle;
+    pre.onclick = preToggle;
+
+    function orderToggle(){
+    }
+    function nextToggle(){
+        num++;
+        if(num > imgSrc.length-1){
+            num = imgSrc.length;
+            img.src = imgSrc[num-1];
+            alert("已经是最后一张了");
+            return;
+        }
+
+        img.src = imgSrc[num];
+        img.style.border = "10px solid #eee";
+        main.style.background = "none";
+        imgTitle.innerHTML = title[num];
+        imgNum.innerHTML = num + 1 + "/" + imgSrc.length;
+    }
+
+    function preToggle(){
+    }
+</script>
+</body>
+</html>
