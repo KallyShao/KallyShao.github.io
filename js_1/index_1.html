@@ -133,7 +133,9 @@ h2 {
         main.style.background = "none";
         img.style.border = "10px solid #eee";
     }
+
     init();
+
     orderBtn.onclick = function (){
         note.innerHTML = "图片只能从第一张到最后一张或从最后一张到第一张";
         isCircle = false;
@@ -142,48 +144,46 @@ h2 {
         note.innerHTML = "图片可从最后一张跳转到第一张循环切换";
         isCircle = true;
     }
-    toggle();
-    function toggle(){
-        next.onclick = function (){
-            if(!isCircle){
-                if(num > imgSrc.length - 2){
-                    alert("已经是最后一张了");
-                    num = imgSrc.length -1;
-                    return num;
-                }
-            }
-            else if(isCircle){
-                if(num > imgSrc.length - 2){
-                    num = 0;
-                    init();
-                    return num;
-                }
-            }
-            num++;
+    function refresh(){
             img.src = imgSrc[num];
             imgNum.innerHTML = num+1 + "/" + imgSrc.length;
             imgTitle.innerHTML = title[num];
-        }
-        pre.onclick = function (){
-            if(!isCircle){
-                if(num < 1){
-                    alert("已经是第一张");
-                    num = 0;
-                    return num;
-                }
+    }
+
+    var realLen = imgSrc.length - 2; 
+    next.onclick = function (){
+        if(!isCircle){
+            if(num > realLen){
+                alert("已经是最后一张了");
+                return;
             }
-            else if(isCircle){
-                if(num < 1){
-                    num = imgSrc.length - 1;
-                    init();
-                    return num;
-                }
-            }
-            num--;
-            img.src = imgSrc[num];
-            imgNum.innerHTML = num+1 + "/" + imgSrc.length;
-            imgTitle.innerHTML = title[num];
         }
+        else {
+            if(num > realLen){
+                num = 0;
+                init();
+                return;
+            }
+        }
+        num++;
+        refresh();
+    }
+    pre.onclick = function (){
+        if(!isCircle) {
+            if(num < 1){
+                alert("已经是第一张");
+                return;
+            }
+        }
+        else {
+            if(num < 1){
+                num = imgSrc.length - 1;
+                init();
+                return;
+            }
+        }
+        num--;
+        refresh();
     }
 
 </script>
