@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>鼠标悬浮出现提示信息</title>
+<style>
+h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    bold: normal;
+}
+h6 {
+    color: #999;
+}
+li {
+    list-style: none;
+    width: 56px;
+    text-align: center;
+    position: absolute;
+}
+#wrap {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid #000;
+}
+h3 {
+    color: #999;
+}
+#con {
+    position: relative;
+}
+.over {
+    width: 200px;
+    z-index: 2;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: #eee;
+    text-align: left;
+    display: none;
+}
+</style>
+<script>
+window.onload = function (){
+    var oLi = document.getElementsByTagName("li");
+    var len = oLi.length;
+    for(var i=0; i<len; i++){
+        oLi[i].style.left = 20 + 66*(i%6) + "px";
+        oLi[i].style.top = parseInt(i/6)*100 + "px";
+        oLi[i].onmouseover = function(){
+            this.getElementsByClassName("over")[0].style.display = "block";
+        };         
+        oLi[i].onmouseout = function(){
+            this.getElementsByClassName("over")[0].style.display = "none";
+        };         
+    }
+}
+</script>
+</head>
+<body>
+<div id = "wrap">
+    <h3>最新上线</h2>
+    <hr>
+    <div id="con">
+        <li>
+        <img src="imgs/1.png" alt="1">
+        <h5>娱乐观</h5>
+        <h6>新闻类</h6>
+        <div class="over">
+            <h4>搜狐汽车图库</h4>
+            <h6>生活</h6>
+            <p>搜狐汽车是中国最具人气和影响力的门户汽车网站，为您提供专业的汽车</p>
+        </div>
+        </li>
+        <li>
+        <img src="imgs/2.png" alt="1">
+        <h5>娱乐观</h5>
+        <h6>新闻类</h6>
+        <div class="over">
+            <h4>搜狐汽车图库</h4>
+            <h6>生活</h6>
+            <p>搜狐汽车是中国最具人气和影响力的门户汽车网站，为您提供专业的汽车1</p>
+        </div>
+        </li>
+        <li>
+        <img src="imgs/3.png" alt="1">
+        <h5>娱乐观</h5>
+        <h6>新闻类</h6>
+        <div class="over">
+            <h4>搜狐汽车图库</h4>
+            <h6>生活</h6>
+            <p>搜狐汽车是中国最具人气和影响力的门户汽车网站，为您提供专业的汽车2</p>
+        </div>
+        </li>
+        <li>
+        <img src="imgs/4.png" alt="1">
+        <h5>娱乐观</h5>
+        <h6>新闻类</h6>
+        <div class="over">
+            <h4>搜狐汽车图库</h4>
+            <h6>生活</h6>
+            <p>搜狐汽车是中国最具人气和影响力的门户汽车网站，为您提供专业的汽车</p>
+        </div>
+        </li>
+        <li>
+        <img src="imgs/5.png" alt="1">
+        <h5>娱乐观</h5>
+        <h6>新闻类</h6>
+        <div class="over">
+            <h4>搜狐汽车图库</h4>
+            <h6>生活</h6>
+            <p>搜狐汽车是中国最具人气和影响力的门户汽车网站，为您提供专业的汽车</p>
+        </div>
+        </li>
+        <li>
+        <img src="imgs/6.png" alt="1">
+        <h5>娱乐观</h5>
+        <h6>新闻类</h6>
+        <div class="over">
+            <h4>搜狐汽车图库</h4>
+            <h6>生活</h6>
+            <p>搜狐汽车是中国最具人气和影响力的门户汽车网站，为您提供专业的汽车</p>
+        </div>
+        </li>
+        <li>
+        <img src="imgs/1.png" alt="1">
+        <h5>娱乐观</h5>
+        <h6>新闻类</h6>
+        <div class="over">
+            <h4>搜狐汽车图库</h4>
+            <h6>生活</h6>
+            <p>搜狐汽车是中国最具人气和影响力的门户汽车网站，为您提供专业的汽车</p>
+        </div>
+        </li>
+        <li>
+        <img src="imgs/2.png" alt="1">
+        <h5>娱乐观</h5>
+        <h6>新闻类</h6>
+        <div class="over">
+            <h4>搜狐汽车图库</h4>
+            <h6>生活</h6>
+            <p>搜狐汽车是中国最具人气和影响力的门户汽车网站，为您提供专业的汽车</p>
+        </div>
+        </li>
+        <li>
+        <img src="imgs/3.png" alt="1">
+        <h5>娱乐观</h5>
+        <h6>新闻类</h6>
+        <div class="over">
+            <h4>搜狐汽车图库</h4>
+            <h6>生活</h6>
+            <p>搜狐汽车是中国最具人气和影响力的门户汽车网站，为您提供专业的汽车</p>
+        </div>
+        </li>
+        <li>
+        <img src="imgs/4.png" alt="1">
+        <h5>娱乐观</h5>
+        <h6>新闻类</h6>
+        <div class="over">
+            <h4>搜狐汽车图库</h4>
+            <h6>生活</h6>
+            <p>搜狐汽车是中国最具人气和影响力的门户汽车网站，为您提供专业的汽车</p>
+        </div>
+        </li>
+        <li>
+        <img src="imgs/5.png" alt="1">
+        <h5>娱乐观</h5>
+        <h6>新闻类</h6>
+        <div class="over">
+            <h4>搜狐汽车图库</h4>
+            <h6>生活</h6>
+            <p>搜狐汽车是中国最具人气和影响力的门户汽车网站，为您提供专业的汽车</p>
+        </div>
+        </li>
+        <li>
+        <img src="imgs/6.png" alt="1">
+        <h5>娱乐观</h5>
+        <h6>新闻类</h6>
+        <div class="over">
+            <h4>搜狐汽车图库</h4>
+            <h6>生活</h6>
+            <p>搜狐汽车是中国最具人气和影响力的门户汽车网站，为您提供专业的汽车</p>
+        </div>
+        </li>
+    </div>
+</div>
+</body>
+</html>
