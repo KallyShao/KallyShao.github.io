@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>QQ下拉列表模拟</title>
+<style>
+body {
+    background: #333;
+}
+h3, ul {
+    margin: 0;
+    padding: 0;
+}
+h3 {
+    text-indent: 20px;
+    line-height: 30px;
+    color: #fff;
+    background: #a2b4ba url(imgs/ico1.gif) 5px center no-repeat;
+}
+li {
+    list-style: none;
+    line-height: 30px;
+    text-indent: 20px;
+}
+#wrap {
+    width: 200px;
+    border: 1px solid #000;
+    margin: 50px auto 0;
+    background: #fff;
+}
+#wrap .active {
+    background: #00b38c url(imgs/ico2.gif) 5px center no-repeat;
+    color: #fff;
+}
+.lis {
+    display: none;
+}
+.lis .selected {
+    background: #373e40;
+    color: #fff;
+}
+</style>
+<script>
+window.onload = function (){
+    var oUl = document.getElementById("wrap");
+    var aH3 = oUl.getElementsByTagName("h3");
+    var aUl = oUl.getElementsByTagName("ul");
+    var obj = null;
+    for(var i=0; i<aH3.length; i++){
+        aH3[i].index = i;
+        aH3[i].onclick = function(){
+            if(obj != null){
+                if(obj == this.index){
+                    aH3[this.index].className = "";
+                    aUl[this.index].style.display = "none";
+                    obj = null;
+                }
+                else{
+                    aH3[obj].className = "";
+                    aUl[obj].style.display = "none";
+                    aH3[this.index].className = "active";
+                    aUl[this.index].style.display = "block";
+                    obj = this.index;
+                }
+            }
+            else{
+                aH3[this.index].className = "active";
+                aUl[this.index].style.display = "block";
+                obj = this.index;
+            }
+        }
+    }
+    for(var i=0; i<aUl.length; i++){
+        var aName = aUl[i].getElementsByTagName("li");
+        for(var j=0; j<aName.length; j++){
+            aName[j].index = j;
+            aName[j].parentIndex = i;
+            aName[j].onclick = function(){
+                for(var i=0; i<aUl.length; i++){
+                    var liList = aUl[i].getElementsByTagName("li");
+                    if(this.parentIndex != i){
+                        for(var j=0; j < liList.length; j++){
+                            liList[j].className = '';
+                        }
+                    }
+                    else{
+                        for(var j=0; j< liList.length; j++){
+                            if(this.index != j){
+                                liList[j].className = '';
+                            }
+                        }
+                    }
+                }
+                if(this.className == ""){
+                    this.className = "selected";
+                }
+                else{
+                    this.className = "";
+                }
+            }
+        }
+    }
+}
+</script>
+</head>
+<body>
+    <ul id="wrap">
+        <li>
+            <h3>我的好友</h3>
+            <ul class="lis">
+                <li>lee</li>
+                <li>lily</li>
+                <li>kim</li>
+                <li>leon</li>
+            </ul>
+        </li>
+        <li>
+            <h3>企业好友</h3>
+            <ul class="lis">
+                <li>nancy</li>
+                <li>meu</li>
+                <li>miya</li>
+                <li>ben</li>
+            </ul>
+        </li>
+        <li>
+            <h3>黑名单</h3>
+            <ul class="lis">
+                <li>sam</li>
+                <li>joy</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

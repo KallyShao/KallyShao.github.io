@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用索引值多组图片切换</title>
+    <style>
+body {
+    background: #333;
+}
+body, h4 {
+    margin: 0;
+    padding: 0;
+}
+#wrap {
+    width: 950px;
+    height: 550px;
+    position: relative;
+    margin: 50px auto 0;
+    background: #fff;
+}
+#left, #right {
+    text-align: center;
+    height: 490px;
+    position: absolute;
+    top: 60px;
+}
+#left {
+    width: 620px;
+    left: 0;
+}
+#right {
+    width: 320px;
+    right: 0;
+}
+img {
+    border: 10px solid #ddd;
+}
+#left img {
+    width: 600px;
+    height: 400px;
+}
+#pre, #next {
+    position: absolute;
+    top: 20px;
+}
+#pre {
+    left: 10px;
+}
+#next {
+    left: 100px;
+}
+#sl, #sr {
+    font-size: 16px;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+}
+    </style>
+<script>
+window.onload = function(){
+    var lSrc = ["imgs/01.jpg","imgs/02.jpg", "imgs/03.jpg"];
+    var rSrc = ["imgs/07.jpg","imgs/08.jpg", "imgs/09.jpg", "imgs/10.jpg"];
+    var lImg = document.getElementById("lImg");
+    var rImg = document.getElementById("rImg");
+    var oSl = document.getElementById("sl");
+    var oSr = document.getElementById("sr");
+    var lNum = document.getElementById("lnum");
+    var rNum = document.getElementById("rnum");
+    var oPre = document.getElementById("pre");
+    var oNext = document.getElementById("next");
+    var num1 = 0;
+    var num2 = 0;
+    function init(){
+        lImg.src = lSrc[num1];
+        rImg.src = rSrc[num2];
+        var indexl = num1 + 1;
+        var indexr = num2 + 1;
+        oSl.innerHTML = indexl + "/" + lSrc.length;
+        oSr.innerHTML = indexr + "/" + rSrc.length;
+        lNum.innerHTML = indexl;
+        rNum.innerHTML = indexr; 
+    }
+    init();
+
+    lImg.onclick = function()
+    {
+        ladd();
+        init();
+    };
+
+    rImg.onclick = function()
+    {
+        radd();
+        init();
+    };
+
+    var lLen = lSrc.length - 2;
+    var rLen = rSrc.length - 2;
+
+    function ladd(){
+        if(num1 > lLen){
+            num1 = -1;
+        }
+        num1++;
+    }
+
+    function radd(){
+        if(num2 > rLen){
+            num2 = -1;
+        }
+        num2++;
+    }
+
+    oNext.onclick = function(){
+        ladd();
+        radd();
+        init();
+    }
+
+    oPre.onclick = function(){
+        if(num1 < 1){
+            num1 = lSrc.length;
+        }
+        if(num2 < 1){
+            num2 = rSrc.length;
+        }
+        num1--;
+        num2--;
+        alert(num1);
+        init();
+    }
+}
+</script>
+</head>
+<body>
+<div id="wrap">
+    <button id="pre">上一组</button>
+    <button id="next">下一组</button>
+    <div id="left">
+        <img id="lImg">
+        <h4>第一组第<span id="lnum"></span>张</h4>
+        <span id="sl"></span>
+    </div>
+    <div id="right">
+        <img id="rImg">
+        <h4>第二组第<span id="rnum"></span>张</h4>
+        <span id="sr"></span>
+    </div>
+</div>
+</body>
+</html>

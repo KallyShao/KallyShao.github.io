@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片切换</title>
+    <style>
+body, ul, h2 {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+body {
+    background: #333;
+}
+a {
+    text-decoration: none;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #333;
+    opacity: 0.5;
+    filter:alpaha(opacity=50);
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+}
+a:hover {
+    opacity: 1;
+    filter:alpaha(opacity=100);
+}
+#pre {
+    top: 280px;
+    left: 20px;
+}
+#next {
+    top: 280px;
+    right: 20px;
+}
+h2 {
+    position: absolute;
+    color: #fff;
+}
+#num, #title {
+    width: 900px;
+    line-height: 40px;
+    left: 10px;
+    background-color: #333;
+    opacity: 0.5;
+    filter:alpaha(opacity=50);
+}
+#num {
+    top: 0;
+}
+#title {
+    bottom: 20px;
+}
+#wrap {
+    width: 940px;
+    height: 720px;
+    background: #fff;
+    margin: 20px auto;
+    position: relative;
+}
+#main {
+    width: 920px;
+    height: 620px;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    margin: auto;
+    text-align: center;
+    background: #000;
+}
+#nav {
+    width: 180px;
+    height: 20px;
+    margin: auto;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -100px;
+}
+#nav span {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: #999;
+    border-radius: 10px;
+}
+#nav .active {
+    background: #ffea00;
+}
+#topTit {
+    color: #666;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+#thumb img {
+    width: 90px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#thumb li {
+    width: 110px;
+    height: 95px;
+    position: absolute;
+    top: -95px;
+    background: url(imgs/img_bg.png) 0 0 no-repeat;
+    display: none;
+}
+#thumb .selected {
+    display: block;
+}
+    </style>
+<script>
+window.onload = function(){
+    var aSpan = document.getElementsByTagName("span");
+    var oUl = document.getElementById("thumb");
+    var aLi = oUl.getElementsByTagName("li");
+    var imgSrc = ['imgs/01.jpg', 'imgs/02.jpg', 'imgs/03.jpg', 'imgs/04.jpg', 'imgs/05.jpg', 'imgs/06.jpg'];
+    var title = ['wedding', 'sunflower', 'friends', 'teatime', 'melody', 'fitness'];
+    var pre = document.getElementById("pre");
+    var next = document.getElementById("next");
+    var img = document.getElementById("img");
+    var main = document.getElementById("main");
+    var imgNum = document.getElementById("num");
+    var imgTitle = document.getElementById("title");
+    var num = 0;
+
+    function init(){
+        for(var i=0; i<aSpan.length; i++){
+            aSpan[i].style.left = 5 + 30*i + "px";
+            aLi[i].style.left = -40 + 30*i + "px";
+            aSpan[i].index = i;
+            aSpan[i].onmouseover = function(){
+                aLi[this.index].style.display = "block";
+            }
+            aSpan[i].onmouseout = function(){
+                aLi[this.index].style.display = "none";
+            }
+            aSpan[i].onclick = function(){
+                num = this.index;
+                refresh();
+            }
+        }
+        main.style.background = "none";
+        refresh();
+    }
+    init();
+
+    function refresh(){
+        img.src = imgSrc[num];
+        imgNum.innerHTML = num+1 + "/" + imgSrc.length;
+        imgTitle.innerHTML = title[num];
+        aSpan[num].className = "active";
+        for(var i=0; i<aSpan.length; i++){
+            if(num != i){
+                aSpan[i].className = "";
+            }
+        }
+    }
+    var len = imgSrc.length - 2; 
+    next.onclick = function (){
+        if(num > len){
+            num = 0;
+        }
+        else{
+            num++;
+        }
+        refresh();
+    }
+    pre.onclick = function (){
+        if(num < 1){
+            num = len + 1;
+        }
+        else{
+            num--;
+        }
+        refresh();
+    }
+}
+</script>
+</head>
+<body>
+    <div id="wrap">
+        <h2 id="topTit">带缩略图的图片轮换</h2>
+        <div id="main">
+            <img id="img">
+            <a href="#" id="pre"> < </a>
+            <a href="#" id="next"> > </a>
+            <h2 id="num">数量正在计算中...</h2>
+            <h2 id="title">图片标题正在加载中...</h2>
+        </div>
+        <div id="nav">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="thumb">
+                <li><img src="imgs/01.jpg" alt="1"></li>
+                <li><img src="imgs/02.jpg" alt="2"></li>
+                <li><img src="imgs/03.jpg" alt="3"></li>
+                <li><img src="imgs/04.jpg" alt="4"></li>
+                <li><img src="imgs/05.jpg" alt="5"></li>
+                <li><img src="imgs/06.jpg" alt="6"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
