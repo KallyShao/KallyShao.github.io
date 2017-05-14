@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+
+<script>
+
+var arr = ['ccc', '100px', 'abc'-6, [], -98765, 34, -2, 0, '300', , function(){alert(1);}, null, document, [], true, '200px'-30,'23.45元', 5, Number('abc'), function(){ alert(3); }, 'xyz'-90 ];
+
+/*
+	1、找到arr里所有的数字：-98765, 34, -2, 0, 5
+document.write("arr里的数字是：");
+for(var i=0; i<arr.length; i++){
+    if(isNaN(arr[i]) == false && typeof arr[i] != "string" && typeof arr[i] != "object" && typeof arr[i] != "boolean"){
+        document.write(" " + arr[i] + "/");
+    }
+}
+	2、找到可以转成数字的：'100px', -98765, 34, -2, 0, '300', '23.45元',  5 
+	3、把转成数字以后，最大值判断出来：300
+	4、把 NaN 所在的位置找出来：1 14 17  19
+*/
+var newArr = [];
+document.write("转换为数字后最大值为：");
+for(var i=0; i<arr.length; i++){
+    if(isNaN(arr[i]) == false || isNaN(parseInt(arr[i])) == false || isNaN(parseFloat(arr[i])) == false){
+        if(isNaN(parseInt(arr[i])) == false || isNaN(parseFloat(arr[i])) == false){
+            if(parseInt(arr[i]) == parseFloat(arr[i])){
+            document.write(parseInt(arr[i]) + "/");
+            newArr.push(parseInt(arr[i]));
+            }
+            else{
+            document.write(parseFloat(arr[i]) + "/");
+            newArr.push(parseFloat(arr[i]));
+            }
+        }
+        else{
+            document.write(Number(arr[i]) + "/");
+            newArr.push(Number(arr[i]));
+        }
+    }
+}
+function getMax(){
+    var max = newArr[0];
+    for(var i=0; i<newArr.length; i++){
+        if(max < newArr[i]){
+            max = newArr[i];
+        }
+    }
+    return max;
+}
+document.write("<br>");
+document.write(newArr);
+document.write("<br>");
+document.write("最大值为：" + getMax());
+document.write("<br>");
+document.write("可以转换为数字的：");
+for(var i=0; i<arr.length; i++){
+    if(isNaN(arr[i]) == false || isNaN(parseInt(arr[i])) == false || isNaN(parseFloat(arr[i])) == false){
+        document.write(arr[i] + "/");
+    }
+}
+
+document.write("<br>");
+document.write("arr里的数字是：");
+for(var i=0; i<arr.length; i++){
+    if(isNaN(arr[i]) == false && typeof arr[i] != "string" && typeof arr[i] != "object" && typeof arr[i] != "boolean"){
+        document.write(" " + arr[i] + "/");
+    }
+}
+document.write("<br>");
+document.write("NaN的位置是");
+for(var i=0; i<arr.length; i++){
+    if(isNaN(arr[i]) == true){
+        if(isNaN(parseInt(arr[i])) == true){
+            if(typeof arr[i] != "object" && typeof arr[i] != "function" && typeof arr[i] != "undefined" && typeof arr[i] != "string"){
+                document.write(i + "/");
+            }
+        }
+    }
+}
+document.write("<br>");
+document.write("所有元素的运算结果是:");
+for(var i=0; i<arr.length; i++){
+            document.write(arr[i] + "/");
+}
+</script>
+
+</head>
+
+<body>
+</body>
+</html>

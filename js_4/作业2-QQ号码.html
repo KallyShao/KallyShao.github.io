@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+window.onload = function (){
+    var text = document.getElementById("text");
+    var btn = document.getElementById("btn");
+    var v = "";
+    btn.onclick = function(){
+        v = text.value;
+        if(v == ""){
+            alert("请输入QQ号码!");
+            return;
+        }
+        else if(isNaN(Number(v)) == true){
+            alert("请输入数字!");
+            return;
+        }
+        else{
+            var flag = 0;
+            if(v[0] == 0){
+                flag |= 0x01;
+            }
+
+            if(parseInt(v) != parseFloat(v)){
+                flag  |= 0x01 << 1;                
+            }
+
+            if(v.length < 5 || v.length > 10){
+                flag |= 0x01 << 2;
+            }
+
+            switch(flag)
+            {
+                case 0x01:
+                    alert("首位不能为0!");
+                    break;
+                case 0x02:
+                    alert("不能包含小数");
+                    break;
+                case 0x03:
+                    alert("首位不能为0且不能包含小数!");
+                    break;
+                case 0x04:
+                alert("长度必须在5位以上10位以下!");
+                    break;
+                case 0x05:
+                    alert("首位不能为0且长度必须在5位以上10位以下!");
+                    break;
+                case 0x06:
+                    alert("不能包含小数且长度必须在5位以上10位以下!");
+                    break;
+                case 0x07:
+                    alert("首位不能为0，不能包含小数且长度必须在5位以上10位以下!");
+                    break;
+                default:
+                    alert("输入合法了!");
+                    break;
+            }
+        }
+    }
+
+}
+</script>
+请输入QQ号码：<input type="text" id="text" />
+<input type="button" value="判断" id="btn"/>
+
+
+<br />
+1、有没有输入<br />
+2、输入的是不是数字<br />
+3、不能有0在前面<br />
+4、不能是小数<br />
+5、输入的数字必须在5位以上、10位以内<br />
+
+</body>
+</html>

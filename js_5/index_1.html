@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>修改文本框内的值</title>
+<style>
+body, ul, h4 {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+h4 {
+    background: #9c0;
+    color: #fff;
+}
+body {
+    background: #333;
+}
+li {
+    list-style: none;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+#wrap {
+    width: 400px;
+    text-indent: 10px;
+    margin: 20px auto 0;
+    background: #fff;
+}
+#list img {
+    position: absolute;
+    top: 5px;
+    left: 350px;
+}
+#save, #cancel {
+    text-align: center;
+    margin-left: 10px;
+}
+#save:hover, #cancel:hover {
+    background: #000;
+    color: #fff;
+}
+</style>
+<script>
+window.onload = function(){
+    var oUl = document.getElementById("list");
+    var aLi = oUl.getElementsByTagName("li");
+
+    function edit(li){
+        var show = li.getElementsByClassName("show")[0];
+        var edit = li.getElementsByClassName("edit")[0];
+
+        var oSpan = show.getElementsByTagName("span")[0];
+        var oImg = show.getElementsByTagName("img")[0];
+        var str1 = oSpan.innerHTML;
+        var str = "<input class = 'text' type='text' value= '" + oSpan.innerHTML + "'>" + "<a href='#' class='save'>保存</a>" + " " + "<a href='#' class='cancel'>取消</a>";
+
+        oImg.onclick = function(){
+            this.index = show.parentNode.index;
+            show.style.display = "none";
+            edit.innerHTML = str;
+            var oSave = li.getElementsByClassName("save")[0];
+            var oCancel = li.getElementsByClassName("cancel")[0];
+            var oText = li.getElementsByClassName("text")[0];
+            oSave.onclick = function(){
+                show.style.display = "block";
+                edit.innerHTML = "";
+                oSpan.innerHTML = oText.value;
+            }
+            oCancel.onclick = function(){
+                show.style.display = "block";
+                edit.innerHTML = "";
+                oSpan.innerHTML = str1;
+            }
+        }
+    }
+
+    for(var i=0; i<aLi.length; i++){
+        edit(aLi[i]);
+    }
+}
+</script>
+
+</head>
+
+<body>
+<div id="wrap">
+    <h4>水果名称</h4>
+    <ul id="list">
+        <li>
+            <div class="show">
+                <span>苹果</span>
+                <a href="#">
+                    <img src="imgs/1.png" alt="1">
+                </a>
+            </div>
+            <div class="edit"></div>
+        </li>
+        <li>
+            <div class="show">
+                <span>香蕉</span>
+                <a href="#">
+                    <img src="imgs/1.png" alt="1">
+                </a>
+            </div>
+            <div class="edit"></div>
+        </li>
+        <li>
+            <div class="show">
+                <span>梨</span>
+                <a href="#">
+                    <img src="imgs/1.png" alt="1">
+                </a>
+            </div>
+            <div class="edit"></div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>商品数量和价格统计</title>
+<script>
+window.onload = function () {
+	var oUl = document.getElementById('list');
+	var aLi = oUl.getElementsByTagName('li');
+	var aStrong = oUl.getElementsByTagName ('strong');
+	var aPrice = oUl.getElementsByTagName ('em');
+
+    var oP = document.getElementById("p");
+    var aSpan = oP.getElementsByTagName("span");
+    var nPrice = [0, 0, 0, 0, 0];
+    var nNum = [0, 0, 0, 0, 0];
+	
+	for ( var i=0; i<aLi.length; i++ ) {
+        aLi[i].index = i;
+		fnCount(aLi[i]);
+	}
+
+    function updateNums(n, p, index){
+        nNum[index] = n;
+        if(nNum[index] > 0){
+            nPrice[index] = p;
+        }
+        else {
+            nPrice[index] = 0;
+        }
+        var totNum = 0;
+        var totPrice = 0;
+        var max = nPrice[0];
+        for(var i=0; i<nNum.length; i++){
+            totNum += nNum[i];
+            totPrice += nNum[i]*nPrice[i];
+            if(max < nPrice[i]){
+                max = nPrice[i];
+            }
+        }
+        aSpan[0].innerHTML = totNum;
+        aSpan[1].innerHTML = totPrice;
+        aSpan[2].innerHTML = max;
+    }
+	
+	function fnCount(li) {
+		var aBtn = li.getElementsByTagName ('input');
+		var oStrong = li.getElementsByTagName ('strong')[0];
+		var oEm = li.getElementsByTagName ('em')[0];
+		var oSpan = li.getElementsByTagName ('span')[0];
+		var n = oStrong.innerHTML;			
+		var price = parseFloat(oEm.innerHTML);			
+		
+		aBtn[0].onclick = function () {
+            if(n <= 0 )
+            {
+                return;
+            }
+            n--;
+			oStrong.innerHTML = n;
+			oSpan.innerHTML = n*price + "元";
+            updateNums(n, price, this.parentNode.index);
+		};
+		aBtn[1].onclick = function (){
+		    n++;
+			oStrong.innerHTML = n;
+			oSpan.innerHTML = n*price + "元";
+            updateNums(n, price, this.parentNode.index);
+		};
+	}
+};
+</script>
+</head>
+
+<body>
+
+<ul id="list">
+	<li>
+  	<input type="button" value="-" />
+    <strong>0</strong>
+  	<input type="button" value="+" />
+    单价：<em>12.5元</em>
+    小计：<span>0</span>
+  </li>
+	<li>
+  	<input type="button" value="-" />
+    <strong>0</strong>
+  	<input type="button" value="+" />
+    单价：<em>10.5元</em>
+    小计：<span>0</span>
+  </li>
+	<li>
+  	<input type="button" value="-" />
+    <strong>0</strong>
+  	<input type="button" value="+" />
+    单价：<em>8.5元</em>
+    小计：<span>0</span>
+  </li>
+	<li>
+  	<input type="button" value="-" />
+    <strong>0</strong>
+  	<input type="button" value="+" />
+    单价：<em>8元</em>
+    小计：<span>0</span>
+  </li>
+	<li>
+  	<input type="button" value="-" />
+    <strong>0</strong>
+  	<input type="button" value="+" />
+    单价：<em>14.5元</em>
+    小计：<span>0</span>
+  </li>
+</ul>
+
+<p id="p">
+共买了<span>0</span>件，共花费了：<span>0</span>元<br />
+其中消费最多的商品单价是：<span>0</span>元
+</p>
+
+</body>
+</html>
