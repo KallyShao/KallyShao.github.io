@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作品列表</title>
+<style>
+body, ul, h2{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #666;
+    display: block;
+}
+a:focus {
+    outline-style: none;
+}
+li {
+    list-style: none;
+}
+#list {
+    width: 400px;
+    margin: 0 auto;
+}
+#list li h2 {
+    font-size: 22px;
+    line-height: 50px;
+}
+#list .sub_li li {
+    line-height: 50px;
+    text-indent: 10px;
+}
+.tit a:hover {
+    background: #6c9;
+    color: #fff;
+    text-indent: 20px;
+    border-radius: 5px;
+}
+.sub_li li a:hover {
+    background: #ccc;
+    color: #fff;
+    border-radius: 5px;
+}
+#wrap {
+    width: 500px;
+    font-size: 20px;
+    margin: 20px auto 0;
+    padding: 40px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px #eee;
+    background: #fff;
+}
+.sub_li {
+    display: none;
+}
+.cls_li {
+    border-bottom: 1px solid #eee;
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+    <ul id="list">
+    </ul>
+</div>
+<script>
+var oUl = document.getElementById("list");
+var str = "";
+var data = [
+    [
+        {title: "第一章 常用图片轮换模块"},
+        {url: "js_1/index_1.html", title: "两种模式的图片切换：顺序切换和循环切换"},
+        {url: "js_3/index_1.html", title: "带缩略图的图片轮换"},
+		{url: "js_3/index_2.html", title: "多组图片切换"},
+		{url: "js_5/index_2.html", title: "带选项卡嵌套的图片切换"},
+        
+    ],
+    [
+        {title: "第二章 内容展示相关模块"},
+        {url: "js_0/index.html", title: "给div设置样式"},
+        {url: "js_1/index_0.html", title: "模拟手机发送短信"},
+		{url: "js_2/index_0.html", title: "点击自动生成10个LI"},
+		{url: "js_2/index_1.html", title: "点击自动生成100个LI"},
+		{url: "js_2/index_2.html", title: "自动生成V字形"},
+		{url: "js_2/index_3.html", title: "生成不同方向的V字形"},
+		{url: "js_2/index_4.html", title: "鼠标悬浮出现提示框"},
+		{url: "js_3/index_0.html", title: "QQ下拉列表模拟"},
+		{url: "js_5/index_1.html", title: "修改文本框内的值"},
+		{url: "js_2/index_4.html", title: ""},
+    ],
+    [
+        {title: "第三章 其他"},
+        {url: "js_4/index_1.html", title: "判断QQ号码的输入格式是否正确"},
+		{url: "js_5/index_0.html", title: "商品数量和价格统计"},
+		{url: "js_7/index_1.html", title: "全选和反选操作"},
+    ]
+];
+for(var i=0; i<data.length; i++){
+    var iterms = data[i];
+    var sub = "";
+    for(var j=0; j<iterms.length; j++){
+    var son = iterms[j];
+    if(j==0){
+        sub = sub + "<li class='cls_li'><h2 class='tit'><a href='javascript:;'>" + son.title + "</a></h2><ul class='sub_li'>";
+    }
+    else{
+        sub = sub + "<li><a href=" + " ' " + son.url + " ' " + "target='_blank'>" + son.title + "</a></li>";
+    }
+    if(j==iterms.length - 1){
+        sub = sub + "</ul></li>";
+    }
+    }
+    str = str + sub;
+}
+
+oUl.innerHTML = str;
+
+function show(li){
+    var flag = false;
+    var subUl = li.getElementsByTagName("ul")[0];
+    var oH2 = li.getElementsByTagName("h2")[0];
+    oH2.onclick = function(){
+        if(flag){
+            subUl.style.display = "none";
+            flag = false;
+        }
+        else{
+            subUl.style.display = "block";
+            flag = true;
+        }
+    }
+   /* if(flag){
+        oH2.onclick = function (){
+            subUl.style.display = "none";
+            flag = false;
+        }
+    }
+    else{
+        oH2.onclick = function (){
+            subUl.style.display = "block";
+            flag = true;
+        }
+    } */
+}
+
+
+var aLi = oUl.getElementsByClassName("cls_li");
+for(var i=0; i<aLi.length; i++){
+    show(aLi[i]);
+}
+</script>
+</body>
+</html>
