@@ -1,0 +1,140 @@
+h1{
+	color: #ff6b08;
+	margin: 30px 0;
+}
+.tit-box{
+	
+}
+.news-tit{
+	width: 100%;
+	height: 20%;
+	opacity: 0;
+	background: rgba(0,0,0,.6);
+	text-align: center;
+}
+.news-tit p{
+	color: white;
+	font-size: 14px;
+}
+.tit-box:hover .news-tit{
+	transform: translateY(-100%);
+	transition: .3s;
+	opacity: 1;
+}
+/**/
+.body-article{
+	margin-top: 20px;
+}
+.blocky{
+	margin: 30px 0;
+}
+.blocky p{
+	margin: 10px 0;
+	color: #2a2a2a;
+}
+h3{
+	color: #666666!important;
+	margin-top: 0; 
+}
+h3:hover{
+	color: #ff6900!important;
+}
+.news-art-abox{
+	display: block;
+	width: 98px;
+	height: 32px;
+	border-radius: 16px;
+	background-color: white;
+	color: #ff6900!important;
+	line-height: 32px;
+	text-align: center;
+	border: 1px solid #ff6900;
+}
+.news-art-abox:hover{
+	background-color: #ff6900;
+	color: #fff!important;
+}
+/**/
+.pageline{
+	width: 90%;
+	height: 90px;
+	border-top: 1px dashed #d4d4d4; 
+	margin: 60px auto 0;
+
+}
+.pagebox{
+	width: 300px;
+	margin: 35px auto 25px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+}
+.pagebox span{
+	display: inline-block;
+	line-height: 30px;
+	color: #2a2a2a;
+	text-align: center;
+	border-right: 1px solid #dddddd; 
+	font-size: 12px;
+}
+.pagebox a:last-child span{
+	border-right: none;
+}
+.pagebox span:hover{
+	background: #e34637;
+	color: #fff;
+}
+.pagebox .span-sum{
+	width: 50px
+}
+.pagebox .span-number{
+	width: 30px;
+}
+.pagebox .span-next{
+	width: 50px;
+}
+
+
+
+
+
+
+@media screen and (min-width: 1024px){
+	.news-tit{
+	width: 84%;
+	height: 20%;
+	margin: 0 auto;
+	}
+	h1{
+		margin: 42px 0 42px 30px;
+	}
+}
+@media screen and (max-width: 768px){
+	.container{
+		width: 300px;
+		text-align: center;
+	}
+	.blocky{
+		margin: 30px 0 10px;
+	}
+	.news-art-abox{
+		display: none;
+	}
+	h3{
+		font-size: 18px;
+	}
+	.pagebox{
+	width: 120px;
+	margin: 35px auto 25px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	}
+	.pagebox .span-number{
+	display: none;
+	}
+	.pagebox .span-sum{
+	display: none;
+	}
+	.pagebox span:first-child{
+	border-right: 1px solid #dddddd;
+	}
+}

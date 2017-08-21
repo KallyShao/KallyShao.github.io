@@ -1,0 +1,12 @@
+ ul li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: none;
+    cursor: auto;
+}
+/**/

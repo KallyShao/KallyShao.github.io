@@ -1,0 +1,170 @@
+.sec1{
+	background-color: #8bc01f;
+	padding: 60px 0; 
+}
+.sec2{
+	background-color: #3393df;
+	padding: 60px 0; 	
+}
+.sec3{
+	padding: 80px 0 0 0;
+}
+.sec4{
+	padding: 0 0;
+	background-color: #f7f7f7;
+}
+/**/
+
+.number{
+	width: 55px;
+	height: 55px;
+	background-color: #fff;
+	border-radius: 3px;
+}
+h1{
+	font-size: 48px;
+	color: #fff;
+	margin: 0;
+	font-family: Arial;
+}
+.number span{
+	color: #8bc01f;
+	line-height: 55px;
+	font-size: 48px;
+	font-family: Arial;
+}
+.sec1 .number span{
+	color: #8bc01f;
+}
+
+.sec2 .number span{
+	color: #3393df;
+}
+h4,p{
+	color: #fff;
+}
+h4{
+	margin-bottom: 40px;
+}
+p{
+	line-height: 30px;
+	margin: 10px 0;
+}
+.sec1 a{
+	display: block;
+	width: 100px;
+	height: 34px;
+	margin-left: 15px;
+	border-radius: 3px;
+	background-color: #fff;
+	color:  #8bc01f;
+	line-height: 34px;
+	font-family: "微软雅黑";
+	padding-left: 21px;
+}
+.sec2 a{
+	display: block;
+	width: 100px;
+	height: 34px;
+	margin-left: 15px;
+	border-radius: 3px;
+	background-color: #fff;
+	color:  #3393df;
+	line-height: 34px;
+	font-family: "微软雅黑";
+	padding-left: 21px;
+}
+.sec2-box>h4{
+	margin:35px 0 15px;
+}
+.sec2-box>p:nth-child(2){
+	color: #8bc01f;
+}
+.sec3 .number{
+	background-color:  #3393df;
+	margin-left: 15px;
+}
+.sec3 span{
+	color: #fff;
+}
+.sec3 h1{
+	color:  #3393df;
+}
+.sec3-box h5{
+	color: #3393df;
+	font-size: 18px;
+	margin: 25px 0;
+
+
+}
+.sec3 .sec3-big-box1{
+	margin-top: 80px;
+	margin-bottom: 80px;
+	height: 606px;
+}
+.sec3 .sec3-big-box2{
+	margin-top: 80px;
+	margin-bottom: 80px;
+	height: 606px;
+}
+.sec4 .sec3-big-box1{
+	margin-top: 80px;
+	margin-bottom: 80px;
+	height: 500px;
+}
+.sec4 .sec3-big-box2{
+	margin-top: 80px;
+	margin-bottom: 80px;
+	height: 500px;
+}
+.sec3-box h5:first-child{
+	color: #5d5d5d;
+}
+.sec3-box p{
+	color: #5d5d5d;
+	text-indent: 2em;
+	padding-bottom: 10px;
+}
+.sec3-box img{
+	margin-left:25%; 
+}
+@media screen and (max-width: 768px){
+	.number{
+		width: 38px;
+		height: 38px;
+		background-color: #fff;
+		border-radius: 3px;
+	}
+	h1{
+		font-size: 38px;
+	}
+	.number span{
+		font-size: 24px;
+		line-height: 38px;
+	}
+		.sec3 .sec3-big-box1{
+		margin-top: 30px;
+		margin-bottom: 30px;
+		height: 550px;
+	}
+	.sec3 .sec3-big-box2{
+		margin-top: 30px;
+		margin-bottom: 30px;
+		height: 550px;
+	}
+	.sec4 .sec3-big-box1{
+		margin-top: 30px;
+		margin-bottom: 30px;
+		height: 400px;
+	}
+	.sec4 .sec3-big-box2{
+		margin-top: 30px;
+		margin-bottom: 30px;
+		height: 400px;
+	}
+}
+@media screen and (max-width: 640px){
+	.sec1,.sec2,.sec3,.sec4{
+		padding-left: 30px;
+	}
+}
