@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			canvas{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width = '800' height = '800'></canvas>
+		<script>
+			var canvas=document.getElementById('canvas')
+			var ogc=canvas.getContext('2d');
+
+			var res = canvas.getBoundingClientRect();
+			console.log(res);
+
+            var num = 0;
+            var time = 0;
+            var pi = Math.PI/180;
+            var timer = null;
+            ogc.fillStyle = 'skyblue';
+            ogc.fillRect(0, 0, 300, 300); //画矩形
+
+            ogc.beginPath(); //画圆
+            ogc.fillStyle = 'yellow';
+            ogc.arc(150, 150, 100, 0, 2*Math.PI);
+            ogc.fill();
+            
+            timer = setInterval(run, 1000/36);
+            function run(){
+
+                ogc.clearRect(0, 0, canvas.width, canvas.height);
+                ogc.fillStyle = 'skyblue';
+                ogc.fillRect(0, 0, 300, 300);
+
+                ogc.beginPath(); //画圆
+                ogc.fillStyle = 'yellow';
+                ogc.arc(150, 150, 100, 0, 2*Math.PI);
+                ogc.fill();
+
+
+                ogc.save();
+                ogc.beginPath(); //画圆
+                ogc.fillStyle = 'skyblue';
+                ogc.translate(150, 150);
+                ogc.rotate(-Math.PI/2);
+                ogc.translate(-150, -150);
+                ogc.moveTo(150, 150);
+//                ogc.arc(150, 150, 101, (-90 + 360 /11) * num * pi,  (-90 + 360 /11) * pi * (num+1));
+                ogc.arc(150, 150, 101, 0,   pi * time);
+                time++;
+                num = Math.floor(time/36);
+                if(time == 360){
+                	time = 0;
+                }
+                ogc.fill();
+                ogc.restore();
+
+                ogc.font = '40px arial'; //数字
+                var w = ogc.measureText(num).width;
+                ogc.textBaseline = 'top';
+                ogc.fillStyle = 'white';
+                ogc.beginPath();
+                ogc.fillText(10 - num, (300 - w)/2, (300 - 40)/2);
+                
+            }
+		</script>
+	</body>
+</html>

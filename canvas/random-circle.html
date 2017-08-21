@@ -1,0 +1,65 @@
+<!DOCTYPE html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>随机圆</title>
+<style>
+body{ background:black;}
+#c1 {
+    background: #fff;
+}
+</style>
+<script>
+window.onload = function(){
+	var oC = document.getElementById('c1');
+	var ogc = oC.getContext('2d');
+    var pi = Math.PI;
+    var opt = [];
+        
+        var i = 0;
+        setInterval(function(){
+            var r = Math.round(Math.random()*95) + 5; // r: 5 - 200
+            var x = Math.round(Math.random()*600);
+            var y = Math.round(Math.random()*600);
+            var c1 = Math.round(Math.random()*255);
+            var c2 = Math.round(Math.random()*255);
+            var c3 = Math.round(Math.random()*255);
+            opt.push({
+                x: x,
+                y: y,
+                r: r,
+                c1: c1,
+                c2: c2,
+                c3: c3,
+                a: 1 
+                });
+            }, 100);
+
+        setInterval(function(){
+        	ogc.clearRect(0, 0, oC.width, oC.height);
+            for(var i=0; i<opt.length; i++){
+            	ogc.fillStyle = 'rgba('+ opt[i].c1 +', '+ opt[i].c2 +', '+ opt[i].c3 +', ' + opt[i].a + ')';
+	            opt[i].a -= 0.01;
+	            if(floatEqu(opt[i].a, -0.01)){
+	                opt.splice(i, 1);
+	            }
+	            ogc.beginPath();
+	            opt[i].r++;
+	            ogc.arc(opt[i].x, opt[i].y, opt[i].r, 0, 2*pi);
+	            ogc.fill();
+            }
+        }, 1000/60);
+
+		function floatEqu(a, b){
+		    return Math.abs(a - b) < 0.000001;
+		}
+}
+	
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<canvas id="c1" width="600" height="600"></canvas>
+</div>
+</body>
+</html>

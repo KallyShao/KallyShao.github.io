@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>canvas考试</title>
+		<style>
+		#canvas, #canvas1{
+			border: 1px solid black;
+		}
+		</style>
+	</head>
+	<body>
+		<h3>五星红旗</h3>
+		<canvas id="canvas" width="600" height="400"></canvas>
+		<script>
+			var oC1=document.getElementById('canvas');
+			var ogc=oC1.getContext("2d");
+			
+			
+			ogc.fillStyle = '#fc0204';
+			ogc.fillRect(0, 0, 600, 400);
+			
+            ogc.save();
+			ogc.translate(100, 100);
+			ogc.rotate(-Math.PI / 2);
+			ogc.translate(-100, -100);
+            drawCircle(100, 100, 50, '#fcfd0b'); //大五角星
+            drawRing(50, 60, 100, 100, '#fc0204');
+            ogc.restore();
+
+            drawCircle(200, 40, 20, '#fcfd0b'); //第一颗小星星
+            drawRing(20, 30, 200, 40, '#fc0204');
+            
+
+            ogc.save();
+			ogc.translate(240, 80);
+			ogc.rotate(-Math.PI / 4);
+			ogc.translate(-240, -80);
+            drawCircle(240, 80, 20, '#fcfd0b'); //第二颗
+            drawRing(20, 30, 240, 80, '#fc0204');
+            ogc.restore();
+
+            ogc.save();
+			ogc.translate(240, 140);
+			ogc.rotate(-Math.PI / 2);
+			ogc.translate(-240, -140);
+            drawCircle(240, 140, 20, '#fcfd0b'); //第三颗
+            drawRing(20, 30, 240, 140, '#fc0204');
+            ogc.restore();
+
+            drawCircle(200, 180, 20, '#fcfd0b'); //第四颗
+            drawRing(20, 30, 200, 180, '#fc0204');
+            
+            function drawCircle(x, y, R, bg){
+                ogc.fillStyle = bg;
+                ogc.beginPath();
+                ogc.arc(x, y, R, 0, 2*Math.PI);
+                ogc.fill();
+                var pi = Math.PI / 180;
+                var sin = Math.sin;
+                var cos = Math.cos;
+                var r = R * sin(36 * pi) / sin(54 * pi);
+                var rr = R * sin(18 * pi) / sin(54 * pi);
+                
+                var x1 = x + rr * cos(36 * pi); 
+                var y1 = y + rr * sin(36 * pi);
+                var start1 = -18 * Math.PI /180;
+                var end1 = 90 * Math.PI /180;
+                drawSector(x1, y1, r, start1, end1, false, '#fc0204');
+                
+                var x2 = x + rr * cos((36 + 72*1) * pi); 
+                var y2 = y + rr * sin((36 + 72*1) * pi);
+                var start2 = 54 * Math.PI /180;
+                var end2 = 162 * Math.PI /180;
+                drawSector(x2, y2, r, start2, end2, false, '#fc0204');
+                
+                var x3 = x + rr * cos((36 + 72*2) * pi); 
+                var y3 = y + rr * sin((36 + 72*2) * pi);
+                var start3 = 126 * Math.PI /180;
+                var end3 = 234 * Math.PI /180;
+                drawSector(x3, y3, r, start3, end3, false, '#fc0204');
+                
+                var x4 = x + rr * cos((36 + 72*3) * pi); 
+                var y4 = y + rr * sin((36 + 72*3) * pi);
+                var start4 = -54 * Math.PI /180;
+                var end4 = -162 * Math.PI /180;
+                drawSector(x4, y4, r, start4, end4, true, '#fc0204');
+                
+                var x5 = x + rr * cos((36 + 72*4) * pi); 
+                var y5 = y + rr * sin((36 + 72*4) * pi);
+                var start5 = -90 * Math.PI /180;
+                var end5 = 18 * Math.PI /180;
+                drawSector(x5, y5, r, start5, end5, false, '#fc0204');
+                
+            }
+
+            function drawSector(x1, y1, r, start, end, dir, bg){   //画扇形
+                ogc.fillStyle = bg;
+                ogc.beginPath();
+                ogc.moveTo(x1, y1);
+                ogc.arc(x1, y1, r, start, end, dir);
+                ogc.closePath();
+                ogc.stroke();
+                ogc.fill();
+            }
+            
+            function drawRing(r1, r2, x, y, fColor){  //去除扇形边框
+            	ogc.fillStyle = fColor;
+            	ogc.beginPath();
+            	ogc.arc(x, y, r1, 0, 2*Math.PI);
+            	ogc.arc(x, y, r2, 0, 2*Math.PI, true);
+				ogc.fill();
+            }
+		</script>
+		
+		<h3>哆啦A梦</h3>
+		<canvas id="canvas1" width="400" height="400"></canvas>
+		<script>
+			var oC2=document.getElementById('canvas1');
+			var ogc1=oC2.getContext("2d");
+			
+			ogc1.translate(90, 40);
+			
+			ogc1.save();
+			
+			ogc1.scale(1, 0.95);
+			ogc1.strokeStyle = '#777';
+			ogc1.fillStyle = '#019fcf';
+			ogc1.lineWidth = 2;
+			ogc1.arc(100, 100, 90, 0, 2*Math.PI);
+			ogc1.fill();
+			ogc1.stroke();
+			
+			ogc1.fillStyle = '#fff';
+			ogc1.beginPath();
+			ogc1.arc(100, 110, 70, 0, 2*Math.PI);
+			ogc1.fill();
+			ogc1.restore();
+			
+			ogc1.fillStyle = '#b43000'; //鼻子
+			ogc1.beginPath();
+			ogc1.arc(100, 75, 10, 0, 2*Math.PI);
+			ogc1.fill();
+			ogc1.stroke();
+			
+			ogc1.save();  //眼眶
+			ogc1.scale(1, 1.15);
+			ogc1.fillStyle = 'white';
+			ogc1.beginPath();
+			ogc1.arc(80, 45, 20, 0, 2*Math.PI);
+			ogc1.fill();
+			ogc1.stroke();
+			ogc1.beginPath();
+			ogc1.arc(120, 45, 20, 0, 2*Math.PI);
+			ogc1.fill();
+			ogc1.stroke();
+			ogc1.restore();
+			
+			ogc1.fillStyle = 'black';
+			ogc1.beginPath(); //眼珠
+			ogc1.arc(90, 55, 5, 0, 2*Math.PI);
+			ogc1.arc(110, 55, 5, 0, 2*Math.PI);
+			ogc1.fill();
+			
+			ogc1.beginPath();
+			ogc1.moveTo(100, 85);
+			ogc1.lineTo(100, 150);
+			ogc1.stroke();
+			
+			ogc1.save();
+			ogc1.scale(1, 0.8)
+			ogc1.beginPath(); //嘴巴
+			ogc1.arc(100, 137, 50, Math.PI/6, 5*Math.PI/6);
+			ogc1.stroke();
+			ogc1.restore();
+			
+			ogc1.save();   //左边胡子
+			ogc1.translate(70, 95);
+			ogc1.rotate(Math.PI/6);
+			ogc1.translate(-70, -95);
+			ogc1.beginPath();
+			ogc1.moveTo(70, 95);
+			ogc1.lineTo(40, 95);
+			ogc1.stroke();
+			ogc1.restore();
+			
+			
+			ogc1.beginPath();
+			ogc1.moveTo(70, 105);
+			ogc1.lineTo(40, 105);
+			ogc1.stroke();
+			
+			ogc1.save();
+			ogc1.translate(70, 115);
+			ogc1.rotate(-Math.PI/6);
+			ogc1.translate(-70, -115);
+			ogc1.beginPath();
+			ogc1.moveTo(70, 115);
+			ogc1.lineTo(40, 115);
+			ogc1.stroke();
+			ogc1.restore();
+			
+			
+			ogc1.save();   //右边胡子
+			ogc1.translate(90, 0); 
+			ogc1.save();
+			ogc1.translate(40, 95); 
+			ogc1.rotate(-Math.PI/6);
+			ogc1.translate(-40, -95); 
+			ogc1.beginPath();
+			ogc1.moveTo(70, 95);
+			ogc1.lineTo(40, 95);
+			ogc1.stroke();
+			ogc1.restore();
+			
+			
+			ogc1.beginPath();
+			ogc1.moveTo(70, 105);
+			ogc1.lineTo(40, 105);
+			ogc1.stroke();
+			
+			ogc1.save();
+			ogc1.translate(40, 115); 
+			ogc1.rotate(Math.PI/6);
+			ogc1.translate(-40, -115); 
+			ogc1.beginPath();
+			ogc1.moveTo(70, 115);
+			ogc1.lineTo(40, 115);
+			ogc1.stroke();
+			ogc1.restore();
+			ogc1.restore();
+			
+			
+			ogc1.fillStyle = '#018fbf'; //身子
+			ogc1.beginPath();
+			ogc1.fillRect(40, 180, 120, 100);
+			ogc1.strokeRect(40, 180, 120, 100);
+			
+			ogc1.save();  //左手
+			ogc1.translate(50, 210);
+			ogc1.rotate(-Math.PI/6);
+			ogc1.translate(-40, -210);
+			ogc1.fillStyle = '#018fbf';
+			ogc1.beginPath();
+			ogc1.fillRect(0, 180, 50, 25);
+			ogc1.restore();
+			
+			ogc1.fillStyle = 'white';
+			ogc1.beginPath();
+			ogc1.arc(15, 210, 15, 0, 2*Math.PI);
+			ogc1.fill();
+			ogc1.stroke();
+			
+			ogc1.save();
+			ogc1.translate(120, 0);
+			ogc1.save();  //右手
+			ogc1.translate(0, 180);
+			ogc1.rotate(Math.PI/6);
+			ogc1.translate(20, -199);
+			ogc1.fillStyle = '#018fbf';
+			ogc1.beginPath();
+			ogc1.fillRect(0, 180, 50, 25);
+			ogc1.restore();
+			
+			ogc1.fillStyle = 'white';
+			ogc1.beginPath();
+			ogc1.arc(65, 210, 15, 0, 2*Math.PI);
+			ogc1.fill();
+			ogc1.stroke();
+			ogc1.restore();
+			
+			ogc1.fillStyle = 'white'; //肚子上的圆
+			ogc1.beginPath();
+			ogc1.arc(100, 220, 45, 0, 2*Math.PI);
+			ogc1.fill();
+			ogc1.stroke();
+			
+			ogc1.fillStyle = 'white'; //肚子上的半圆
+			ogc1.beginPath();
+			ogc1.arc(100, 220, 35, 0, Math.PI);
+			ogc1.closePath();
+			ogc1.stroke();
+			
+			ogc1.strokeStyle = '#9d1e0b';
+			ogc1.lineCap = 'round';
+			ogc1.lineWidth = 15;
+			ogc1.beginPath();
+			ogc1.moveTo(34, 180);
+			ogc1.lineTo(160, 180);
+			ogc1.stroke();
+			
+			ogc1.fillStyle = '#e6cd3c';
+			ogc1.beginPath(); //铃铛
+			ogc1.arc(100, 180, 10, 0, 2*Math.PI);
+			ogc1.fill();
+			
+			ogc1.save();
+			ogc1.fillStyle = 'black';
+			ogc1.beginPath(); //铃铛
+			ogc1.arc(100, 184, 3, 0, 2*Math.PI);
+			ogc1.fill();
+			ogc1.restore();
+			
+			ogc1.lineWidth = 2;
+			ogc1.strokeStyle = 'black';
+			ogc1.beginPath();
+			ogc1.moveTo(100, 185);
+			ogc1.lineTo(100, 190);
+			ogc1.stroke();
+			
+			ogc1.lineWidth = 5;
+			ogc1.strokeStyle = '#a46829';
+			ogc1.beginPath();
+			ogc1.moveTo(93, 177);
+			ogc1.lineTo(107, 177);
+			ogc1.stroke();
+
+			ogc1.fillStyle = 'white';
+			ogc1.strokeStyle = 'black';
+			ogc1.lineWidth = 1;
+			ogc1.beginPath();
+			ogc1.arc(100, 280, 5, 0, -Math.PI, true);
+			ogc1.fill();
+			ogc1.stroke();
+			
+			ogc1.fillStyle = 'white';
+			ogc1.beginPath();
+			ogc1.arc(100, 283, 5, 0, 2*Math.PI);
+			ogc1.fill();
+			
+			ogc1.save(); //左脚
+			ogc1.translate(35, 0);
+			ogc1.strokeStyle = 'black';
+			ogc1.fillStyle = 'white';
+			ogc1.beginPath();
+			ogc1.fillRect(0, 280, 60, 15);
+			ogc1.strokeRect(0, 280, 60, 15);
+			ogc1.restore();
+			
+			ogc1.save(); //右脚
+			ogc1.translate(105, 0);
+			ogc1.strokeStyle = 'black';
+			ogc1.fillStyle = 'white';
+			ogc1.beginPath();
+			ogc1.fillRect(0, 280, 60, 15);
+			ogc1.strokeRect(0, 280, 60, 15);
+			ogc1.restore();
+		</script>
+			
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		
+			#div1{
+				width: 300px;
+				height: 100px;
+				border:1px solid red;
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas1"></canvas>
+		<script>
+			var canvas1=document.getElementById('canvas1');
+			var ogc1=canvas1.getContext('2d');
+			canvas1.width=600;
+			canvas1.height=500;
+			var pi = Math.PI/180;
+			
+			
+			ogc1.translate(20, 20);
+			
+			function init(){
+				for(var i=0; i<60; i++){
+				ogc1.strokeStyle = '#abcdf0';
+				ogc1.lineWidth = 4;
+				ogc1.beginPath();
+				ogc1.moveTo(200, 200);
+				ogc1.arc(200, 200, 200, 6 * i * pi, 6 * pi + 6 * i * pi );
+				ogc1.stroke();
+				}
+				
+				for(var i=0; i<12; i++){
+					ogc1.strokeStyle = '#000';
+					ogc1.lineWidth = 6;
+					ogc1.beginPath();
+					ogc1.moveTo(200, 200);
+					ogc1.arc(200, 200, 195, 30 * i * pi, 30 * pi + 6 * i * pi );
+					ogc1.stroke();
+				}
+				
+				ogc1.fillStyle = 'white';
+				ogc1.beginPath();
+				ogc1.arc(200, 200, 180, 0, 2*Math.PI);
+				ogc1.fill();
+				
+				ogc1.strokeStyle = 'white';
+				ogc1.lineWidth = 8;
+				ogc1.beginPath();
+				ogc1.arc(200, 200, 195, 0, 2*Math.PI);
+				ogc1.stroke();
+				
+				ogc1.strokeStyle = '#abcdf0';
+				ogc1.lineWidth = 6;
+				ogc1.beginPath();
+				ogc1.arc(200, 200, 204, 0, 2*Math.PI);
+				ogc1.stroke();
+			}
+			
+			draw();
+			setInterval(draw, 1000);
+			
+			function draw(){
+
+				ogc1.clearRect(0, 0, canvas1.width, canvas1.height);
+				init();
+				var time = new Date();
+				var oH = time.getHours();
+				var oM = time.getMinutes();
+				var oS = time.getSeconds();
+				var sA = -Math.PI/2 + oS * 6 * pi;
+				var mA = -Math.PI/2 + (oM * 6 + oS/10) * pi
+				var hA = -Math.PI/2 + ((oH-12) * 30 + oM/2) * pi;
+//				ogc1.beginPath();
+				ogc1.strokeStyle = '#c21a1a'; //秒针
+				ogc1.lineWidth = 4;
+				ogc1.beginPath();
+				ogc1.moveTo(200, 200);
+				ogc1.arc(200, 200, 180, sA, sA);
+				ogc1.stroke();
+				
+				ogc1.strokeStyle = '#000'; //分针
+				ogc1.lineWidth = 6;
+				ogc1.beginPath();
+				ogc1.moveTo(200, 200);
+				ogc1.arc(200, 200, 160, mA, mA);
+				ogc1.stroke();
+				
+				ogc1.strokeStyle = '#000'; //时针
+				ogc1.lineWidth = 10;
+				ogc1.beginPath();
+				ogc1.moveTo(200, 200);
+				ogc1.arc(200, 200, 140, hA, hA);
+				ogc1.stroke();
+				
+				ogc1.fillStyle = 'black';
+				ogc1.beginPath();
+				ogc1.arc(200, 200, 10, 0, 2*Math.PI);
+				ogc1.fill();
+			}
+		</script>
+		
+	</body>
+</html>
