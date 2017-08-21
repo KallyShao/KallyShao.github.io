@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+   <script>
+var arr = [
+    [1, 2, 0],
+    [3],
+    [4, 0]
+        ];
+    var i=0;
+    var j=0;
+    setInterval(function(){
+            console.log(show(i, j));
+            j++;
+            if(j==arr[i].length){
+                i++;
+                j=0;
+            }
+            i %= 3;
+            }, 2000);
+
+function show(m, n){
+    return arr[m][n];
+}
+   </script>
+</body>
+</html>

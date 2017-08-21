@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字搬运工</title>
+<style>
+body{
+	background: #333;
+}
+p{
+	margin: 0;
+}
+/*input{
+	padding: 0;
+}*/
+.wrap{
+	width: 800px;
+	height: 300px;
+	margin: 50px auto;
+	border: 10px solid #ccc;
+	background: #fff;
+	position: relative;
+}
+textarea, p{
+	width: 40%;
+	height: 80%;
+	border: 1px dotted #000;
+	position: absolute;
+	top: 30px;
+}
+textarea{
+	left: 10px;
+	text-indent: 0;
+}
+p{
+	right: 10px;
+	background: bisque;
+}
+button{
+	position: absolute;
+	left: 365px;
+	top: 30px;
+}
+#count{
+	width: 100px;
+	position: absolute;
+	left: 380px;
+	top: 60px;
+}
+ul{
+	width: 140px;
+	height: 20px;
+	position: absolute;
+	left: 308px;
+	top: 80px;
+}
+li{
+	list-style: none;
+	float: left;
+	width: 15px;
+	height: 15px;
+	background: orange;
+	margin: 0 4px;
+}
+.limegreen{
+	background: limegreen;
+}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<textarea autofocus id="text-input">央视网消息：6月21日至23日，
+		习近平总书记来到山西，他瞻仰革命纪念馆，参观革命旧址，深入农村、企业考察调研，他强调各级党委要守土有责，守土尽责，
+		扎扎实实做好改革发展稳定各项工作，为党的十九大胜利召开营造良好环境。
+		这两天，记者走访了山西当地的干部群众，大家表示，一定牢记总书记嘱托，和党中央一起撸起袖子加油干，让好日子芝麻开花节节高。
+		</textarea>
+		<button id="btn">把文字右移</button>
+		<div id="count"><span>0</span> / <span>0</span></div>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<p></p>
+	</div>
+<script>
+	var oInp = document.getElementById('text-input');
+	var oBtn = document.getElementById('btn');
+	var aSpan = document.getElementsByTagName('span');
+	var aLi = document.getElementsByTagName('li');
+	var oP = document.getElementsByTagName('p')[0];
+
+	var timer = null;
+	var lenLi = 0;
+	
+	oBtn.onclick = function(){   //还需要去除字符串前后的空格，然后判断当左边文本框的内容为空，重新开始时先清除右边的内容
+		//去除空格的方法： http://www.cnblogs.com/mingforyou/p/3930638.html
+		console.log(oInp.value.length);
+		if(!oInp.value){
+			return;
+		}
+		var arr = [];
+		var num = 0;
+		clearInterval(timer);
+		var str = oInp.value;
+		var len = str.length;
+		aSpan[1].innerHTML = len;
+		
+		timer = setInterval(function(){
+			str = oInp.value;
+			arr = str.split(''); //字符串拆分为数组
+			
+			for(var i=0; i<aLi.length; i++){
+				aLi[i].className = '';
+			}
+			aLi[lenLi].className = 'limegreen';
+			lenLi++;
+			if(lenLi == aLi.length){
+				lenLi = 0;
+			}
+			
+//			console.log(num);
+//			arr.splice(0, 1);
+			var a = arr.splice(0, 1);
+			console.log(a);
+			oP.innerHTML += a;
+//			console.log(arr.length);
+			var newStr = arr.join('');
+//			console.log(newStr);
+			oInp.value = newStr;
+			
+			aSpan[0].innerHTML = num + 1;
+			num++;
+
+			if(num == len){
+				clearInterval(timer);
+				num = 0;
+			}
+		}, 200);
+	}
+	
+</script>
+</body>
+</html>

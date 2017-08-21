@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>带双重选项卡的图片切换(定时器自动切换)</title>
+<style>
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+}
+body {
+    background: #333;
+}
+li {
+    list-style: none;
+}
+#catalog li {
+    width: 110px;
+    line-height: 90px;
+    position: relative;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #bbb;
+    background: #ccc;
+    text-align: center;
+}
+#wrap {
+    width: 680px;
+    margin: 50px auto 0;
+    background: #fff;
+    border: 10px solid #fff;
+    position: relative;
+}
+#catalog {
+    width: 110px;
+}
+#catalog a {
+    width: 110px;
+    line-height: 90px;
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+#catalog #bt {
+    border-top: 1px solid #bbb;
+}
+#bb {
+    border-bottom: 1px solid #fff;
+}
+#con {
+    width: 570px;
+    height: 273px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#list {
+    width: 570px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#list li {
+    line-height: 30px;
+    background: #333;
+    color: #fff;
+    opacity: 0.5;
+    filter: Alpha(opacity=50);
+    position: absolute;
+    bottom: 0;
+    border-right: 1px solid #fff;
+    text-align: center;
+}
+#list a {
+    display: block;
+    height: 30px;
+    color: #fff;
+}
+</style>
+<script>
+window.onload = function(){
+    var data = [
+        [
+        {src: "imgs/1.jpg", title: "玖姿"},
+        {src: "imgs/2.jpg", title: "音儿"},
+        {src: "imgs/3.jpg", title: "舒朗"},
+        {src: "imgs/4.jpg", title: "欧时力"}
+        ],
+        [
+        {src: "imgs/5.jpg", title: "Jurlique"},
+        {src: "imgs/6.jpg", title: "Gucci"},
+        {src: "imgs/7.jpg", title: "欧莱雅"},
+        {src: "imgs/8.jpg", title: "whoo"},
+        {src: "imgs/9.jpg", title: "美宝莲"}
+        ],
+        [
+        {src: "imgs/10.jpg", title: "kisscat"},
+        {src: "imgs/11.jpg", title: "daniel hechter"}
+        ]
+        ]
+    
+    var oUl = document.getElementById("catalog");
+    var aA = oUl.getElementsByTagName("a");
+    var aLi = oUl.getElementsByTagName("li");
+    var oCon = document.getElementById("con");
+
+    function init(i){
+        var len = data[i].length;
+        var lWidth = (570 - (len - 1)) / len;
+        var sub = "";
+        sub += "<a href='#'><img src=" + data[i][0].src + " alt='2'></a><ul id='list'>";
+        console.log(len);
+        for(var j=0; j<len; j++){
+            sub = sub + "<li><a href='#'>" + data[i][j].title + "</a></li>";
+        }
+        sub = sub + "</ul>";
+        oCon.innerHTML = sub;
+        var oList = document.getElementById("list");
+        var aList_lis = oList.getElementsByTagName("li");
+        var aList_as = oList.getElementsByTagName("a");
+        var oImg = oCon.getElementsByTagName("img")[0]; 
+        aList_lis[0].style.background = "#c03";
+        
+        function showCon(m, n){
+            oImg.src = data[m][n].src;
+            for(var k=0; k<len; k++){
+                if(n != k){
+                    aList_lis[k].style.background = "#333";
+                }
+                else{
+                    aList_lis[n].style.background = "#c03";
+                }
+            }
+            aLi[m].style.background = "#fff";
+            aA[m].style.color = "#f39";
+            for(var j=0; j<aLi.length; j++){
+                if(m != j){
+                    aLi[j].style.background = "#ccc";
+                    aA[j].style.color = "#fff";
+                }
+            }
+        }
+        var num = 0;
+        var timer = null;
+        function autoPlayCon(){
+//            clearInterval(timer);
+            timer = setInterval(function(){
+//                console.log(i, num, data[i].length);
+                showCon(i, num);
+                num++;
+                if(num == data[i].length){
+                    i++;
+                    num =0;
+                }
+                i %= aLi.length;
+            }, 2000);
+        }
+        autoPlayCon();
+        for(var j=0; j<len; j++){
+            aList_as[j].style.width = lWidth + "px";
+            aList_lis[j].style.left = (lWidth+1)*j + "px";
+            aList_lis[j].index = j;
+            aList_lis[j].parentIndex = i;
+            aList_lis[j].onmouseover = function(){
+                showCon(this.parentIndex, this.index);
+            }
+    }
+}
+//    init(0);
+    for(var i=0; i<aLi.length; i++){
+        aLi[i].index = i;
+//        aLi[i].onmouseover = function(){
+//            clearInterval(timer);
+//            init(this.index);
+//        }
+    }
+    var i=0;
+    init(i);
+}
+</script>
+
+</head>
+
+<body>
+<div id="wrap">
+    <ul id="catalog">
+        <li id="bt"><a href="#">品牌女装</a></li>
+        <li><a href="#">精选鞋包</a></li>
+        <li id="bb"><a href="#">缤纷美妆</a></li>
+    </ul>
+    <div id="con"></div>
+</div>
+</body>
+</html>

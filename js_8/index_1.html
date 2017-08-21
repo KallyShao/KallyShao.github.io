@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>按钮控制商品图片上下滚动</title>
+<style>
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #333;
+}
+li {
+    /* height: 91px; */
+    width: 300px;
+    list-style: none;
+    position: absolute;
+    right: 0;
+}
+#wrap {
+    width: 300px;
+    height: 500px;
+    margin: 50px auto 0;
+    background: #fff;
+    border: 10px solid #ccc;
+    position: relative;
+}
+#catalog img {
+    width: 190px;
+    height: 91px;
+}
+#catalog, #up, #down {
+    position: absolute; 
+    left: 0;
+}
+#catalog {
+    /* overflow: auto; */
+    height: 460px;
+    /* width: 300px; */
+    top: 20px;
+    right: 0;
+}
+#up {
+    top: 0
+}
+#down {
+    bottom: 0;
+}
+#up , #down {
+    display: block;
+    width: 300px;
+    height: 20px;
+    text-align: center;
+    background: #ff0;
+}
+span {
+    display: inline-block;
+    width: 110px;
+    text-align: center;
+}
+</style>
+<script>
+window.onload = function(){
+    var data = [
+        {src: "imgs/1.jpg", title: "玖姿"},
+        {src: "imgs/2.jpg", title: "音儿"},
+        {src: "imgs/3.jpg", title: "舒朗"},
+        {src: "imgs/4.jpg", title: "欧时力"},
+        {src: "imgs/5.jpg", title: "Jurlique"},
+        {src: "imgs/6.jpg", title: "Gucci"},
+        {src: "imgs/7.jpg", title: "欧莱雅"},
+        {src: "imgs/8.jpg", title: "whoo"},
+        {src: "imgs/9.jpg", title: "美宝莲"},
+        {src: "imgs/10.jpg", title: "kisscat"},
+        {src: "imgs/11.jpg", title: "daniel hechter"}
+        ]
+    var len = data.length;
+    var str = "";
+    for(var i=0; i<len; i++){
+        str += "<li><span>" + data[i].title + "</span><img src=' " + data[i].src + " ' alt='1'></li>";
+    }
+    
+    var oUl = document.getElementById("catalog");
+    oUl.innerHTML = str;
+    var aLi = oUl.getElementsByTagName("li");
+    for(var i=0; i<aLi.length; i++){
+        aLi[i].style.top = 100*i + "px";
+    }
+}
+</script>
+
+</head>
+
+<body>
+<div id="wrap">
+    <a id="up" href="#"><img src="imgs/up.png" alt="up" width="30" height="20"></a>
+        <ul id="catalog">
+        <!-- <li><span>玖姿</span><img src="imgs/1.jpg" alt="1"></li> -->
+        <!-- <li><span>音儿</span><img src="imgs/2.jpg" alt=""></li> -->
+        <!-- <li><span>舒朗</span><img src="imgs/3.jpg" alt=""></li> -->
+    </ul>
+    <a id="down" href="#"><img src="imgs/down.png" alt="down" width="30" height="20"></a>
+    </div>
+</body>
+</html>

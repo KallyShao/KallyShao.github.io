@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>模拟评分栏</title>
+<style>
+body, h3, p {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #333;
+}
+#wrap {
+    margin: 100px auto 0;
+    width: 600px;
+    height: 50px;
+    height: 50px;
+    background: #fff;
+    position: relative;
+}
+#ass {
+    display: none; 
+    line-height: 50px;
+    left: 280px;
+    font-size: 18px;
+    color: #ff9c00;
+    font-weight: bold;
+}
+h3, #l_img, #ass, #tip, #tip p, #t_img {
+    position: absolute;
+    top: 0;
+}SCRIPT
+#pointer {
+    position: absolute;
+    bottom: -4px;
+    right: 20px;
+}
+#tip p {
+    width: 180px;
+    line-height: 40px;
+}
+#l_img {
+    height: 30px;
+    margin-top: 8px;
+    left: 90px;
+}
+h3, #tip p {
+    left: 0;
+}
+#tip, #t_img {
+    right: 0;
+}
+h3, #tip, #tip img {
+    line-height: 50px;
+}
+#tip {
+    border: 1px solid #ed9e22;
+    border-radius: 5px;
+    width: 320px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 5px;
+}
+#l_img img {
+    width: 30px;
+    height: 30px;
+}
+#tip img {
+    width: 20px;
+    height: 20px;
+}
+#tip p {
+    font-size: 14px;
+}
+</style>
+<script>
+window.onload = function (){
+    var ass = ["很差", "较差", "还行", "推荐", "力荐"];
+    var oLimg = document.getElementById("l_img");
+    var oAss = document.getElementById("ass");
+    var oTip = document.getElementById("tip");
+    var aImg = oLimg.getElementsByTagName("img");
+    var isClick = false;
+
+    for(var i=0; i<aImg.length; i++){
+        aImg[i].index = i;
+        aImg[i].onmouseover =function(){
+            show(this);
+        }
+        aImg[i].onclick = function(){
+            isClick = true;
+            show(this);
+        }
+        aImg[i].onmouseout = function(){
+            if(isClick) {
+                return;
+            }
+            hide();
+        }
+    }
+
+    function hide(){
+        oTip.style.display = "block";
+        oAss.style.display = "none";
+        for(var i=0; i<aImg.length; i++){
+            aImg[i].src = "imgs/star-empty.png";
+        }
+    }
+
+    function show(obj){
+        oTip.style.display = "none";
+        oAss.style.display = "block";
+        if(obj.index < 2){
+            for(var i=0; i<=obj.index; i++){
+                aImg[i].src = "imgs/fav.png";
+            }
+        }
+        else{
+            for(var i=0; i<=obj.index; i++){
+                aImg[i].src = "imgs/star-full.png";
+            }
+        }
+
+        oAss.innerHTML = ass[obj.index];
+    }
+}
+</script>
+</head>
+
+<body>
+<div id="wrap">
+    <h3>总体评价:</h3>
+    <div id="l_img">
+        <a href=""><img src="imgs/star-empty.png" alt="1"></a>
+        <a href=""><img src="imgs/star-empty.png" alt="1"></a>
+        <a href=""><img src="imgs/star-empty.png" alt="1"></a>
+        <a href=""><img src="imgs/star-empty.png" alt="1"></a>
+        <a href=""><img src="imgs/star-empty.png" alt="1"></a>
+    </div>
+    <span id="ass"></span>
+    <div id="tip">
+        <p>小提示：点小星星就能打分</p>
+        <div id="t_img">
+            <img src="imgs/star-full.png" alt="2">
+            <img src="imgs/star-full.png" alt="2">
+            <img src="imgs/star-full.png" alt="2">
+            <img src="imgs/star-full.png" alt="2">
+            <img src="imgs/star-full.png" alt="2">
+            <img src="imgs/fav.png" alt="3">
+            <img src="imgs/pointer.png" alt="3" id="pointer">
+        </div>
+    </div>
+</div>
+</body>
+</html>

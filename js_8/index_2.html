@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>淘宝商品广告效果</title>
+<style>
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #333;
+}
+li {
+    /* height: 91px; */
+    width: 300px;
+    list-style: none;
+}
+#wrap {
+    width: 700px;
+    height: 273px;
+    margin: 50px auto 0;
+    background: #fff;
+    border: 10px solid #ccc;
+    position: relative;
+}
+#left, #right {
+    width: 50px;
+    position: absolute;
+    top: 0;
+}
+#left {
+    left: 0;
+}
+#right {
+    right: 0;
+}
+img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -285px;
+}
+</style>
+<script>
+window.onload = function(){
+    var data = [
+        [
+            {src: "imgs/1.jpg", title: "玖姿"},
+            {src: "imgs/2.jpg", title: "音儿"},
+            {src: "imgs/3.jpg", title: "舒朗"},
+            {src: "imgs/4.jpg", title: "欧时力"},
+            {src: "imgs/5.jpg", title: "Jurlique"}
+        ],
+        [
+            {src: "imgs/6.jpg", title: "Gucci"},
+            {src: "imgs/7.jpg", title: "欧莱雅"},
+            {src: "imgs/8.jpg", title: "whoo"},
+            {src: "imgs/9.jpg", title: "美宝莲"},
+            {src: "imgs/10.jpg", title: "kisscat"}
+        ]
+    ]
+    var lenL = data[0].length;
+    var lenR = data[1].length;
+    var strL = "";
+    var strR = "";
+    for(var i=0; i<lenL; i++){
+        strL += 
+    }
+    
+    var oUl = document.getElementById("catalog");
+    oUl.innerHTML = str;
+    var aLi = oUl.getElementsByTagName("li");
+    for(var i=0; i<aLi.length; i++){
+    }
+}
+</script>
+
+</head>
+
+<body>
+<div id="wrap">
+    <ul id="left">
+        <li><a href="#">玖姿</a></li>
+    </ul>
+    <img src="imgs/1.jpg" alt="1">
+    <ul id="right">
+        <li><a href="#">kisscat</a></li>
+    </ul>
+    </div>
+</body>
+</html>
