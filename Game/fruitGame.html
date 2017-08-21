@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>接水果游戏 -- By Kally</title>
+		<script src="lufylegend.js-lufylegend-1.10.1/lufylegend-1.10.1.min.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div id="lufy"></div>
+		<script>
+
+        LInit(1000/60, "lufy", 800, 600, main);
+
+        var img_list = [{path: 'images/back.jpg', name: 'back', type: 'img'},
+                        {path: 'images/player.png', name: 'player', type: 'img'},
+                        {path: 'images/up.png', name: 'up', type: 'img'},
+                        {path: 'images/over.png', name: 'over', type: 'img'},
+                        {path: 'images/item0.png', name: 'item0', type: 'img'},
+                        {path: 'images/item1.png', name: 'item1', type: 'img'},
+                        {path: 'images/item2.png', name: 'item2', type: 'img'},
+                        {path: 'images/item3.png', name: 'item3', type: 'img'},
+                        {path: 'images/item4.png', name: 'item4', type: 'img'},
+                        {path: 'images/item5.png', name: 'item5', type: 'img'},
+                        {path: 'images/item6.png', name: 'item6', type: 'img'},
+                        {path: 'images/item7.png', name: 'item7', type: 'img'}]
+
+
+        var backLayer;
+
+        function main(){
+            backLayer = new LSprite();
+            addChild(backLayer);
+
+            var proLayer = new LoadingSample2();
+            backLayer.addChild(proLayer);
+
+            LLoadManage.load(img_list, function(progress){
+                proLayer.setProgress(progress)
+            }, initGame);
+        }
+
+        var imglist = [];
+        function initGame(res){
+            backLayer.removeAllChild();
+            imglist = res;
+
+            // Setting Game background color
+            var shape = new LShape();
+            backLayer.addChild(shape);
+            shape.graphics.drawRect(0, '#000', [0, 0, LGlobal.width, LGlobal.height], true, '#000');
+
+
+            var over = new LBitmap(new LBitmapData(imglist['over']));
+            var up = new LBitmap(new LBitmapData(imglist['up']));
+            var button = new LButton(over, up);
+            button.x = (LGlobal.width - button.getWidth())/2;
+            button.y = (LGlobal.height - button.getHeight())/2;
+            backLayer.addChild(button);
+            button.addEventListener(LMouseEvent.MOUSE_DOWN, gameStart);
+        }
+
+        function gameStart(){
+            backLayer.removeAllChild();
+
+            if(game_state == 2)
+            {
+                score = level == 0 ? 0 : score_list[level - 1];
+            }else if(game_state == 3){
+            	score = 0;
+                level = 0;
+                drop_speed = 1;
+            }
+
+            blood = 5;
+
+            var back = new LBitmap(new LBitmapData(imglist['back']));
+            backLayer.addChild(back);
+
+            addPlayer();
+
+            fruitsLayer = new LSprite();
+            backLayer.addChild(fruitsLayer);
+            addFruits();
+
+            addText();
+        }
+
+        var playerLayer, player, fruitsLayer;
+        var interval = 0; //动画执行的时间间隔
+        var step = 2; //人物每次移动的距离
+        function addPlayer(){
+            playerLayer = new LSprite();
+            backLayer.addChild(playerLayer);
+            var list = LGlobal.divideCoordinate(256, 256, 4, 4);
+            var data = new LBitmapData(imglist['player'], 0, 0, 64, 64);
+            player = new LAnimation(playerLayer, data, list);
+            player.x = (LGlobal.width - playerLayer.getWidth()) /2;
+            player.y = LGlobal.height - playerLayer.getHeight();
+
+            playerLayer.addEventListener(LEvent.ENTER_FRAME, onframe);
+            LGlobal.stage.addEventListener(LMouseEvent.MOUSE_MOVE, onMove);
+            LGlobal.stage.addEventListener(LKeyboardEvent.KEY_DOWN, playerMove);
+        }
+
+        function onframe(){
+            interval++;
+            if(interval==60){
+                interval = 0;
+                player.onframe();
+                if(fruitsLayer.childList.length < 5){
+                    addFruits();
+                }
+            }
+            
+            for(var i=0; i<fruitsLayer.childList.length; i++){
+                fruitsLayer.childList[i].drop();;
+                fruitsLayer.childList[i].isHit();;
+            }
+            changeText();
+        }
+
+        function addFruits(){
+            var x = Math.floor(Math.random()*800);
+            var index = Math.floor(Math.random()*8);
+            var fruit_img = new LBitmapData(imglist['item' + index]);
+            var fruit = new Fruits(x, 0, fruit_img, index);
+            fruitsLayer.addChild(fruit);
+        }
+
+
+        function playerMove(e){
+            if(e.keyCode == 39 && player.x <= LGlobal.width - player.getWidth()){ //right
+                player.x += step;
+                player.setAction(2);
+            }
+            else if(e.keyCode == 40 && player.y <= LGlobal.height - player.getHeight()){ //down
+                player.y += step;
+                player.setAction(0);
+            }
+            else if(e.keyCode == 37 && player.x >= 0){ //left
+                player.x -= step;
+                player.setAction(1);
+            }
+            else if(e.keyCode == 38 && player.y >= 0){ //up
+                player.y -= step;
+                player.setAction(3);
+            }
+        }
+
+        function onMove(event){
+            player.x = event.offsetX;
+            player.y = event.offsetY;
+        }
+
+        //Fruits Class
+        function Fruits(x, y, bitmapdata, index){ //水果类
+            base(this, LSprite, []);
+            this.bitmap = new LBitmap(bitmapdata);
+            this.addChild(this.bitmap);
+            this.index = index;
+            if(x >= LGlobal.width - this.getWidth()){
+                this.x = LGlobal.width - this.getWidth()
+            }
+            else{
+                this.x = x;
+            }
+            this.y = y;
+        }
+
+        var drop_speed = 1;
+        Fruits.prototype.drop = function(){
+            this.y += drop_speed;
+            if(this.y >= LGlobal.height - this.getHeight()){
+                fruitsLayer.removeChild(this);
+            }
+        }
+
+        var game_state = 0; // 0: not start, 1: win, 2: lose, 3: finish
+        var blood = 5;
+        var score = 0;
+        var score_list = [5, 12, 20, 30];
+        //var score_list = [5]
+        
+        var level = 0;
+        //var dest_score = score_list[level];
+
+        Fruits.prototype.isHit = function (){
+            if(!LGlobal.hitTestArc(player, this)){
+                return;
+            }
+            if(this.index <= 3)
+            {
+                score++;
+            }
+            else
+            {
+                blood--;
+            }
+            addFruits();
+            fruitsLayer.removeChild(this);
+            
+            if(score >= score_list[level]){
+
+                if((level+1) == score_list.length) {
+                    game_state = 3;
+                    gameDone();
+                    return;
+                }
+
+                level++;
+                //dest_score = score_list[level];
+                game_state = 1;
+                enterNext();
+            }
+            
+            
+            if(blood <= 0){
+                game_state = 2;
+                enterNext();
+            }
+        }
+		function gameDone(){
+			backLayer.die();
+            var shape =  new LShape();
+            backLayer.addChild(shape);
+            var x1 = (LGlobal.width - 400)/2; 
+            var y1 = (LGlobal.height - 50)/2; 
+            shape.graphics.drawRect(0, '', [x1, y1, 400, 50], true, '#000');
+            var nText = new LTextField();
+            nText.text = '恭喜通过所有关卡！点击重新开始游戏！';
+            nText.size = 30;
+            nText.color = 'white';
+            nText.x = (LGlobal.width - nText.getWidth())/2;
+            nText.y = (LGlobal.height - nText.getHeight())/2 - 2;
+            backLayer.addChild(nText);
+//          console.log(drop_speed);
+            shape.addEventListener(LMouseEvent.MOUSE_DOWN, gameStart);
+		}
+
+
+        function enterNext(){
+            backLayer.die();
+            var shape =  new LShape();
+            backLayer.addChild(shape);
+            var x1 = (LGlobal.width - 400)/2; 
+            var y1 = (LGlobal.height - 50)/2; 
+            shape.graphics.drawRect(0, '', [x1, y1, 400, 50], true, '#000');
+            var nText = new LTextField();
+            if(game_state == 1){
+//          	if(game_state == 3){
+//          		nText.text = '恭喜通过所有关卡！点击重新开始游戏！';
+//          	}
+                nText.text = '恭喜通关！点击进入下一关!';
+                drop_speed++;
+            } else if(game_state == 2)
+            {
+                nText.text = '失败！点击重新开始本关!';
+            }
+            else if(game_state == 3){
+            	 nText.text = '恭喜通过所有关卡！点击重新开始游戏！';
+            }
+            nText.size = 30;
+            nText.color = 'white';
+            nText.x = (LGlobal.width - nText.getWidth())/2;
+            nText.y = (LGlobal.height - nText.getHeight())/2 - 2;
+            backLayer.addChild(nText);
+//          console.log(drop_speed);
+            shape.addEventListener(LMouseEvent.MOUSE_DOWN, gameStart);
+        }
+
+
+        function changeText(){
+            blood_text.text = '血量：' + blood;
+            score_text.text = '得分：' + score;
+        }
+
+        var blood_text, score_tetx;
+        function addText(){
+            blood_text = new LTextField();
+            blood_text.size = 30;
+            blood_text.x = 20;
+            blood_text.y = 20;
+            blood_text.color = 'red';
+
+            score_text = new LTextField();
+            score_text.size = 30;
+            score_text.x = 20;
+            score_text.y = 50;
+            score_text.color = '#0f0';
+
+            changeText();
+
+            backLayer.addChild(blood_text);
+            backLayer.addChild(score_text);
+        }
+		</script>
+	</body>
+</html>
