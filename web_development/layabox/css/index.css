@@ -44,6 +44,12 @@ div{
 .sec-1-left-img pull-left{
 	width: 64px;
 }
+.sec-1-left-img img{
+	transition: 1s;
+}
+.sec-1-left-img img:hover{
+	-webkit-transform:rotate(360deg);
+}
 .sec1-libox{
 	width: 300px;
 }
@@ -147,10 +153,6 @@ div{
 	font-size: 14px;
 }
 /**/
-.sec4{
-	
-}
-
 .sec4 h2{
 	font-size: 34px;
 	padding: 85px 0 46px;
@@ -168,6 +170,11 @@ div{
 .sec4 p{
 	font-size: 14px;
 	color: #2a2a2a;
+}
+.sec4 .more{
+	font-size: 16px;
+    color: #2a2a2a;
+    text-decoration: none;
 }
 /**/
 .sec5{

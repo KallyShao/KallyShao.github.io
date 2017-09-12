@@ -1,0 +1,26 @@
+[0615/102318:ERROR:proxy_service_factory.cc(105)] Cannot use V8 Proxy resolver in single process mode.
+[0615/102319:ERROR:command_buffer_proxy_impl.cc(156)] Failed to initialize command buffer service.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(394)] CommandBufferProxy::Initialize failed.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(413)] Failed to initialize command buffer.
+[0615/102319:ERROR:command_buffer_proxy_impl.cc(156)] Failed to initialize command buffer service.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(394)] CommandBufferProxy::Initialize failed.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(413)] Failed to initialize command buffer.
+[0615/102319:ERROR:command_buffer_proxy_impl.cc(156)] Failed to initialize command buffer service.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(394)] CommandBufferProxy::Initialize failed.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(413)] Failed to initialize command buffer.
+[0615/102319:ERROR:command_buffer_proxy_impl.cc(156)] Failed to initialize command buffer service.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(394)] CommandBufferProxy::Initialize failed.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(413)] Failed to initialize command buffer.
+[0615/102319:ERROR:command_buffer_proxy_impl.cc(156)] Failed to initialize command buffer service.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(394)] CommandBufferProxy::Initialize failed.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(413)] Failed to initialize command buffer.
+[0615/102319:ERROR:command_buffer_proxy_impl.cc(156)] Failed to initialize command buffer service.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(394)] CommandBufferProxy::Initialize failed.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(413)] Failed to initialize command buffer.
+[0615/102319:ERROR:command_buffer_proxy_impl.cc(156)] Failed to initialize command buffer service.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(394)] CommandBufferProxy::Initialize failed.
+[0615/102319:ERROR:webgraphicscontext3d_command_buffer_impl.cc(413)] Failed to initialize command buffer.
+[0615/102320:ERROR:command_buffer_proxy_impl.cc(156)] Failed to initialize command buffer service.
+[0615/102320:ERROR:webgraphicscontext3d_command_buffer_impl.cc(394)] CommandBufferProxy::Initialize failed.
+[0615/102320:ERROR:webgraphicscontext3d_command_buffer_impl.cc(413)] Failed to initialize command buffer.
+[0615/135808:ERROR:proxy_service_factory.cc(105)] Cannot use V8 Proxy resolver in single process mode.
