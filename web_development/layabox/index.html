@@ -5,10 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>layabox-首页</title>
-
-    <!-- Bootstrap -->
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -27,10 +24,9 @@
   <body>
     <header>
       <nav>
-        <div class="center-block navbar navbar-inverse header-nav">
-            <div class="container">
+        <div class="center-block navbar navbar-inverse  header-nav">
+            <div class="container header-container">
               <div class="navbar-header">
-                　<!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                   <span class="sr-only">Toggle Navigation</span>
                   <span class="icon-bar"></span>
@@ -41,7 +37,7 @@
                 <a href="##" class="logo navbar-brand"><img src="images/logo.png" alt=""></a>
               </div>
               <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
-              <div class="collapse navbar-collapse">
+              <div class="collapse navbar-collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="./index.html">首页</a></li>
                   <li><a href="./family.html">Laya家族</a></li>
@@ -58,7 +54,7 @@
                     Language
                     <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu" role="menu">
+                    <ul class="dropdown-menu" >
                       <li role="presentation"><a href="##">中文</a></li>
                       <li role="presentation"><a href="##">English</a></li>
                       <li role="presentation"><a href="##">Francais</a></li>
@@ -75,7 +71,7 @@
     <!-- 第一部分 -->
     <section>
       <div class="banner">
-        <div class="cntainer">
+        <div class="container">
           <div class="row">
             <div class="banner-img col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <img class="img-responsive wow zoomIn" src="images/banner.png" alt="" style="visibility: visible; animation-name: zoomIn;">
@@ -86,7 +82,7 @@
     </section>
     <!-- 第二部分 -->
     <div class="sec-1">
-      <div class="cntainer">
+      <div class="container sec1-container">
         <div class="row">
           <div class=" sec-1-left col-xs-12 col-sm-12 col-md-8 col-lg-8">
             <h1 class="wow fadeInLeft" >LayaFlash 引擎</h1>
@@ -121,7 +117,6 @@
                   <h4>AS3开发者可直接使用Flash开源框
                       架和工具链进行开发HTML5</h4>
                 </div>
-
               </div>
               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 sec1-libox wow fadeInLeft">
                 <div class="sec-1-left-img pull-left">
@@ -135,7 +130,6 @@
               </div>
             </div>
           </div>
-
           <div class="sec-1-right hidden-xs hidden-sm col-md-4 col-lg-4">
             <img src="./images/flash_bg.png" alt="">
           </div>
@@ -144,8 +138,8 @@
     </div>
   <!-- 第三部分 -->
     <div class="sec-2">
-      <div class="cntainer">
-        <div class="row">
+      <div class="container sec2-container">
+        <div class="row sec2-row">
           <div class="sec-2-right hidden-xs hidden-sm col-md-4 col-lg-4">
             <img src="./images/layabox_bg.png" alt="">
           </div>
@@ -194,7 +188,7 @@
 
   <!-- 第四部分 -->
     <div class="sec3"> 
-      <div class="cntainer">
+      <div class="container sec3-container">
         <div class="row">
           <div class="sec3-title col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <h1>
@@ -205,7 +199,7 @@
                 <div class="sec-3-left-img pull-left">
                   <img src="./images/sec3_tb1.png" alt="">
                 </div>
-                <div class="sec-3-left-font pull-left">
+                <div class="sec-3-left-font">
                   <h3>LayaAir</h3>
                   <h4>核心库仅100K左右的新一代HTML5引擎，支
                       持AS3\TS\JS语言开发，支持2D\3D，非运行
@@ -216,7 +210,7 @@
                 <div class="sec-3-left-img pull-left">
                   <img src="./images/sec3_tb2.png" alt="">
                 </div>
-                <div class="sec-3-left-font pull-left">
+                <div class="sec-3-left-font">
                   <h3>LayaPublish</h3>
                   <h4>Layabox发行业务，通过在H5产业链中的技术
                       桥梁优势，帮助CP获得流量支持。</h4>
@@ -226,7 +220,7 @@
                 <div class="sec-3-left-img pull-left">
                   <img src="./images/sec3_tb3.png" alt="">
                 </div>
-                <div class="sec-3-left-font pull-left">
+                <div class="sec-3-left-font">
                   <h3>LayaFlash</h3>
                   <h4>使用Flash AS3语言开发H5的引擎框架，可直
                       接在FB或FD中开发、调试、编译H5，也可快
@@ -237,7 +231,7 @@
                 <div class="sec-3-left-img pull-left">
                   <img src="./images/sec3_tb4.png" alt="">
                 </div>
-                <div class="sec-3-left-font pull-left">
+                <div class="sec-3-left-font">
                   <h3>LayaStore</h3>
                   <h4>嵌入式HTML5商城，APP只需嵌入20K的SDK
                       即可以获得托管式HTML5商店服务，进入流量
@@ -248,7 +242,7 @@
                 <div class="sec-3-left-img pull-left">
                   <img src="./images/sec3_tb5.png" alt="">
                 </div>
-                <div class="sec-3-left-font pull-left">
+                <div class="sec-3-left-font">
                   <h3>LayaPlayer</h3>
                   <h4>HTML5高速运行器，性能卓越、支持大型
                       HTML5游戏流畅运行，目前已植入QQ、百度
@@ -259,7 +253,7 @@
                 <div class="sec-3-left-img pull-left">
                   <img src="./images/sec3_tb6.png" alt="">
                 </div>
-                <div class="sec-3-left-font pull-left">
+                <div class="sec-3-left-font">
                   <h3>LayaOpen</h3>
                   <h4>Layabox开放平台，整合了Laya提供的各项运
                       营，管理服务的服务，提供给游戏提供商和互
@@ -272,7 +266,7 @@
 
     <!-- 第五部分 -->
     <div class="sec4">
-      <div class="container">
+      <div class="container sec4-container">
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInLeft">
               <h2>
@@ -280,18 +274,17 @@
                 <span class="pull-right"><a href="#" class="more">更多</a></span>
               </h2>
             </div>
-           
           </div>
-          <div class="row">
+          <div class="row sec4-img">
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 ">
               <a href="">
-                <img class="img-responsive" src="./images/sec4-left.png" alt="">
+                <img class="img-responsive video" src="./images/sec4-left.png" alt="">
               </a>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 ">
               <div class="row">
-                <ul>
-                  <a href="">
+                <ul class="clear">
+                  <a href="#">
                     <li class="col-xs-4 col-sm-2 col-md-2 col-lg-2 wow fadeInLeft">
                       <img src="./images/game_tb1.png" alt="">
                       <p>
@@ -375,7 +368,7 @@
     </div>
     <!-- 第六部分 -->
     <div class="sec5">
-      <div class="container">
+      <div class="container sec5-container">
         <h1>
           合作伙伴<small>(排序不分先后)</small>
         </h1>

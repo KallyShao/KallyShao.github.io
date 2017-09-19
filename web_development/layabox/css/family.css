@@ -128,43 +128,52 @@ p{
 .sec3-box img{
 	margin-left:25%; 
 }
-@media screen and (max-width: 768px){
-	.number{
-		width: 38px;
-		height: 38px;
-		background-color: #fff;
-		border-radius: 3px;
+
+@media screen and (max-width: 992px) {
+	.sec3{
+		padding: 0;
 	}
-	h1{
-		font-size: 38px;
+	.sec2-box{
+		width: 100%;
 	}
-	.number span{
-		font-size: 24px;
-		line-height: 38px;
+	.sec3 .number{
+		margin: 0;
 	}
-		.sec3 .sec3-big-box1{
-		margin-top: 30px;
-		margin-bottom: 30px;
-		height: 550px;
-	}
-	.sec3 .sec3-big-box2{
-		margin-top: 30px;
-		margin-bottom: 30px;
-		height: 550px;
-	}
-	.sec4 .sec3-big-box1{
-		margin-top: 30px;
-		margin-bottom: 30px;
-		height: 400px;
-	}
-	.sec4 .sec3-big-box2{
-		margin-top: 30px;
-		margin-bottom: 30px;
-		height: 400px;
+	.sec3 .sec3-big-box1, .sec4 .sec3-big-box2{
+		margin-bottom: 0;
 	}
 }
-@media screen and (max-width: 640px){
-	.sec1,.sec2,.sec3,.sec4{
-		padding-left: 30px;
+@media screen and (max-width: 768px) {
+	.sec1 .container, .sec2 .container, .sec3 .container, .sec4 .container{
+		width: 80%;
+	}
+	.sec1 img{
+		display: none;
+	}
+	.sec1-content{
+		width: 100%;
+	}
+	.merge{
+		width: 100%;
+	}
+	.merge .m-title{
+		width: 80%;
+	}
+	.merge .m-title h1{
+		font-size: 40px;
+	}
+}
+@media screen and (max-width: 425px) {
+	.sec1 h1, .sec2 h1, .sec3 h1, .sec4 h1{
+		font-size: 40px;
+	}
+	.number{
+		width: 40px;
+		height: 40px;
+		text-align: center;
+	}
+	.number span{
+		font-size: 40px;
+		line-height: 40px;
 	}
 }

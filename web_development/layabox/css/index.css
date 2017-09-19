@@ -1,13 +1,4 @@
 @charset "utf-8";
-.clear{
-	clear: both;
-}
-div{
-	overflow: hidden;
-}
-.cntainer{
-	margin: 0 auto;
-}
 .logo {
 	padding:7px 18px 0 25px;
 }
@@ -15,7 +6,7 @@ div{
     text-align: center;
 	background-color: #2b80d9;
 }
-.banner-img{
+.banner-img img{
 	margin: 0 auto;
 }
 /*第二部分*/
@@ -25,7 +16,6 @@ div{
 		padding-left: 50px;
 }
 .sec-1 h1{
-
 	font-size: 48px;
 	color: #0078d7;
 	font-weight: bold;
@@ -68,12 +58,12 @@ div{
 	color: #666666;
 	padding-bottom: 45px;
 	margin: 0;
+	line-height: 1.5;
 }
 /*第三部分*/
 .sec-2{
 	background-color: #fff;
-		padding: 100px 50px 100px 0; 
-
+	padding: 100px 50px 100px 0; 
 }
 .sec-2 h1{
 
@@ -93,6 +83,7 @@ div{
 .sec-2-left{
 	margin-left: 7px;
 	margin-right: -7px;
+	/*width: 100%;*/
 }
 .sec-2-right img{
 	width: 100%;
@@ -101,12 +92,12 @@ div{
 	width: 64px;
 }
 .sec2-libox{
-	width: 600px;
+	width: 100%;
 	margin:  8px 0;
 }
 .sec-2-left-font{
-	width: 500px;
-	padding-left: 5px;
+	width: 70%;
+	padding-left: 50px;
 }
 .sec-2 h3{
 	font-size: 20px;
@@ -141,7 +132,7 @@ div{
 .sec-3-left-font{
 	width: 300px;
 	height: 100px;
-	margin-left: 45px;
+	margin-left: 20%;
 }
 .sec3 h3{
 	color: #fffefe;
@@ -151,6 +142,7 @@ div{
 .sec3 h4{
 	color: #fffefe;
 	font-size: 14px;
+	line-height: 1.5;
 }
 /**/
 .sec4 h2{
@@ -192,109 +184,137 @@ div{
 }
 
 
-
-
-}
-@media screen and (max-width: 1024px){
-	.sec-1{
-		padding-left: 50px!important;
+@media screen and (max-width: 992px) {
+	.sec-1, .sec-2, .sec3{
+		padding: 40px 0;
 	}
-}
-@media screen and (max-width: 767px){
-	h1{
-		font-size: 30px!important;
+	.sec4, .sec5{
+		padding-top: 0;
 	}
-	h2{
-		font-size: 22px!important;
+	.sec3{
+		padding-bottom: 80px;
 	}
-		
-	.sec-1{
-	padding: 35px;
-	}
-	h3{
-		font-size: 16px!important;
+	.sec1-container, .sec2-container, .sec3-container, .sec4-container, .sec5-container{
+		width: 80%;
 	}
 	h4{
-		font-size: 14px!important;
-		width: 280px;
+		line-height: 1.5;
 	}
-	.sec-2{
-	padding: 35px;
-	}
-	.sec-2-left{
-	margin: 0;
-	opacity: 
-    }
-    /**/
-    .sec3-libox{
-	margin-left: 80px;
-}
-    .sec-3-left-font{
-	width: 250px;
-	margin-left: 25px;	
-	}
-	.sec-3-left-font>h4{
-		display: block;
-		width: 250px;
-	}
-	/**/
-	.sec5 h1{
-	font-size: 34px;
-	padding: 35px 0 16px;
-	}
-}
-@media screen and (max-width: 425px){
-	.sec3-libox{
-	margin-left: 20px;
-	}
-	.sec4 h2{
-	font-size: 34px;
-	padding: 35px 0 0px;
-	}
-	.sec4 h5{
-		font-size: 14px;
-	    color: #2a2a2a;
-	    margin: 0;
-	    line-height: 34px;
-	}
-    .sec4 ul{
-    	margin-left: -40px;
-    }
-    /**/
-    .sec5 img{
-	margin: 5px 0;
-	}
-}
-
-@media screen and (max-width: 375px){
-	.sec-2-left-font{
-		width: 250px;
-	}
-	.sec-2-left-font h3{
-		line-height: 30px;
-	}
-
-	.sec-3-left-font>h4{
-		display: block;
-		width: 200px;
-	}
-}
-@media screen and (max-width: 320px){
-	.sec-1{
-	width: 320px;
-	}
-	.sec-1 h4{
-		width: 160px;
-	}
-	.sec-2-left-font{
-		width: 200px;
+	.sec3 img{
+		display: none;
 	}
 	.sec-3-left-font{
-	width: 230px;
-	margin-left: 8px;
+		margin: 0;
 	}
-	.sec-3-left-font>h4{
-		display: block;
-		width: 200px;
+	.sec4 .video{
+		margin: 0 auto;
+	}
+	.sec4-img ul{
+		padding: 0;
+	}
+}
+@media screen and (max-width: 768px) {
+	nav .dropdown{
+		margin-right: 40px;
+	}
+	.logo{
+		display: none;
+	}
+	.header-container{
+		padding-top: 40px;
+	}
+	.sec-1 h1, .sec-2 h1, .sec3 h1{
+		font-size: 36px;
+	}
+	.sec-1 h2{
+		padding-bottom: 40px;
+		font-size: 26px;
+	}
+	.sec-1 h4, .sec3 h4{
+		line-height: 1.5;
+	}
+	.sec-1 img{
+		margin-top: 20px;
+	}
+	.sec-2-left-img{
+		display: none;
+	}
+	.sec-2-left-font{
+		padding-left: 0;
+	}
+	
+	.sec3{
+		padding-top: 40px;
+	}
+	.sec3 h3{
+		font: 28px;
+	}
+	.sec3 img{
+		display: none;
+	}
+	.sec-3-left-font{
+		margin: 0 auto;
+		width: 80%;
+	}
+	.sec3-libox{
+		margin: 20px auto 0;
+		padding-left: 5%;
+	}
+	
+	/*第五部分*/
+	
+	.sec4-img{
+		margin-right: 20px;
+	}
+	.sec4 h2, .sec5 h1{
+		padding: 10px 30px;
+	}
+	.sec3-container, .sec4-container, .sec5-container{
+		width: 80%;
+	}
+}
+@media screen and (max-width: 425px) {
+	 .sec-1 h1, .sec-2 h1, .sec3 h1, .sec4 h1, .sec5 h1{
+		font-size: 30px;
+	}
+	.sec-1 h2, .sec-2 h2, .sec3 h2, .sec4 h2, .sec5 h2{
+		font-size: 20px;
+	}
+	.sec-1 h3, .sec-2 h3, .sec3 h3, .sec4 h3, .sec5 h3{
+		font-size: 18px;
+	}
+	
+	.sec1-container{
+		width: 80%;
+	}
+	.sec-1{
+		padding-top: 40px;
+		padding-left: 0;
+	}
+	.sec-1 h1{
+		margin-top: -10px;
+	}
+	.sec2-row, .sec-2{
+		padding: 0;
+	}
+	.sec2-container{
+		width: 80%;
+	}
+	.sec2-libox{
+		width: 100%;
+		margin: 0;
+	}
+	.sec2-libox img{
+		display: none;
+	}
+	.sec-2-left-font{
+		width: 100%;
+	}
+	.sec3-libox{
+		margin: 40px auto 0;
+	}
+	.sec4 h2{
+		font-size: 20px;
+		padding: 10px 0;
 	}
 }
