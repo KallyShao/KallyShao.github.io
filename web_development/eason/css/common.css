@@ -1,0 +1,92 @@
+.logo{
+	height: 148px;
+	width: 100%;
+	background: url(../imgs/log_bg.jpg) 0 0 repeat-y;
+}
+.logo img{
+	display: block;
+	margin: 0 auto;
+}
+nav{
+	position: relative;
+	height: 44px;
+	background: #363636;
+	color: #fff;
+	font-size: 0.7rem;
+	font-family: "微软雅黑";
+}
+nav ul{
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 8%;
+}
+
+nav li{
+	height: 100%;
+    text-align: center;
+	width: 16.66%;
+	float: left;
+}
+nav a{
+	width: 80%;
+	font-size: 14px;
+	height: 100%;
+	box-sizing: border-box;
+	line-height: 44px;
+	margin: 0 auto;
+}
+nav .active a, nav a:hover{
+	color: #c5842d;
+	border-bottom: 2px solid #fff;
+}
+
+.foot .foot-cat{
+	width: 70%;
+	margin: 0 auto;
+	height: 270px;
+	background: #000;
+	padding: 0 15%;
+}
+.foot .foot-cat ul{
+	float: left;
+	width: 16.66%;
+	padding-top: 70px;
+}
+
+.foot .foot-cat li{
+	line-height: 24px;
+	color: #858585;
+	font-size: 12px;
+	text-align: center;
+}
+.foot .foot-cat h1{
+	line-height: 36px;
+	color: #cdcccc;
+	font-size: 18px;
+}
+
+.foot .foot-contact{
+	height: 46px;
+	background: #1e1e1e;
+}
+.foot .foot-contact ul{
+	width: 1120px;
+	margin: 0 auto;
+}
+.foot .foot-contact li{
+	color: #b1b1ae;
+	font-size: 12px;
+	font-family: "宋体";
+	float: left;
+	line-height: 46px;
+	padding-right: 70px;
+}
+.foot .foot-contact-l{
+	padding-left: 140px;
+}
+
+
+@media screen and (max-width: 1200px){
+
+}

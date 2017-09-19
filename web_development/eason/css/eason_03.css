@@ -1,0 +1,112 @@
+@charset "utf-8";
+/*reset.css*/
+
+.con img, .con-bottom img{
+	width: 100%;
+	height: auto;
+}
+.con {
+	background: #000;
+	width: 100%;
+}
+.con .banner{
+	width: 81%;
+	margin: 0 auto;
+}
+.con .banner h3{
+	font-size: 12px;
+	color: #b9b9b9;
+	line-height: 60px;
+}
+.con .banner h1{
+	width: 100%;
+	color: #fff;
+	font-size: 72px;
+	text-align: center;
+}
+.con .banner span{
+	width: 50px;
+	display: block;
+	border: 1px solid #c5842d;
+	margin: 0 auto;
+	margin-top: 50px;
+	
+}
+.con .banner p{
+	color: #878787;
+	font-size: 18px;
+	width: 100%;
+	line-height: 30px;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+.con .con-pro, .con-bottom{
+	width: 81%;
+	margin: 0 auto;
+	position: relative;
+}
+.con .con-pro .pro-info{
+	width: 40.6%;
+	position: absolute;
+	top: 190px;
+}
+.con .con-pro .pro-info-l{
+	left: 0;
+}
+.con .con-pro .pro-info-r{
+	right: 0;
+}
+.con .pro-info h1{
+	color: #fff;
+	font-size: 48px;
+	padding-bottom: 40px;
+}
+.con .pro-info h2{
+	color: #878787;
+	font-size: 24px;
+}
+.con .pro-info h3{
+	color: #878787;
+	font-size: 14px;
+	margin-top: 140px;
+}
+
+.con-bottom{
+	margin-top: 114px;
+}
+.con-bottom h1{
+	color: #fff;
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+.con-bottom p{
+	color: #c5842d;
+	font-size: 14px;
+}
+.con-bottom div:first-child{
+	position: absolute;
+	top: 112px;
+	left: 100px;
+}
+.con-bottom div:nth-of-type(2){
+	position: absolute;
+	bottom: 90px;
+	left: 100px;
+}
+.con-bottom img:nth-of-type(1){
+	margin-bottom: 16px;
+}
+.con-bottom a{
+	display: block;
+	width: 90px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	margin: 20px auto;
+	color: #fff;
+	background: #9c9c9c;
+}
+
+
