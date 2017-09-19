@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		  <meta name="viewport" content="width=750,initial-scale=0.5,maximum-scale=1,minimum-scale=0.5, user-scalable=yes" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/common.css" />		
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<header>
+				<a href="index.html" class="logo fl">
+					<img src="img/logo.png" alt=""/>
+				</a>
+				<div class="search fl">
+					<input type="text" name="" placeholder="输入商家、分类或商圈" value="" class="input" />
+					<a href="search.html" class="sousuo">
+						<img src="img/search.png" alt=""/>
+					</a>
+				</div>
+				<img src="img/saoma.png" alt="" class="saoma fl" />
+				<img src="img/ring.png" alt="" class="ring fl" />
+			</header>
+			<div class="banner">
+				<div class="img">
+					<ul>
+						<li><a href="javascript:;"><img src="img/ad.jpg"></a></li>
+						<li><a href="javascript:;"><img src="img/ad.jpg"></a></li>
+						<li><a href="javascript:;"><img src="img/ad.jpg"></a></li>
+					</ul>
+				</div>
+				<div class="yuan"><!--圆点列单-->
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<section>
+				<div class="top">
+					<ul>
+						<li>
+							<a href="">
+								<img src="img/icon-1.png" alt="" />
+								<p>抽奖</p>
+								<img src="img/hot.gif" alt="" class="hot-a" />
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="img/icon-2.png" alt="" />
+								<p>兑换</p>
+								<img src="img/hot.gif" alt="" class="hot-a" />
+							</a>
+						</li>
+						<li class="hot">
+							<a href="">
+								<img src="img/icon-3.png" alt="" />
+								<p>促销</p>
+								<img src="img/hot.gif" alt="" class="hot-a" />
+							</a>
+						</li>
+						<li>
+							<a href="sort.html">
+								<img src="img/icon-4.png" alt="" />
+								<p>闪送超市</p>
+								<img src="img/hot.gif" alt="" class="hot-a" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="content">
+					<article>
+						<div class="left fl">
+							<h2>Fresh奶</h2>
+							<div>光明畅优乳杆菌<span class="a">6</span>元/<span class="b">2</span>瓶</div>
+							<p>更多优惠 低至5折</p>
+						</div>
+						<div class="right fl">
+							<img src="img/milk.png" alt="" />
+						</div>
+					</article>
+					<article>
+						<div class="left fl">
+							<h2>Fresh奶</h2>
+							<div>光明畅优乳杆菌<span class="a">6</span>元/<span class="b">1</span>包</div>
+							<p>更多优惠 低至5折</p>
+						</div>
+						<div class="right fl">
+							<img src="img/moyu.png" alt="" />
+						</div>
+					</article>
+					<article>
+						<div class="left fl">
+							<h2>Fresh奶</h2>
+							<div>光明畅优乳杆菌<span class="a">6</span>元/<span class="b">2</span>瓶</div>
+							<p>更多优惠 低至5折</p>
+						</div>
+						<div class="right fl">
+							<img src="img/milk.png" alt="" />
+						</div>
+					</article>
+				</div>
+			</section>
+			<nav>
+				<ul>
+					<li class="checked">
+						<a href="">
+							<img src="img/home.png" alt=""  class="before"/>
+							<img src="img/nav-1.png" alt=""  class="after"/>
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="sort.html">
+							<img src="img/shop.png" alt="" class="before"/>
+							<img src="img/nav-2.png" alt="" class="after"/>
+							<p>闪送超市</p>
+						</a>
+					</li>
+					<li>
+						<a href="my.html">
+							<img src="img/my.png" alt="" class="before"/>
+							<img src="img/nav-3.png" alt="" class="after"/>
+							<p>我的</p>
+						</a>
+					</li>
+					<li>
+						<a href="product.html">
+							<img src="img/buy.png" alt="" />
+							<p>¥0起送</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$(".banner .yuan li").eq(0).addClass("on");
+			var winW=$(document).width();
+			var a=0;
+			var num=$(".banner .img li").length;
+			var bool=true;
+			for(var i=0;i<num;i++){
+				$(".banner .img li").eq(i).css({"left":winW*i+"px"});
+			}
+			$(".banner .yuan li").click(function(){
+				$(this).addClass("on").siblings().removeClass("on")
+				var len=$(this).index();
+				$(".banner .img").stop(false,true).animate({left:-winW*len+"px"},700);
+				return a=len;
+			})
+			$(".banner").mouseover(function(){
+				clearInterval(lun);
+			})
+			$(".banner").mouseout(function(){
+				show();
+			})
+			function show(){
+				lun=setInterval(function(){
+					a=a+1;
+					if(a>=num){
+						a=0;
+					}
+					$(".banner .img").stop(false,true).animate({left:-winW*a+"px"},700);
+					$(".banner .yuan li").eq(a).addClass("on").siblings().removeClass("on");
+				},2000)
+			}
+			show();
+		})
+	</script>
+	</body>
+</html>

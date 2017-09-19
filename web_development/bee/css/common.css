@@ -1,0 +1,50 @@
+@charset "utf-8";
+.wrap{
+	width: 750px;
+	margin: 0 auto;
+}
+.bot-hidden{
+	height: 119px;
+}
+nav{
+	width: 750px;
+	position: fixed;
+	bottom: 0;
+	height: 119px;
+	border-top: 1px solid #c3c3c3;
+	background: #fcfcfc;
+}
+nav ul li{
+	float: left;
+	width: 25%;
+	font-family: '宋体';
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+nav ul li a{
+	color: #949494;
+}
+nav ul li img{
+	margin: 20px auto 15px;
+}
+nav ul li:last-child a{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+nav ul li .before{
+	display: block;
+}
+nav ul li .after{
+	display: none;
+}
+nav ul .checked .before{
+	display: none;
+}
+nav ul .checked .after{
+	display: block;
+}
+nav ul .checked a{
+	color: #fea31e;
+}

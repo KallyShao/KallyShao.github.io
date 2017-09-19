@@ -1,0 +1,139 @@
+header {
+  width: 14.16rem;
+  margin: 1rem auto 0;
+  position: relative;
+}
+header .back {
+  width: 2.52rem;
+  height: 1.16rem;
+  line-height: 1.16rem;
+  border: 2px solid #ff9344;
+  border-radius: 0.4rem;
+  font-size: 0.52rem;
+  text-align: center;
+  display: inline-block;
+}
+header h1 {
+  font-size: 0.52rem;
+  display: inline;
+  margin-left: 3.56rem;
+}
+header img {
+  width: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0.3rem;
+}
+#detail {
+  width: 14.16rem;
+  margin: 0.5rem auto 0;
+}
+#detail img {
+  width: 100%;
+}
+#detail .price {
+  vertical-align: middle;
+}
+#detail .price p {
+  font-size: 1.44rem;
+  color: #ff9344;
+}
+#detail .price input {
+  width: 2.24rem;
+  height: 1.16rem;
+  color: #fff;
+  background: #ff9344;
+  font-size: 0.6rem;
+  border: none;
+  border-radius: 10px;
+  margin-top: 0.36rem;
+}
+#detail .price,
+#detail .comment {
+  width: 13.28rem;
+  margin: 0 auto;
+}
+#detail .comment h1 {
+  font-size: 0.6rem;
+  font-weight: normal;
+  padding-left: 1rem;
+  background: url(../images/star_01.png) no-repeat center left / 0.74rem;
+  margin-top: 0.36rem;
+}
+#detail .comment span:nth-of-type(1) {
+  color: #ff9344;
+}
+#detail .comment span:nth-of-type(2) {
+  font-size: 0.52rem;
+  color: #8e8e8e;
+}
+#appli-shop {
+  width: 13.28rem;
+  margin: 0 auto;
+}
+#appli-shop .star-list img {
+  float: left;
+}
+#appli-shop .pro-img {
+  width: 3.5rem;
+}
+#appli-shop li {
+  margin-bottom: 0.24rem;
+}
+#appli-shop h1 {
+  background: #ff9344;
+  height: 1.32rem;
+  line-height: 1.32rem;
+  margin: 0.44rem auto;
+  padding: 0 0.2rem;
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: normal;
+}
+#appli-shop .pro-text {
+  width: 9.28rem;
+  position: relative;
+}
+#appli-shop h2 {
+  font-weight: normal;
+  font-size: 0.6rem;
+}
+#appli-shop .star-list {
+  display: block;
+  line-height: 0.74rem;
+}
+#appli-shop .star-list img {
+  width: 0.74rem;
+  margin: 0.2rem 0.1rem 0 0;
+}
+#appli-shop .star-list small {
+  font-size: 0.52rem;
+  color: #929292;
+}
+#appli-shop h3 {
+  font-size: 0.48rem;
+  color: #929292;
+  font-weight: normal;
+  line-height: 1.04rem;
+}
+#appli-shop .check-detail {
+  font-size: 0.4rem;
+  color: #ff9344;
+  text-align: left;
+  line-height: 0.76rem;
+}
+#appli-shop .enter {
+  font-size: 0.6rem;
+  color: #fff;
+  width: 2.2rem;
+  height: 1.16rem;
+  line-height: 1.16rem;
+  border-radius: 10px;
+  background: #ff9344;
+  position: absolute;
+  right: 0;
+  top: 1.3rem;
+}
+footer #foot-list li:nth-child(1) a {
+  background: url(../images/nav-1.png) no-repeat top left / 1.42rem 1.46rem;
+}

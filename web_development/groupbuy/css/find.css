@@ -1,0 +1,173 @@
+header {
+  width: 14.16rem;
+  margin: 1rem auto 0;
+  position: relative;
+}
+header #down {
+  width: 0.6rem;
+  height: 0.3rem;
+  position: absolute;
+  right: 0.2rem;
+  top: 0.6rem;
+}
+header select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  right: 0;
+  top: 0.2rem;
+  width: 3.2rem;
+  height: 1.1rem;
+  border: 2px solid #ff9344;
+  font-size: 0.48rem;
+  padding-left: 5px;
+}
+header .back {
+  width: 2.52rem;
+  height: 1.16rem;
+  line-height: 1.16rem;
+  border: 2px solid #ff9344;
+  border-radius: 0.4rem;
+  font-size: 0.52rem;
+  text-align: center;
+  display: inline-block;
+}
+header h1 {
+  font-size: 0.52rem;
+  display: inline;
+  margin-left: 3.56rem;
+}
+#search {
+  width: 10.24rem;
+  height: 6.56rem;
+  margin: 0 auto;
+}
+#search .search {
+  width: 5.4rem;
+  height: 1.12rem;
+  margin: 0.68rem auto 0;
+  position: relative;
+}
+#search .search input {
+  border: 2px solid #ff9344;
+  border-radius: 25px;
+  font-size: 0.48rem;
+  padding-left: 0.6rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#search .search .span {
+  font-size: 0.48rem;
+}
+#search .search .glyphicon-search {
+  color: #ff9344;
+  position: absolute;
+  right: -10px;
+  top: 5px;
+}
+#search h1 {
+  font-size: 0.52rem;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 0.6rem;
+}
+#search ul {
+  margin-top: 0.4rem;
+}
+#search li {
+  width: 25%;
+  font-size: 0.4rem;
+  color: #898989;
+  float: left;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  text-align: center;
+  background: #dcdcdc;
+  border-right: 7px solid #fff;
+  border-bottom: 5px solid #fff;
+  box-sizing: border-box;
+}
+#hot-search {
+  width: 14.16rem;
+  margin: 0 auto;
+}
+#hot-search .title h1 {
+  position: relative;
+  font-size: 0.6rem;
+  font-weight: normal;
+  line-height: 1.32rem;
+  margin-top: 0.54rem;
+  padding-left: 1.2rem;
+}
+#hot-search .title span {
+  font-size: 0.48rem;
+  position: absolute;
+  right: 0.56rem;
+  top: 0;
+}
+#hot-search .title1 {
+  background: url(../images/find_01.png) no-repeat center left / 1.14rem 1.1rem, url(../images/index_13.png) no-repeat center right / 0.5rem 0.5rem;
+}
+#hot-search #img1 {
+  width: 5.6rem;
+}
+#hot-search #img2 {
+  width: 100%;
+}
+#hot-search #img3 {
+  width: 3.84rem;
+  margin-top: 0.2rem;
+}
+#hot-search #img4 {
+  margin-top: 0.2rem;
+  width: 4.24rem;
+}
+#hot-search #fr {
+  width: 8.4rem;
+}
+#hot-search img {
+  width: 100%;
+}
+#hot-search #img-list {
+  margin-top: 0.64rem;
+}
+#sug-search {
+  width: 14.16rem;
+  margin: 0 auto 3rem;
+}
+#sug-search .title h1 {
+  position: relative;
+  font-size: 0.6rem;
+  font-weight: normal;
+  line-height: 1.32rem;
+  margin-top: 0.54rem;
+  padding-left: 1.2rem;
+}
+#sug-search .title span {
+  font-size: 0.48rem;
+  position: absolute;
+  right: 0.56rem;
+  top: 0;
+}
+#sug-search .title2 {
+  background: url(../images/find_02.png) no-repeat center left / 1.14rem 1.1rem, url(../images/index_13.png) no-repeat center right / 0.5rem 0.5rem;
+}
+#sug-search img {
+  width: 4.56rem;
+  margin: 0 auto;
+}
+#sug-search ul {
+  margin-top: 0.8rem;
+}
+#sug-search li {
+  float: left;
+  width: 33.33%;
+}
+footer #foot-list li:nth-child(1) a {
+  background: url(../images/nav-1.png) no-repeat top left / 1.42rem 1.46rem;
+}
+footer #foot-list li:nth-child(3) a {
+  background: url(../images/find.png) no-repeat top left / 1.42rem 1.46rem;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>分类</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/sort.css">
+	<script type="text/javascript">
+		(function(){
+			var html = document.documentElement;
+			var h_width = html.getBoundingClientRect().width;
+			html.style.fontSize = h_width/15 + "px";
+		})()
+	</script>
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<a href="index.html" class="back">Back</a>
+		<h1>分类</h1>
+		<select>
+			<option value="广州市">广州市</option>
+			<option value="深圳市">深圳市</option>
+			<option value="东莞市">东莞市</option>
+		</select>
+		<img src="images/arrow_down.png" id="down">
+	</header>
+	<div>
+		<ul id="sort-list" class="clear">
+			<li><a href="#">
+				<img src="images/sort_01.png">
+				<span>美食</span>
+			</a></li>
+			<li><a href="#">
+				<img src="images/sort_02.png">
+				<span>电影</span>
+			</a></li>
+			<li><a href="#">
+				<img src="images/sort_06.png">
+				<span>运动</span>
+			</a></li>
+			<li><a href="#">
+				<img src="images/sort_03.png">
+				<span>唱歌</span>
+			</a></li>
+		</ul>
+		<ul id="dot" class="clear">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div id="main">
+		<div id="food">
+			<div class="title title1">
+				<h1>美食类<span>更多</span></h1>
+			</div>
+			<ul class="clear">
+				<li><a href="javascript:;"><img src="images/sort_05.png"></a></li>
+				<li><a href="javascript:;"><img src="images/sort_06.png"></a></li>
+				<li><a href="javascript:;"><img src="images/sort_07.png"></a></li>
+				<li><a href="javascript:;"><img src="images/sort_08.png"></a></li>
+			</ul>
+		</div>
+		<div id="sport">
+			<div class="title title2">
+				<h1>运动类<span>更多</span></h1>
+			</div>
+			<ul class="clear">
+				<li><a href="javascript:;"><img src="images/sort_09.png"></a></li>
+				<li><a href="javascript:;"><img src="images/sort_10.png"></a></li>
+				<li><a href="javascript:;"><img src="images/sort_11.png"></a></li>
+				<li><a href="javascript:;"><img src="images/sort_12.png"></a></li>
+			</ul>
+		</div>
+		<div id="movie">
+			<div class="title title3">
+				<h1>电影类<span>更多</span></h1>
+			</div>
+			<ul class="clear">
+				<li><a href="javascript:;"><img src="images/sort_13.png"></a></li>
+				<li><a href="javascript:;"><img src="images/sort_14.png"></a></li>
+				<li><a href="javascript:;"><img src="images/sort_13.png"></a></li>
+				<li><a href="javascript:;"><img src="images/sort_14.png"></a></li>
+			</ul>
+		</div>
+	</div>
+	
+
+	<footer>
+		<ul id="foot-list" class="clear">
+			<li>
+				<a href="index.html"><span>首页</span></a>
+			</li>
+			<li>
+				<a href="sort.html"><span>分类</span></a>
+			</li>
+			<li>
+				<a href="find.html"><span>发现</span></a>
+			</li>
+			<li>
+				<a href="mine.html"><span>我的</span></a>
+			</li>
+			
+		</ul>
+	</footer>
+</div>
+</body>
+</html>

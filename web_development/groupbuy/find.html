@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>分类</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/find.css">
+	<script type="text/javascript">
+		(function(){
+			var html = document.documentElement;
+			var h_width = html.getBoundingClientRect().width;
+			html.style.fontSize = h_width/15 + "px";
+		})()
+	</script>
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<a href="index.html" class="back">Back</a>
+		<h1>发现</h1>
+		<select>
+			<option value="广州市">广州市</option>
+			<option value="深圳市">深圳市</option>
+			<option value="东莞市">东莞市</option>
+		</select>
+		<img src="images/arrow_down.png" id="down">
+	</header>
+	<section id="search">
+		<div  class="search">
+			<input type="text" name="" placeholder="请输入商品名称">
+			<span class="glyphicon glyphicon-search"></span>
+		</div>
+		<h1>大家都在搜</h1>
+		<ul class="clear">
+			<li>寿司</li>
+			<li>羽毛球</li>
+			<li>火锅</li>
+			<li>游泳馆</li>
+			<li>电影</li>
+			<li>周黑鸭</li>
+			<li>KTV</li>
+			<li>肯德基</li>
+		</ul>
+	</section>
+	<section id="hot-search">
+		<div class="title title1">
+			<h1>热门搜索<span>更多</span></h1>
+		</div>
+		<div id="img-list" class="clear">
+			<a href="#" class="fl" id="img1"><img src="images/find_03.png"></a>
+			<div class="fr" id="fr">
+				<a href="#" id="img2"><img src="images/find_06.png"></a>
+				<div class="clear">
+					<a href="#" class="fl" id="img3"><img src="images/find_04.png"></a>
+					<a href="#" class="fr" id="img4"><img src="images/find_05.png"></a>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<section id="sug-search">
+		<div class="title title2">
+			<h1>推荐搜索<span>更多</span></h1>
+		</div>
+		<ul class="clear">
+			<li><a href="#"><img src="images/index_06.png"></a></li>
+			<li><a href="#"><img src="images/sort_09.png"></a></li>
+			<li><a href="#"><img src="images/sort_14.png"></a></li>
+		</ul>
+	</section>
+	
+
+	<footer>
+		<ul id="foot-list" class="clear">
+			<li>
+				<a href="index.html"><span>首页</span></a>
+			</li>
+			<li>
+				<a href="sort.html"><span>分类</span></a>
+			</li>
+			<li>
+				<a href="find.html"><span>发现</span></a>
+			</li>
+			<li>
+				<a href="mine.html"><span>我的</span></a>
+			</li>
+			
+		</ul>
+	</footer>
+</div>
+</body>
+</html>

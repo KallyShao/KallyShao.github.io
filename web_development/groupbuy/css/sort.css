@@ -1,0 +1,126 @@
+header {
+  width: 14.16rem;
+  margin: 1rem auto 0;
+  position: relative;
+}
+header #down {
+  width: 0.6rem;
+  height: 0.3rem;
+  position: absolute;
+  right: 0.2rem;
+  top: 0.6rem;
+}
+header select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  right: 0;
+  top: 0.2rem;
+  width: 3.2rem;
+  height: 1.1rem;
+  border: 2px solid #ff9344;
+  font-size: 0.48rem;
+  padding-left: 5px;
+}
+header .back {
+  width: 2.52rem;
+  height: 1.16rem;
+  line-height: 1.16rem;
+  border: 2px solid #ff9344;
+  border-radius: 0.4rem;
+  font-size: 0.52rem;
+  text-align: center;
+  display: inline-block;
+}
+header h1 {
+  font-size: 0.52rem;
+  display: inline;
+  margin-left: 3.56rem;
+}
+#sort-list {
+  width: 14.16rem;
+  margin: 0.4rem auto 0;
+}
+#sort-list li {
+  float: left;
+  width: 25%;
+}
+#sort-list img {
+  width: 2.96rem;
+}
+#sort-list span {
+  font-size: 0.52rem;
+}
+#dot {
+  width: 2.24rem;
+  margin: 0.4rem auto 0;
+}
+#dot li {
+  width: 0.36rem;
+  height: 0.36rem;
+  border-radius: 0.18rem;
+  float: left;
+  background: #ffc9a1;
+  margin-right: 0.2rem;
+}
+#dot .active {
+  background: #ff9344;
+}
+#main ul {
+  margin-top: 0.84rem;
+}
+#main li {
+  float: left;
+  width: 25%;
+}
+#main #food,
+#main #sport,
+#main #movie {
+  width: 14.16rem;
+  margin: 0 auto;
+}
+#main #food .title h1,
+#main #sport .title h1,
+#main #movie .title h1 {
+  position: relative;
+  font-size: 0.6rem;
+  font-weight: normal;
+  line-height: 1.32rem;
+  margin-top: 0.54rem;
+  padding-left: 1.4rem;
+}
+#main #food .title span,
+#main #sport .title span,
+#main #movie .title span {
+  font-size: 0.48rem;
+  position: absolute;
+  right: 0.56rem;
+  top: 0;
+}
+#main #food .title1,
+#main #sport .title1,
+#main #movie .title1 {
+  background: url(../images/sort_15.png) no-repeat center left / 1.38rem 1.3rem, url(../images/index_13.png) no-repeat center right / 0.5rem 0.5rem;
+}
+#main #food .title2,
+#main #sport .title2,
+#main #movie .title2 {
+  background: url(../images/sort_16.png) no-repeat center left / 1.38rem 1.3rem, url(../images/index_13.png) no-repeat center right / 0.5rem 0.5rem;
+}
+#main #food .title3,
+#main #sport .title3,
+#main #movie .title3 {
+  background: url(../images/sort_17.png) no-repeat center left / 1.38rem 1.3rem, url(../images/index_13.png) no-repeat center right / 0.5rem 0.5rem;
+}
+#main #food img,
+#main #sport img,
+#main #movie img {
+  width: 2.64rem;
+}
+footer #foot-list li:nth-child(1) a {
+  background: url(../images/nav-1.png) no-repeat top left / 1.42rem 1.46rem;
+}
+footer #foot-list li:nth-child(2) a {
+  background: url(../images/sort.png) no-repeat top left / 1.42rem 1.46rem;
+}

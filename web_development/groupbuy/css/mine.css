@@ -1,0 +1,122 @@
+header {
+  width: 14.16rem;
+  margin: 1rem auto 0;
+  position: relative;
+}
+header .back {
+  width: 2.52rem;
+  height: 1.16rem;
+  line-height: 1.16rem;
+  border: 2px solid #ff9344;
+  border-radius: 0.4rem;
+  font-size: 0.52rem;
+  text-align: center;
+  display: inline-block;
+}
+header h1 {
+  font-size: 0.52rem;
+  display: inline;
+  margin-left: 3.56rem;
+}
+header img {
+  width: 1.24rem;
+  position: absolute;
+  right: 0;
+  top: 0.3rem;
+}
+#login,
+#mine-list1,
+#mine-list2 {
+  width: 14.16rem;
+  margin: 0 auto;
+}
+#login {
+  margin-top: 0.4rem;
+}
+#login img {
+  width: 3.4rem;
+}
+#login .login-text {
+  width: 10.2rem;
+  height: 3.4rem;
+  position: relative;
+}
+#login .login-text h1 {
+  font-size: 0.6rem;
+  font-weight: normal;
+  line-height: 1.96rem;
+}
+#login .login-text h2 {
+  font-size: 0.52rem;
+  color: #9d9d9d;
+  font-weight: normal;
+}
+#login .login-text span {
+  position: absolute;
+  right: 0;
+  top: 0.3rem;
+  font-size: 1.76rem;
+}
+#mine-list1 {
+  margin-top: 0.56rem;
+}
+#mine-list1 li {
+  float: left;
+}
+#mine-list1 li:nth-child(2) {
+  margin: 0 1.24rem;
+}
+#mine-list1 img {
+  width: 3.88rem;
+}
+#mine-list2 {
+  margin-top: 0.6rem;
+}
+#mine-list2 li {
+  font-size: 0.52rem;
+  height: 1.56rem;
+  line-height: 1.56rem;
+  background: ;
+  padding-left: 1.88rem;
+  padding-right: 0.56rem;
+  margin-bottom: 0.4rem;
+}
+#mine-list2 li:nth-child(1) {
+  background: url(../images/index_13.png) no-repeat center right / 0.52rem, url(../images/mine_07.png) no-repeat center left / 1.88rem;
+}
+#mine-list2 li:nth-child(2) {
+  background: url(../images/index_13.png) no-repeat center right / 0.52rem, url(../images/mine_08.png) no-repeat center left / 1.88rem;
+}
+#mine-list2 li:nth-child(3) {
+  background: url(../images/index_13.png) no-repeat center right / 0.52rem, url(../images/mine_09.png) no-repeat center left / 1.88rem;
+}
+#mine-list2 li:nth-child(4) {
+  background: url(../images/index_13.png) no-repeat center right / 0.52rem, url(../images/mine_10.png) no-repeat center left / 1.88rem;
+}
+#mine-list2 li:nth-child(5) {
+  background: url(../images/index_13.png) no-repeat center right / 0.52rem, url(../images/mine_11.png) no-repeat center left / 1.88rem;
+}
+#mine-list2 li:nth-child(6) {
+  background: url(../images/index_13.png) no-repeat center right / 0.52rem, url(../images/mine_03.png) no-repeat center left / 1.88rem;
+}
+#mine-list2 a {
+  float: right;
+}
+#exit {
+  width: 10.8rem;
+  margin: 0.56rem auto;
+}
+#exit input {
+  width: 2.9rem;
+  height: 1.5rem;
+  background: #ff9344;
+  color: #fff;
+  font-size: 0.48rem;
+  border-radius: 0.8rem;
+}
+footer #foot-list li:nth-child(1) a {
+  background: url(../images/nav-1.png) no-repeat top left / 1.42rem 1.46rem;
+}
+footer #foot-list li:nth-child(4) a {
+  background: url(../images/my.png) no-repeat top left / 1.42rem 1.46rem;
+}

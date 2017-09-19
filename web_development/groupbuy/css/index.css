@@ -1,0 +1,173 @@
+#header {
+  width: 14.16rem;
+  height: 3rem;
+  margin: 0 auto;
+  position: relative;
+}
+#header #logo {
+  width: 2.46rem;
+  margin-top: 0.4rem;
+}
+#header #search {
+  position: absolute;
+  left: 3.92rem;
+  top: 1rem;
+  width: 5.4rem;
+  height: 1.12rem;
+}
+#header #search input {
+  border: 2px solid #ff9344;
+  border-radius: 25px;
+  font-size: 0.48rem;
+  padding-left: 0.6rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#header #search .span {
+  font-size: 0.48rem;
+}
+#header #search .glyphicon-search {
+  color: #ff9344;
+  position: absolute;
+  right: -10px;
+  top: 5px;
+}
+#header select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  width: 3.2rem;
+  height: 1.1rem;
+  border: 2px solid #ff9344;
+  font-size: 0.48rem;
+  padding-left: 5px;
+}
+#header #down {
+  width: 0.6rem;
+  height: 0.3rem;
+  position: absolute;
+  right: 0.2rem;
+  top: 1.4rem;
+}
+#banner {
+  width: 15rem;
+  height: 5.7rem;
+  position: relative;
+}
+#banner a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#banner img {
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+#banner #dot {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -0.6rem;
+  z-index: 99;
+}
+#banner #dot .active {
+  background: black;
+}
+#banner #dot span {
+  width: 10px;
+  height: 10px;
+  float: left;
+  background: red;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+#main {
+  width: 14.16rem;
+  margin: 0 auto 3rem;
+}
+#main .title h1 {
+  position: relative;
+  font-size: 0.6rem;
+  font-weight: normal;
+  line-height: 1.32rem;
+  margin-top: 0.54rem;
+  padding-left: 1.2rem;
+}
+#main .title span {
+  font-size: 0.48rem;
+  position: absolute;
+  right: 0.56rem;
+  top: 0;
+}
+#main .title1 {
+  background: url(../images/index_07.png) no-repeat center left / 1.14rem 1.1rem, url(../images/index_13.png) no-repeat center right / 0.5rem 0.5rem;
+}
+#main .title2 {
+  background: url(../images/index_08.png) no-repeat center left / 1.14rem 1.1rem, url(../images/index_13.png) no-repeat center right / 0.5rem 0.5rem;
+}
+#main #on-sale #group-list {
+  margin-left: 1.12rem;
+}
+#main #on-sale #group-list li {
+  width: 4.72rem;
+  height: 1.86rem;
+  float: left;
+  margin-bottom: 0.6rem;
+}
+#main #on-sale #group-list li:nth-child(1),
+#main #on-sale #group-list li:nth-child(3) {
+  margin-right: 2.08rem;
+}
+#main #on-sale #group-list img {
+  width: 100%;
+}
+#main #may-like #like-list li {
+  position: relative;
+  margin-top: 0.52rem;
+}
+#main #may-like #like-list h1 {
+  position: relative;
+  font-size: 0.6rem;
+  font-weight: normal;
+  line-height: 1.32rem;
+}
+#main #may-like #like-list h1 span {
+  color: #494949;
+  font-size: 0.44rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#main #may-like #like-list div {
+  width: 9.6rem;
+  position: absolute;
+  left: 4.6rem;
+  top: 0;
+}
+#main #may-like #like-list p {
+  font-size: 0.44rem;
+  color: #494949;
+}
+#main #may-like #like-list h2 {
+  color: #ff9344;
+  font-size: 0.64rem;
+  position: relative;
+  font-weight: normal;
+  margin-top: 0.4rem;
+}
+#main #may-like #like-list h2 span {
+  color: #494949;
+  font-size: 0.44rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#main #may-like #like-list img {
+  width: 4.2rem;
+}
+
