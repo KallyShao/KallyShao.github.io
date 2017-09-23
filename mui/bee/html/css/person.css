@@ -1,0 +1,57 @@
+header {
+  height: 5.4rem;
+  background: url(../images/my-ad.png) no-repeat top left / 15rem;
+}
+#list-1 {
+  height: 3.96rem;
+  border-bottom: 1px solid #c3c3c3;
+  background: #fff;
+}
+#list-1 a {
+  height: 2.8rem;
+  margin-top: 0.36rem;
+}
+#list-1 img {
+  margin: 0 auto 0.4rem;
+  height: 1.4rem;
+}
+#list-1 li {
+  float: left;
+  width: 33.33%;
+}
+#list-1 li:nth-child(2) a {
+  border-left: 1px solid #c3c3c3;
+  border-right: 1px solid #c3c3c3;
+}
+#list-1 span {
+  font-size: 0.6rem;
+}
+#list-2 ul {
+  background: #f2f2f2;
+}
+#list-2 li {
+  margin-top: 0.5rem;
+  height: 1.82rem;
+  background: #fff;
+  border-bottom: 1px solid #c6c6c6;
+  border-top: 1px solid #c6c6c6;
+}
+#list-2 .mui-table-view-cell:after,
+#list-2 .mui-table-view:before,
+#list-2 .mui-table-view:after {
+  display: none;
+}
+#list-2 img {
+  width: 0.92rem;
+  height: auto;
+}
+#list-2 .mui-media-body {
+  font-size: 0.6rem;
+  height: 0.92rem;
+  line-height: 0.92rem;
+  text-align: left;
+}
+#list-2 .m-none {
+  margin-top: 0;
+  border-top: none;
+}

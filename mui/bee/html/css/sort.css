@@ -1,0 +1,77 @@
+#sort-list .mui-fullscreen {
+  top: 2.5rem;
+}
+#sort-list .mui-col-xs-3 {
+  width: 3.56rem;
+}
+#sort-list .mui-col-xs-9 {
+  width: 11.44rem;
+}
+#sort-list a.mui-control-item {
+  width: 100%;
+  font-size: 0.6rem;
+  color: #3c3c3c;
+}
+#sort-list .mui-segmented-control .mui-control-item.mui-active {
+  font-size: 0.6rem;
+  color: #fea31e;
+  background: #fff;
+}
+#sort-list #segmentedControlContents li {
+  width: 11.48rem;
+  height: 4.4rem;
+  padding: 0.2rem 0.3rem;
+}
+#sort-list #segmentedControlContents .pro-img {
+  width: 3.36rem;
+  margin-top: 1rem;
+}
+#sort-list #segmentedControlContents .title {
+  height: 1rem;
+  line-height: 1rem;
+  padding: 0;
+  padding-left: 0.2rem;
+  font-size: 0.6rem;
+  background: #f8f8f8;
+}
+#sort-list .pro-text {
+  position: relative;
+}
+#sort-list .pro-text a {
+  width: 1.34rem;
+  height: 1.34rem;
+  position: absolute;
+  right: 0;
+  bottom: 0.4rem;
+}
+#sort-list .pro-text h1 {
+  font-size: 0.56rem;
+  color: #404040;
+  line-height: 1.28rem;
+}
+#sort-list .pro-text span {
+  font-size: 0.46rem;
+  color: #ff4100;
+  border: 1px solid #ff4100;
+  border-radius: 0.4rem;
+}
+#sort-list .pro-text mark {
+  font-size: 0.44rem;
+  color: #fff;
+  background: #f85252;
+  border-radius: 0.2rem;
+  padding: 0.1rem;
+}
+#sort-list .pro-text h2 {
+  font-size: 0.6rem;
+  color: #929091;
+  line-height: 0.84rem;
+}
+#sort-list .pro-text h3 {
+  font-size: 0.72rem;
+  color: #ff4100;
+  line-height: 0.92rem;
+}
+#sort-list .pro-text img {
+  width: 1.34rem;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <title>产品详情</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/reset.css" rel="stylesheet"/>
+    <link href="css/common.css" rel="stylesheet"/>
+    <link href="css/pro.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<section id="top">
+		<a href="sort.html" class="fl"><</a>
+		<h1 class="fl">合味道XO酱海鲜风味面</h1>
+	</section>
+	<section id="pro">
+		<img src="images/product-ad.jpg">
+		<h1>合味道XO酱海鲜风味面</h1>
+		<h2>￥<strong>5</strong><del>￥6</del></h2>
+		<h3>品牌<small>日清</small></h3>
+		<h3>产品规格<small>87g</small></h3>
+	</section>
+	<img src="images/love-bee.jpg" id="bee">
+	<section id="add">
+		添加商品：
+		<input type="button" name="sub" value="-">
+		<span></span>
+		<input type="button" name="add" value="+">
+		<div class="circle"></div>
+		<div class="rect"></div>
+		<img src="images/song.png">
+	</section>
+	<script src="js/rem.js"></script>
+	<script>
+		var oAdd = document.getElementById("add");
+		var aInp = oAdd.getElementsByTagName("input");
+		var oSpan = oAdd.getElementsByTagName("span")[0];
+		var num = 0;
+		oSpan.innerHTML = num;
+		aInp[0].onclick = function(){
+			if(num==0){
+				return;
+			}
+			num--;
+			oSpan.innerHTML = num;
+		}
+		aInp[1].onclick = function(){
+			num++;
+			oSpan.innerHTML = num;
+		}
+	</script>
+</body>
+</html>

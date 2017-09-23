@@ -1,0 +1,71 @@
+{
+  "index.html": {
+    "resources": [
+      "images/index_line.jpg",
+      "images/footer_line.png",
+      "images/title_bg.png",
+      "images/header.png",
+      "js/nav.js",
+      "images/footer_four.png",
+      "css/public.css",
+      "images/game_one.jpg",
+      "images/footer_three.png",
+      "images/game_three.jpg",
+      "css/index.css",
+      "images/footer_logo.png",
+      "images/footer_one.png",
+      "images/banner.jpg",
+      "images/footer_bg.png",
+      "images/down.jpg",
+      "js/mui.min.js",
+      "images/zan.jpg",
+      "images/game_two.jpg",
+      "css/mui.min.css",
+      "images/download.jpg",
+      "images/footer_two.png"
+    ],
+    "refer": [
+      "cat.html",
+      "more.html"
+    ]
+  },
+  "cat.html": {
+    "resources": [
+      "images/cat_seven.jpg",
+      "images/cat_header.jpg",
+      "images/cat_two.jpg",
+      "images/cat_one.jpg",
+      "images/cat_four.jpg",
+      "images/cat_three.jpg",
+      "images/cat_five.jpg",
+      "css/cat.css",
+      "images/cat_six.jpg",
+      "css/mui.min.css",
+      "css/public.css"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  },
+  "more.html": {
+    "resources": [
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "search.html"
+    ]
+  },
+  "community.html": {
+    "refer": [
+      "cat.html"
+    ]
+  },
+  "search.html": {
+    "resources": [
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "community.html"
+    ]
+  }
+}
