@@ -11,8 +11,22 @@ section li{
 	margin-bottom: 0;
 	border-radius: 0;
 }
+#game-list .game-item{
+	position: relative;
+	overflow: hidden;
+}
+#game-list .game-item p{
+	width: 86%;
+	 margin: 0 auto;
+	 font-size: 12px;
+	 line-height: 20px;
+	 position: absolute;
+	 top: 10px;
+	 left: -86%;
+	 color: #fff;
+}
 
-/**/
+
 
 
 @media (min-width: 768px){
