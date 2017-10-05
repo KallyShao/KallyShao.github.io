@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无缝滚动</title>
+<style type="text/css">
+body{
+    background: #333;
+}
+body, ul, li{
+    margin: 0;
+    padding: 0;
+}
+#wrap{
+    background: #fff;
+    border: 10px solid #ccc;
+    width: 680px;
+    height: 200px;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+}
+ul{
+    width: 1360px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+li{
+    float: left;
+    list-style: none;
+    margin: 0 10px;
+}
+img{
+    width: 150px;
+}
+a{
+    display: none;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 70px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+#wrap a:nth-child(2){
+    right: 0;
+}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+    <a href="#"><</a>
+    <a href="#">></a>
+    <ul id="list">
+        <li><img src="imgs/07.jpg"></li>
+        <li><img src="imgs/08.jpg"></li>
+        <li><img src="imgs/09.jpg"></li>
+        <li><img src="imgs/10.jpg"></li>
+    </ul>
+</div>
+
+<script src="../jquery-1.10.1.min.js"></script>
+<script src="slider.js"></script>
+
+</body>
+</html>
