@@ -71,7 +71,6 @@ $(function(){
 			var num = parseInt(str[len-1]);
 
 			$('.num').each(function(){
-				console.log(str[$(this).index('.num')]);
 				$(this).attr('src', 'images/' + str[$(this).index('.num')] + '.png');			
 			});
 			$('.num2').attr('src', 'images/' + arr[num-1] + '.png');

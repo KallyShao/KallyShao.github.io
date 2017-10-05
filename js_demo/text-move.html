@@ -10,9 +10,7 @@ body{
 p{
 	margin: 0;
 }
-/*input{
-	padding: 0;
-}*/
+
 .wrap{
 	width: 800px;
 	height: 300px;
@@ -97,7 +95,7 @@ li{
 	
 	oBtn.onclick = function(){   //还需要去除字符串前后的空格，然后判断当左边文本框的内容为空，重新开始时先清除右边的内容
 		//去除空格的方法： http://www.cnblogs.com/mingforyou/p/3930638.html
-		console.log(oInp.value.length);
+
 		if(!oInp.value){
 			return;
 		}
@@ -121,14 +119,10 @@ li{
 				lenLi = 0;
 			}
 			
-//			console.log(num);
-//			arr.splice(0, 1);
+
 			var a = arr.splice(0, 1);
-			console.log(a);
 			oP.innerHTML += a;
-//			console.log(arr.length);
 			var newStr = arr.join('');
-//			console.log(newStr);
 			oInp.value = newStr;
 			
 			aSpan[0].innerHTML = num + 1;
