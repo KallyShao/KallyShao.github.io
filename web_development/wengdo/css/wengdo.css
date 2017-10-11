@@ -1,0 +1,657 @@
+/*公共部份 start @rl*/
+body{
+	background:#fbfbfb;
+}
+.navbar-brand{
+	padding:0px;
+}
+.navbar{
+	border:0px;
+	background:#fbfbfb;
+}
+.clear-padding{
+	margin-left: -15px;
+	margin-right:-15px;
+}
+.padding-none{
+	padding:0px;
+}
+.nav-list-login select{
+	background:#fbfbfb;
+	padding:0px 5px;
+}
+.nav-list-login a{
+	padding:0px 10px!important;
+	color:#23b35c!important;
+	font-size:1.4rem;
+
+}
+.navbar-nav{
+	float:none;
+}
+.navbar {
+	margin:0px;
+}
+/*个别详细或列表页的头部小图*/
+.public-ban{
+	background-color: #000;
+}
+.public-ban img{
+	margin:0px auto;
+}
+.footer-link li{
+	float:left;
+	
+	background:url('../images/footer_link_bg.gif') no-repeat right center;
+}
+.footer-link li a{
+	color:#ff8f54;
+	padding:0px 11px;
+	font-size:1.4rem;
+}
+.footer-link{
+	margin-top:11px;
+}
+.footer-setting{
+	padding-top:9px;
+}
+.footer-link-law{
+	margin-top:11px;
+}
+.footer-setting{
+	font-size:1.2rem;
+}
+.public-link{
+	font-size:1.4rem;
+	color:#999;
+	margin-top:12px;
+}
+.public-user-sidebar{
+	width:160px;
+	margin:35px auto;
+	height:44px;
+}
+.public-user-top{
+	border-right:1px solid #ccc;
+}
+.public-user{
+	border:1px solid #ccc;
+}
+.public-user-name{
+	height:44px;
+	line-height:44px;
+	font-size:1.8rem;
+	color:#333333;
+	text-indent:1rem;
+}
+.public-user-nav{
+	border-top:1px solid #cccccc;
+}
+
+@media screen and (min-width:768px){
+	
+	.nav-list-login{
+		padding-top:27px;
+		float:right;
+	}
+	.footer-setting{
+		color:#333333;
+		font-size:1.2rem;
+	}
+	.nav-list-link li{
+		background:url('../images/nav_link_bg.gif') no-repeat right center;
+	}
+	.nav-list-link li a{
+		padding-right:20px;
+	}
+	.nav-list-link .nav-list-link-last,.footer-link .footer-link-last{
+		background:url('');
+	}
+	.footer-link{
+		padding:20px 0px;
+		margin-top:10px;
+		border-top:1px solid #e1e1e1;
+		border-bottom:1px solid #e1e1e1;
+	}
+}
+@media screen and (min-width:1200px){
+	.container{
+		width:1153px;
+	}
+	.navbar{
+		height:124px;
+	}
+}
+@media screen and (max-width:768px){
+	.nav-logo-img{
+		width:205px;
+	}
+	.footer-setting-share{
+		margin-right:30%;
+		margin-top:20px;
+	}
+	.nav-list a{
+		text-align:center;
+	}
+	.nav-list-login{
+		padding-left:25%;
+	}
+	.nav-list-login li{
+		float:left;
+	}
+	
+}
+
+/*公共部份 end */
+/*首页 start @rl*/
+.index-service-text{
+	margin-top:33px;
+	font-size:1.2rem;
+	color:#999999;
+	text-align: center;
+}
+.index-service-img{
+	margin:0px auto;
+	margin-top:15px;
+}
+.index-service-news .container{
+	
+	background:#fff;
+	margin-top: 7px;
+}
+.index-service-news{
+	background: #fbfbfb;
+	overflow: hidden;
+}
+.index-service h3{
+	font-size:1.4rem;
+	color:#333333;
+	font-weight: bold;
+	margin-top:30px;
+}
+.index-service h4{
+	font-size:1.4rem;
+	color:#999;
+}
+
+.index-service p{
+	font-size:1.2rem;
+	color:#666666;
+}
+.index-news-info{
+	border:1px solid #dddddd;
+	border-bottom:0px;
+	height:24px;
+	font-size:1.4rem;
+	line-height: 24px;
+}
+.index-news-more{
+	border-bottom: 1px solid #ddd;
+	height:24px;
+}
+.index-news{
+	margin-top:15px;
+}
+.index-news-content div{
+	font-size:1.2rem;
+	color:#666666;
+	text-indent:2rem;
+	padding:4px 0px;
+
+}
+.index-news-content li div:first-child{
+	background:url('../images/index_news_list_bg.png') no-repeat left center;
+}
+.index-news-content ul{
+	margin-top:16px;
+}
+.index-case{
+	background: #fbfbfb;
+}
+.index-case .container{
+	background: #fff;
+}
+.index-case-title div{
+	height:62px;
+	background:url('../images/index_case_title_bg.png');
+}
+.index-case-title{
+	margin-top:23px;
+}
+.index-case-img{
+	height:250px;
+	margin-top:22px;
+	margin-bottom:38px;
+	overflow:hidden;
+}
+.index-case-img-list div{
+	margin-right:24px;
+}
+.index-case-img-list{
+	width:4000px;
+}
+.index-case-list{
+	position:relative;
+}
+.index-case-but-left{
+	position: absolute;
+	left:-40px;
+	top:93px;
+}
+.index-case-but-right{
+	position: absolute;
+	right:-40px;
+	top:93px;
+}
+.index-article{
+	background: #e9eef2;
+	padding-bottom:65px;
+}
+.index-article-click img{
+	display: block;
+	margin:0px auto;
+}
+.index-article h3{
+	font-size:1.8rem;
+	font-weight: bold;
+	margin-top:21px;
+	margin-bottom:21px;
+	color:#333333;
+}
+.index-article-why p{
+	font-size: 1.2rem;
+	color:#333333;
+	text-indent:2rem;
+	line-height: 24px;
+}
+.index-article-click{
+	margin-top:34px;
+}
+.index-article-serve h4{
+	color:#333333;
+	font-size: 1.4rem;
+	font-weight: bold;
+	margin:0px;
+}
+.index-article-serve p{
+	color:#333;
+	font-size: 1.2rem;
+	text-indent: 2.4rem;
+	margin-bottom:22px;
+}
+.index-article-contact-text{
+	padding-top:4%;
+	color:#ff7930;
+	font-size:2rem;
+	font-weight: bold;
+}
+@media screen and (max-width: 768px){
+	.index-case-but-right{
+		right:0px;
+	}
+	.index-case-but-left{
+		left:0px;
+	}
+}
+
+/*首页 end*/
+/*关于我们 start @rl*/
+.about-tab-img{
+	background:#010101;
+}
+.about-tab-nav div{
+	padding:0px;
+	padding-right:2px;
+}
+.about-tab-nav div div{
+	background: #ccc;
+	font-size:1.4rem;
+	color:#fff;
+	font-weight: bold;
+	text-align: center;
+	padding:12px 0px;
+}
+.about-tab-nav div div:hover{
+	background: #ffa72b;
+}
+.about-tab-nav{
+	margin-bottom:15px;
+}
+.about-tab-content h2{
+	font-size:2.4rem;
+	color:#333333;
+	margin-top:40px;
+	margin-bottom:50px;
+}
+.about-tab-content p{
+	color:#333333;
+	margin-bottom:35px;
+	font-weight: bold;
+}
+.about-tab-content p:nth-child(2){
+	text-indent: 2.4rem;
+}
+.about-tab-content{
+	display:none;
+}
+.about-tab-content p:nth-child(3){
+	text-indent: 2.4rem;
+}
+.about-tab-content h2 small{
+	font-size:2.4rem;
+}
+/*关于我们 end*/
+/*案例 start @rl*/
+
+.case-tab-list{
+	width:19.9%;
+	margin-right:0.1%;
+	text-align: center;
+	padding:11px 0px;
+	background:#cccccc;
+	font-size:1.8rem;
+	color:#fff;
+}
+.case-tab-content-text{
+	font-size:1.2rem;
+	font-weight: bold;
+	color:#333;
+	text-align: center;
+	padding:20px 0px;
+}
+.case-tab-content{
+	border:1px solid #ccc;
+	margin-top:15px;
+}
+.case-tab-content-list:not(:nth-child(3n)){
+	margin-right:30px;
+}
+.case-page li{
+	border:1px solid #fbfbfb!important;
+}
+.case-page a{
+	color:#555555!important;
+	border-radius:0px!important;
+	margin-right:5px;
+
+}
+.case-page a:hover{
+	background:#ffac3b!important;
+}
+.pagination{
+	margin-left:30%;
+}
+.case-tab-list:hover{
+	background:#ffa72b;
+}
+@media screen and (max-width: 768px){
+	.case-tab-list{
+		width:100%;
+	}
+	.case-tab-content-list:not(:nth-child(3n)){
+		margin-right:0px;
+	}
+	.case-tab-content-list:not(:nth-child(2n)){
+		margin-right:28px;
+	}
+	.pagination{
+		margin-left:0%;
+	}
+}
+/*案例 end*/
+/*联系我们 start @rl*/
+.contact-text h3{
+	font-size:2.8rem;
+	color:#000;
+	margin-top:30px;
+	margin-bottom:22px;
+}
+.contact-text p{
+	color:#333;
+	font-size:1.4rem;
+	margin-bottom:35px;
+}
+.contact-us h3{
+	color:#dcdcdc;
+	font-size:4rem;
+}
+.contact-us input[type="text"]{
+	width:297px;
+	height:33px;
+	border:1px solid #8d8d8d;
+	padding-left:10px;
+}
+.contact-us span{
+	display:block;
+	font-size:1.2rem;
+	font-weight:bold;
+	margin:12px 0px;
+}
+.contact-us textarea{
+	width:523px;
+	height:117px;
+	border:1px solid #8d8d8d;
+	padding-left:10px;
+}
+.contact-us input[type="submit"]{
+	width:163px;
+	height:41px;
+	border:1px solid #8d8d8d;
+	background:#ff6c2e;
+	font-size:1.3rem;
+	color:#fff;
+	margin-top:10px;
+}
+.contact_map{
+	margin-top:52px;
+	margin-bottom:66px;
+}
+/*联系我们 end*/
+/*文章列表页 start @rl*/
+.news-contant{
+	padding-bottom:150px;
+}
+.news-list{
+	border:1px solid #e5e5e5;
+	background:#fff;
+	margin-top:15px;
+}
+.news-list-title{
+	border-bottom:1px dotted #e5e5e5;
+	margin-left:0px;
+	margin-right:0px;
+}
+.news-list-title h3{
+	font-size: 2.4rem;
+	color:#333333;
+	margin-top:15px;
+	margin-bottom:7px;
+}
+.news-list-title span{
+	color:#e5e5e5;
+	margin-right:10px;
+	font-size:1.4rem;
+	padding-top:24px;
+}
+.news-list p{
+	font-size:1.2rem;
+	color:#666666;
+	text-indent: 2.4rem;
+	margin:20px 0px;
+}
+.new-list-detail{
+	font-size:1.4rem;
+	color:#333333;
+	margin-bottom:15px;
+}
+/*文章列表页 end*/
+/*用户基本信息 start @sq*/
+.del-margin{
+	margin:0px;
+}
+.del-padding{
+	padding:0px;
+}
+.user-bottom{
+	padding-bottom: 1%;
+
+	border-bottom:  1px solid #cccccc;
+}
+.user-center-logo{
+	height: 650px;
+	border-right:  1px solid #cccccc;
+}
+.user-center-logo ul li img{
+	margin: 10% 0% 10% 15%;
+}
+.username-tab a{
+	font-size: 1.6rem;
+	color: #7a7a7a;
+	text-decoration: none;
+	
+}
+.username-tab a:hover{
+	color: #fff;
+}
+.username-tab li{
+	text-align:center;
+	padding:5% 0 3% 0;
+
+}
+.username-tab li:hover{
+	background: #00ae4f;
+
+}
+.user-center-logo ul{
+	margin-bottom: 0px;
+}
+.user-center-main a{
+	border:0px;
+}
+.user-center-main a li{
+	line-height: 30px;
+	border:0px;
+	width: 15%;
+	height: 30px;
+	float: left;
+	color: #7a7a7a;
+	font-size: 1.6rem;
+	text-align: center;
+	margin-right: 20px;
+}
+.user-center-main a li:hover{
+	background: #00ae4f;
+	color: #fff;
+}
+.user-center-main{
+	margin-top: 20px;
+	height: 30px;
+	border-bottom:  1px solid #cccccc;
+}
+.usertext-center{
+	text-align: center;
+}
+.user-neirou{
+	margin-top: 5%;
+}
+.user-neirou p{
+	font-size: 1.4rem;
+	color: #333333;
+	text-indent: 2rem;
+}
+.user-right-text{
+	text-align: right;
+}
+.user-neirou div ul li{
+		margin-bottom: 20px;
+}
+.user-input{
+	width: 70%;
+	height:30px;
+	margin-top:-9px;
+}
+.liuyan-time{
+	font-size: 1.4rem;
+	color: #5c5c5c;
+}
+.liuyan-name{
+	font-size: 1.2rem;
+	color: #414141;
+}
+.liuyan-neirong{
+	font-size: 1.4rem;
+	color: #414141;
+}
+.liuyan-email{
+	font-size: 1.2rem;
+	color: #bbbbbb;
+}
+.liuyan{
+	border-bottom: 1px dotted #d4d4d4;
+}
+@media screen and (max-width: 768px){
+	.user-center-main a li{
+		font-size: 1.2rem;
+	}
+}
+/*用户基本信息*/
+/*注册页 @sq start*/
+
+.register-name{
+	width: 100%;
+	height: 30px;
+	border-bottom: 2px solid #eaeaea;
+	margin-top: 7%;
+}
+.register-name .register-name2{
+	height: 30px;	
+	width: 20%;
+	font-size: 1.8rem;
+	text-align: center;
+	color: #00ae50;
+	border-bottom: 2px solid #00ae50;
+}
+.register-right{
+	border-right: 1px dotted #d4d4d4;
+}
+.register-name3 li{
+	font-size: 1.4rem;
+	text-align: right;
+}
+.reg-name{
+	text-align: right;
+	padding-top: 10px;
+}
+.register-name3 div{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.fl{
+	float: left;
+}
+.form-group .reg-ydcode{
+	text-decoration: none;
+	color: #999999;
+}
+.reg-cf{
+	font-size: 1.4rem;
+	margin-top: 60px;
+}
+.reg-border{
+	padding:2% 2% 2% 2%;
+	border:2px solid #cccccc;
+	text-align:center;
+	background: #eaeaea;
+}
+@media screen and (max-width: 768px){
+
+	.register-name .register-name2{
+		width: 50%;
+	}
+	@media screen and (max-width: 320px){
+		.register-name .register-name2{
+		width: 100%;
+	}
+	}
+}
+/*注册页 end*/
