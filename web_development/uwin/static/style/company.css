@@ -1,0 +1,13 @@
+#content .big_intro, #content .lit_intro,#content .history {padding: 0;}
+.article { height:0.3rem; padding:10px; overflow:auto; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+.big_intro {width: 0.552rem;}
+.lit_intro { margin-top: 0.01rem;}
+.lit_intro img {width:99%;height: 0.05333rem;}
+.friend_link {margin-top: 0.0507rem;}
+.friend_link h4 {color: #404040; font-size: 0.013rem;}
+.friend_link li {float: left;margin-right: 0.01rem;}
+.friend_link .row {margin-top: 0.01rem;}
+.scroll_down {margin-top: 0.05rem;}
+.scroll_down, .scroll_down_img{text-align: center;}
+.scroll_down_img {cursor: pointer;}
+.scroll_down_img img {width: 0.01rem;}

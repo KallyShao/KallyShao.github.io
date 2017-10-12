@@ -1,0 +1,32 @@
+
+
+.boxbasic div {
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+
+}
+
+
+
+.boxbasic > div {
+	display: inline-block;
+}
+
+div.boxbasic {
+	z-index: 60000;
+	position: absolute;
+	width: 180px;
+	height: 160px;
+	padding: 30px;
+	display: inline-block;
+	left: 35%;
+	top:20%;
+}
+.boxbasic div {font-size: 30px; }
+.basic {position: absolute; width: 32px; height: 32px; z-index: 500;}
+.basic1 {left:-30px;top:-30px;border-left: 1px solid black;border-top: 1px solid black;}
+.basic2 {right:-30px;top:-30px;border-right: 1px solid black;border-top: 1px solid black;}
+.basic3 {left:-30px;bottom:-30px;border-left: 1px solid black;border-bottom: 1px solid black;}
+.basic4 {right:-30px;bottom:-30px;border-right: 1px solid black;border-bottom: 1px solid black;}

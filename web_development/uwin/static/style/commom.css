@@ -1,0 +1,103 @@
+html { font-size: 1200px;}
+#wrapper {width: 100%;overflow: hidden;margin:0 auto;padding: 0;background: #f08220;}
+nav>div {display: none;}
+#menu {background: #f08220;position:relative;padding:0px;}
+#menu .logo {margin:0 auto; width: 100%;text-align: center;margin-top: 0.049rem;}
+#menu .logo img {width: 0.1rem;}
+#menu > .other_content {margin-left: 0.030rem;}
+#menu nav {margin-top: 0.0767rem; margin-left:0.030rem;}
+#menu .logo2 {margin-top: 0.049rem;margin-left: 0.014rem;margin-bottom:0.053rem;width: 0.1rem;}
+
+#menu nav > a {display: block; margin-top: 0.0323rem;font-size: 0.012rem;}
+#menu label {font-size: 0.01rem;font-weight: 900;}
+#menu select {appearance:none;-moz-appearance:none;-webkit-appearance:none;padding-right: 0.01rem;border: 0;background: transparent url(../images/xia.gif) no-repeat right center;background-size: 0.01rem 0.0075rem;}
+#menu #languages {margin-top: 0.0533rem;margin-bottom:0.0475rem; }
+#menu section a{display: block;margin-bottom: 0.01rem;font-size: 0.01rem;}
+#menu footer {margin-top: 0.043rem;font-weight: 900;font-size: 0.007rem;}
+#menu nav>div ol{margin-left: 0.014rem;}
+#menu nav>div {color:#747474;}
+#menu nav>div a {color:#747474;}
+#menu nav>div select {color:#747474;}
+#menu nav>div ol>li a {display: block;}
+#menu nav>div ol>li {margin-bottom: 0.02rem;}
+#menu nav>div ol>li>a{font-size: 0.011rem; margin-bottom: 0.017rem;}
+#menu nav>div ol>li>ul{display: none;}
+#menu nav>div ol>li>ul>li {height: 0.02rem; line-height: 0.02rem; margin-left: 0.023rem;}
+#menu nav>div ol>li>ul a {font-size: 0.01rem; }
+#menu nav>div .other_content {margin-left: 0.009rem;}
+#content {background:white;padding-left: 0.1rem;padding-top:0.045rem;float: left; padding-bottom: 200px;}
+#content h2 {font-size:0.045rem;color:#ababab;}
+#content .three_nav {margin-top: 0.02rem;position: relative;width: 100%; overflow: hidden; height: 0.07rem;}
+#content .three_nav > li{float: left; margin-right : 0.01rem; padding-right: 0.015rem; background: url('../images/three_nav_bg.jpg') no-repeat right center; }
+#content .three_nav > li:last-child {background: none;}
+#content .three_nav > li > a {font-size: 0.01rem;color:#ababab;}
+#content .three_nav > li > ul {position: absolute; left: 0; width: 200%; top : 0.023rem;}
+#content .three_nav > li > ul > li {float: left; margin-right : 0.01rem; padding-right: 0.015rem; background: url('../images/three_nav_bg.jpg') no-repeat right center; }
+#content .three_nav > li > ul > li:last-child {background: none;}
+#content .three_nav > li > ul > li > a {font-size: 0.0085rem;color:#ababab;}
+.page_show {position: absolute;right: 10%; bottom: 5%}
+.page_show span{color: rgba(199,199,199,.5) ; font-weight: 900}
+.page_show .current {font-size: 0.1rem}
+.page_show .other {font-size: 0.03rem}
+.page {position: absolute; top:13%; right: 10%;}
+.page li {float: left; padding-left: 0.006rem;padding-right: 0.006rem;}
+.page li a {color: #aaa; font-size: 0.0085rem;}
+.page .active {display:inline-block; margin-top:-0.1rem;color:red; font-size: 0.018rem; line-height: -0.8rem;}
+.right {position: absolute; top:0.37rem; right: 0;}
+.content_1 {width: 130px;}
+#menu nav div ul {height: 0.05rem}
+/* media query*/
+/*
+@media only screen and(max-width:960px) {
+	640
+
+}
+*/
+@media only screen and (max-width:1024px) {
+	#menu label {font-size: 0.0085rem;}
+		#menu footer {font-size: 0.005rem;}
+}
+
+
+@media only screen and (max-width:999px) {
+	#menu label {font-size: 0.0085rem;}
+}
+
+@media only screen and (max-width:992px) {
+	html { font-size: 950px;}
+
+}
+
+@media only screen and (max-width:980px) {
+	html { font-size: 920px;}
+}
+
+@media only screen and (max-width:960px) {
+	html { font-size: 900px;}
+
+}
+
+@media only screen and (max-width:800px) {
+	html { font-size: 700px;}
+}
+
+@media only screen and (max-width:768px) {
+	html { font-size: 680px;}
+}
+
+@media only screen and (max-width:589px) {
+	html { font-size: 600px;}
+	#menu label {font-size: 0.0080rem;}
+}
+
+@media only screen and (max-width:535px) {
+	html { font-size: 590px;}
+	#menu label {font-size: 0.0075rem;}
+	#menu footer {font-size: 0.005rem;}
+	#menu #languages {margin-top: 0.034rem;margin-bottom:0.032rem; }
+}
+
+@media only screen and (max-width:480px) {
+	html { font-size: 500px;}
+
+}

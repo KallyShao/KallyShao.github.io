@@ -1,0 +1,58 @@
+/* #menu {width: 24.55rem;background: #f08220;float: left;height: 103rem;padding-left: 5.7rem;}
+#menu .logo {margin-top: 6.9rem;}
+#menu nav {margin-top: 17.67rem;}
+#menu nav a {display: block; margin-bottom: 8.83rem;font-size: 1.5rem;}
+#menu label {font-size: 1rem;font-weight: 900;}
+#menu #languages {margin-top: 5.33rem;margin-bottom:4.75rem; }
+#menu section a{display: block;margin-bottom: 1rem;font-size: 1rem;}
+#menu footer {margin-top: 4.3rem;font-weight: 900;}
+#banner {width: 83.3%;float: left;}
+#banner > img{height: 103rem;width: 136rem;} */
+#banner {padding:0px;}
+/*position:fixed; _position:absolute; top:*px; _top:expression(eval(document.documentElement.scrollTop*/
+.lb>li {position: relative;}
+.lb>li .more {position: absolute; top:70%; left: 42%; display: inline-block; background: rgba(0,0,0,.5);  font-size: 0.01rem; padding: 0.01rem; color: white;}
+#banner .click_btn {
+	position: absolute; display: block;
+	background:rgba(0,0,0,0.5);color: white;
+	width: 0.194rem;height: 0.045rem;text-align: center;
+	line-height:0.045rem;top: 25%;
+	font-size: 0.01rem;
+}
+.effect {font-size: 0.04rem;}
+.effect span {color: white;}
+
+
+.slideBox{  overflow:hidden; position:relative;  }
+.slideBox .hd{overflow:hidden; position:absolute; right:5px; bottom:5%; z-index:1; width: 100%;text-align: center;}
+.slideBox .hd  li{  margin-right:4px;  width:0.01rem; text-align:center; cursor:pointer; font-size: 0.015rem;display: inline;}
+.slideBox .hd  li.on{ color:#fff; }
+.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.slideBox .bd li{ zoom:1; vertical-align:middle; }
+.slideBox .bd img {width: 100%}
+.art_text {font-family: dsr;}
+
+@media only screen and (max-width:993px) {
+	/*#banner .position_banner {position: absolute; top:0.19rem; left: 0.4rem; width: 100%}*/
+	.effect {font-size: 0.038rem;}
+	#banner .click_btn {font-size: 0.009rem;}
+}
+@media only screen and (max-width:992px) {
+	/*#banner .position_banner {position: absolute; top:0.19rem; left: 0.4rem; width: 100%}*/
+	.effect {font-size: 0.037rem;}
+	#banner .click_btn {font-size: 0.008rem;}
+}
+
+@media only screen and (max-width:640px) {
+	/*#banner .position_banner {position: absolute; top:0.16rem; left: 0.41rem; width: 100%}*/
+	/*.effect {font-size: 0.025rem;}*/
+	.effect {font-size: 0.036rem;}
+	#banner .click_btn {font-size: 0.0075rem;}
+}
+
+@media only screen and (max-width:480px) {
+	/*#banner .position_banner {position: absolute; top:0.16rem; left: 0.41rem; width: 100%}*/
+	/*.effect {font-size: 0.02rem;}*/
+	.effect {font-size: 0.035rem;}
+	#banner .click_btn {font-size: 0.007rem;}
+}

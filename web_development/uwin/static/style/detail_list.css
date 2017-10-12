@@ -1,0 +1,8 @@
+#content {position: relative;}
+#content div {padding: 0px;}
+.lit_pic {padding: 0!important;}
+.product_list a img {width: 100%;border: 1px solid #ccc;}
+.product_list>div {width:30%;position: relative;overflow: hidden;padding: 0;margin-bottom: 0.01rem;margin-right: 0.01rem;}
+.product_list .rsp { position: absolute;background:rgb(0,0,0);top:0px;left:0px;overflow:hidden;}
+.product_list .text {position: absolute;top:0px;left:-300px;overflow:hidden;}
+.product_list .text h3{font-size:0.01rem; text-align:center;background:rgba(0,0,0,.6); padding:0.005rem;margin-top:40%;color:#FFFFFF; display: inline-block;float: right; border: 1px #f1803a solid;}

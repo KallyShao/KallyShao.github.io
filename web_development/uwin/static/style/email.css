@@ -1,0 +1,8 @@
+.send_email_alert { border:1px solid #d1762f; background: #2e2e2e;position: absolute;top:15%; right: 30%;}
+.send_email_alert .del {position: absolute;width: 0.015rem;top:2%; right: 2%;}
+.send_email_alert .class_logo {width: 0.08rem;margin-top:0.009rem;}
+.send_email_alert>div {margin-bottom: 0.03rem;}
+.send_email_alert .input {height: 0.025rem;}
+.send_email_alert input ,.send_email textarea {font-size: 12px;}  
+.send_email_alert textarea {height: 0.14rem;}
+.send_email_alert .btn-default{background: #f1803a;border:1px solid #f1803a; color:white;}

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<link rel="stylesheet" href="static/style/bootstrap.css">
+	<link rel="stylesheet" href="static/style/reset.css"> 
+	<link rel="stylesheet" href="static/style/commom.css">
+	<link rel="stylesheet" href="static/style/detail.css">
+	<link rel="stylesheet" href="static/style/email.css">
+	<style type="text/css">
+			#vertical {padding: 0;}
+			/* smallImg */
+
+			img{max-width: none!important;}
+			/* bigImg */
+			.bigImg{position:relative; }
+			.bigImg #winSelector{width:130px; height:130px;}
+			#winSelector{position:absolute; cursor:crosshair; filter:alpha(opacity=15); -moz-opacity:0.15; opacity:0.15; background-color:#000; border:1px solid #fff;}
+			/* bigView */
+			#bigView{position:absolute;border: 1px solid #959595; overflow: hidden; z-index:999;}
+			#bigView img{position:absolute;}
+	</style>
+</head>
+
+<body>
+	<div id="wrapper" class="container">
+		<div id="menu" class="col-md-2 col-sm-2 col-xs-2">
+			<div class="logo">
+				<img src="static/images/home_logo.jpg" alt="">
+			</div>
+			<nav>
+				<a href="#">INDOOR</a>
+				<div>
+					<img src="static/images/home_logo2.jpg" class="logo2" alt="">
+					<ol>
+					<li>
+						<a href="#">EVA SHELF LINERS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">FLOOR CARPET</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">ANTI-SLIP MATS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">KITCHEN MATS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">BATHTUB MATS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					</ol>
+				</div>
+				<a href="#">OUTDOOR</a>
+				<div>
+					<img src="static/images/home_logo2.jpg" class="logo2" alt="">
+					<ol>
+					<li>
+						<a href="#">EVA SHELF LINERS2</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">FLOOR CARPET</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">ANTI-SLIP MATS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">KITCHEN MATS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">BATHTUB MATS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					</ol>
+				</div>
+				<a href="#">CHILDRENS</a>
+				<div>
+					<img src="static/images/home_logo2.jpg" class="logo2" alt="">
+					<ol>
+					<li>
+						<a href="#">EVA SHELF LINERS3</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">FLOOR CARPET</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">ANTI-SLIP MATS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">KITCHEN MATS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">BATHTUB MATS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					</ol>
+				</div>
+				<a href="#">HEALTH</a>
+				<div>
+					<img src="static/images/home_logo2.jpg" class="logo2" alt="">
+					<ol>
+					<li>
+						<a href="#">EVA SHELF LINERS4</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">FLOOR CARPET</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">ANTI-SLIP MATS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">KITCHEN MATS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">BATHTUB MATS</a>
+						<ul>
+							<li><a href="detail_list.html">HOT STAMPING</a></li>
+							<li><a href="detail_list.html">TRANSPARENCY</a></li>
+							<li><a href="detail_list.html">PATTERN</a></li>
+							<li><a href="detail_list.html">3D EMBOSSING</a></li>
+						</ul>
+					</li>
+					</ol>
+				</div>
+			</nav>
+			<div class="other_content">
+					<label for="languages" >Language:</label>
+					<select name="language" id="languages" >
+						<option value="1">English</option>
+						<option value="2">Chinese</option>
+					</select>
+				<section>
+					<a href="#">Company</a>
+					<a href="#">Certifications</a>
+					<a href="#">Exhibitions</a>
+					<a href="#">Contacts</a>
+				</section>
+				<footer>
+					&copy;2016 Uwin All Rights Reserved
+				</footer>
+			</div>
+		</div>
+		<div id="content" class="col-md-10 col-sm-10 col-xs-10">
+			<h2>EVA Shelf Liners</h2>
+			<ul class="three_nav">
+				<li><a href="#">HOT STAMPING</a></li> 
+				<li><a href="#">TRANSPARENCY</a></li>
+				<li>
+					<a href="#">PATTERN</a>
+					<ul>
+						<li><a href="#">PATTERN1</a></li>
+						<li><a href="#">PATTERN2</a></li>
+						<li><a href="#">PATTERN3</a></li>
+						<li><a href="#">PATTERN4</a></li>
+						<li><a href="#">PATTERN5</a></li>
+						<li><a href="#">PATTERN6</a></li>
+						<li><a href="#">PATTERN7</a></li>
+						<li><a href="#">PATTERN8</a></li>
+						<li><a href="#">PATTERN9</a></li>
+					</ul>
+				</li>
+				<li><a href="#">3D EMBOSSING</a></li>
+			</ul>
+			<div class="clearfix"></div>
+			<div class="product ">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-ls-6 preview">
+						<div id="vertical" class="col-md-12 col-sm-12 col-ls-12 bigImg ">
+							<img src="static/images/detail_big.jpg"  class="detail_big" width="100%" height="261px" id="midimg" alt="">
+							<div style="display:none;" id="winSelector"></div>
+						</div>
+
+						<div class="col-md-12 col-sm-12 col-ls-12 lit_pic" style="padding-left: 0px;padding-right: 0px;">
+							<div class="col-md-3 col-sm-3 col-ls-3">
+								<img src="static/images/banner1.jpg" alt="">
+							</div>
+							<div class="col-md-3 col-sm-3 col-ls-3">
+								<img src="static/images/banner2.jpg" alt="">
+							</div>
+							<div class="col-md-3 col-sm-3 col-ls-3">
+								<img src="static/images/banner1.jpg" alt="">
+							</div>
+							<div class="col-md-3 col-sm-3 col-ls-3 active">
+								<img src="static/images/banner2.jpg" alt="">
+							</div>
+						</div>
+
+						<div id="bigView" style="display:none;"><img alt="" src="" /></div>
+
+					</div>
+				 	<div class="col-md-5 col-sm-5 col-ls-5 product_info">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 col-ls-12">
+									<span class="title">Product basic information:</span>
+									<span class="info_content">lorem ipsum dolor sit amet, consectetur adipiscing elitariaiatur.</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 col-sm-12 col-ls-12">
+									<span class="title">Product basic information:</span>
+									<span class="info_content">lorem ipsum dolor sit amet, consectetur adipiscing elitariaiatur.</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 col-sm-12 col-ls-12">
+								<span class="title">Size:</span>
+								<span class="info_content">180x100cm</span>
+								</div>
+								<div class="col-md-12 col-sm-12 col-ls-12">
+								<span class="title">Other:</span>
+								<span class="info_content">lorem ipsum dolor.</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 col-sm-12 col-ls-12">
+								<a href="#">
+									<img src="static/images/detail_btn1.jpg" class="detail_btn1" alt="">
+								</a>
+							</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 col-sm-12 col-ls-12">
+								<span class="info_content">
+									Do you want to know more about this product?
+								</span>
+								</div>
+								<div class="col-md-12 col-sm-12 col-ls-12">
+								<a href="#">
+									<img src="static/images/detail_btn2.jpg" class="detail_btn1 send_email" alt="">
+								</a>
+							</div>
+							</div>
+					</div>
+					<div class="type_pic col-md-5 col-sm-5 col-ls-5 pull-right col-sm-pull-1 col-ls-pull-1 col-md-pull-1">
+						<div class="col-md-3 col-sm-3 col-ls-3">
+							<img src="static/images/lit_lit_pic1.jpg" alt="">
+						</div>
+						<div class="col-md-3 col-sm-3 col-ls-3">
+							<img src="static/images/lit_lit_pic2.jpg" alt="">
+						</div>
+						<div class="col-md-3 col-sm-3 col-ls-3">
+							<img src="static/images/lit_lit_pic3.jpg" alt="">
+						</div>
+						<div class="col-md-3 col-sm-3 col-ls-3">
+							<img src="static/images/lit_lit_pic4.jpg" alt="">
+						</div>
+					</div>
+				</div> 
+					
+					
+					
+			</div>
+			
+			
+			<div class="send_email_alert col-md-5 col-sm-5 col-xs-6" style="display: none;">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<img src="static/images/logo3.jpg" class="class_logo"   alt="">
+				</div>
+				<img src="static/images/del.jpg" class="del" alt="">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<form action="">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Your Name">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Your Email Address">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Eva Shelf Liners - MDD 1234567">
+					</div>
+					<div class="form-group">
+						<textarea name="" class="form-control" placeholder="Message"></textarea>
+					</div>
+					
+						<button class="btn btn-default">
+							<span class="glyphicon glyphicon-send"> </span>
+							SEND IT 
+						</button>
+					</form>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+
+<script src="static/script/jquery-2.2.3.js"></script>
+<script type="text/javascript" src="static/script/jquery.1.4.2-min.js"></script>
+<script src="static/script/common.js"></script>
+<script src="static/script/detail.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	// 图片上下滚动
+	var count = $("#imageMenu li").length - 5; /* 显示 6 个 li标签内容 */
+	var interval = $("#imageMenu li:first").width();
+	var curIndex = 0;
+	
+	$('.scrollbutton').click(function(){
+		if( $(this).hasClass('disabled') ) return false;
+		
+		if ($(this).hasClass('smallImgUp')) --curIndex;
+		else ++curIndex;
+		
+		$('.scrollbutton').removeClass('disabled');
+		if (curIndex == 0) $('.smallImgUp').addClass('disabled');
+		if (curIndex == count-1) $('.smallImgDown').addClass('disabled');
+		
+		$("#imageMenu ul").stop(false, true).animate({"marginLeft" : -curIndex*interval + "px"}, 600);
+	});	
+	// 解决 ie6 select框 问题
+	$.fn.decorateIframe = function(options) {
+        if ($.browser.msie && $.browser.version < 7) {
+            var opts = $.extend({}, $.fn.decorateIframe.defaults, options);
+            $(this).each(function() {
+                var $myThis = $(this);
+                //创建一个IFRAME
+                var divIframe = $("<iframe />");
+                divIframe.attr("id", opts.iframeId);
+                divIframe.css("position", "absolute");
+                divIframe.css("display", "none");
+                divIframe.css("display", "block");
+                divIframe.css("z-index", opts.iframeZIndex);
+                divIframe.css("border");
+                divIframe.css("top", "0");
+                divIframe.css("left", "0");
+                if (opts.width == 0) {
+                    divIframe.css("width", $myThis.width() + parseInt($myThis.css("padding")) * 2 + "px");
+                }
+                if (opts.height == 0) {
+                    divIframe.css("height", $myThis.height() + parseInt($myThis.css("padding")) * 2 + "px");
+                }
+                divIframe.css("filter", "mask(color=#fff)");
+                $myThis.append(divIframe);
+            });
+        }
+    }
+    $.fn.decorateIframe.defaults = {
+        iframeId: "decorateIframe1",
+        iframeZIndex: -1,
+        width: 0,
+        height: 0
+    }
+    //放大镜视窗
+    $("#bigView").decorateIframe();
+    //点击到中图
+    var midChangeHandler = null;
+	
+    $('.lit_pic img').bind("click", function(){
+			$('.lit_pic img').removeClass('active');
+			$(this).addClass('active');
+			midChange($(this).attr("src"));
+	});
+
+    function midChange(src) {
+        $("#midimg").attr("src", src);
+        changeViewImg();
+    }
+    //大视窗看图
+    function mouseover(e) {
+        if ($("#winSelector").css("display") == "none") {
+            $("#winSelector,#bigView").show();
+        }
+        $("#winSelector").css(fixedPosition(e));
+        e.stopPropagation();
+    }
+    function mouseOut(e) {
+        if ($("#winSelector").css("display") != "none") {
+            $("#winSelector,#bigView").hide();
+        }
+        e.stopPropagation();
+    }
+    $("#midimg").mouseover(mouseover); //中图事件
+    $("#midimg,#winSelector").mousemove(mouseover).mouseout(mouseOut); //选择器事件
+
+    var $divWidth = $("#winSelector").width(); //选择器宽度
+    var $divHeight = $("#winSelector").height(); //选择器高度
+    var $imgWidth = $("#midimg").width(); //中图宽度
+    var $imgHeight = $("#midimg").height(); //中图高度
+    var $viewImgWidth = $viewImgHeight = $height = null; //IE加载后才能得到 大图宽度 大图高度 大图视窗高度
+
+    function changeViewImg() {
+    	//console.log($("#midimg").attr("src"));
+        $("#bigView img").attr("src", $("#midimg").attr("src"));
+    }
+    changeViewImg();
+    $("#bigView").scrollLeft(0).scrollTop(0);
+    function fixedPosition(e) {
+        if (e == null) {
+            return;
+        }
+        var $imgLeft = $("#midimg").offset().left; //中图左边距
+        var $imgTop = $("#midimg").offset().top; //中图上边距
+        X = e.pageX - $imgLeft - $divWidth / 2; //selector顶点坐标 X
+        Y = e.pageY - $imgTop - $divHeight / 2; //selector顶点坐标 Y
+        X = X < 0 ? 0 : X;
+        Y = Y < 0 ? 0 : Y;
+        X = X + $divWidth > $imgWidth ? $imgWidth - $divWidth : X;
+        Y = Y + $divHeight > $imgHeight ? $imgHeight - $divHeight : Y;
+
+        if ($viewImgWidth == null) {
+            $viewImgWidth = $("#bigView img").outerWidth();
+            $viewImgHeight = $("#bigView img").height();
+            if ($viewImgWidth < 200 || $viewImgHeight < 200) {
+                $viewImgWidth = $viewImgHeight = 800;
+            }
+            $height = $divHeight * $viewImgHeight / $imgHeight;
+            $("#bigView").width($divWidth * $viewImgWidth / $imgWidth);
+            $("#bigView").height($height);
+        }
+        var scrollX = X * $viewImgWidth / $imgWidth;
+        var scrollY = Y * $viewImgHeight / $imgHeight;
+        $("#bigView img").css({ "left": scrollX * -1, "top": scrollY * -1 });
+        $("#bigView").css({ "top": 0, "left": $(".preview").offset().left  + 170 });
+
+        return { left: X, top: Y };
+    }
+});
+</script>
+<script>
+	$('.send_email').click(function(e) {
+
+		$('.send_email_alert').show();
+		return false;
+	})
+	$('.del').click(function() {
+		$('.send_email_alert').hide();
+
+	})
+</script>
+
+</body>
+</html>

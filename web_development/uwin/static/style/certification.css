@@ -1,0 +1,11 @@
+#content {position: relative;}
+#content .row .col-md-3 {height: 0.16rem; position: relative; bottom:10px;top:10px;margin-bottom: 10px;}
+#content .row div img {height: 0.159rem; width: 95%; position: absolute; margin-bottom: 0.01rem;}
+#content .row div img:hover {
+-webkit-transform:rotate(0deg) scale(1.25);
+	-ms-transform:rotate(0deg) scale(1.25);
+	transform:rotate(0deg) scale(1.25);
+	-webkit-transition:all 0.5s ease-in;
+	transition:all 0.5s ease-in;
+	z-index: 2;
+}

@@ -1,0 +1,16 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body {background:#ccc; font-size:0.01rem; font-family: "ProximaNova-Regular","Open Sans", "黑体", "Hei", "Heiti", sans-serif }
+body #wrapper {padding: 1px}
+td,th,caption { font-size:0.01rem; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:0.01rem; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:black; text-decoration:none!important; }
+img { border:none; max-width: 100%}
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:0.01rem "ProximaNova-Regular","Open Sans", "黑体", "Hei", "Heiti", sans-serif }
+table { border-collapse:collapse; }
+html {overflow-y: scroll;}
+nav > a:hover {color : #FFFFF0!important;}
+/* css common */
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }

@@ -1,0 +1,6 @@
+.content {position: relative;}
+.article {column-count: 2;column-gap:0.02rem;margin-top: 0.075rem;text-align: justify;}
+.article h3 {font-size: 0.025rem; height: 0.05rem; line-height: 0.05rem;}
+.article p {font-size: 0.01rem;}
+.right {position: absolute;top:0.5387rem; right: 0;}
+.article .first {font-size: 0.04rem;font-weight:900;float: left; color:#f1803a; line-height: 0.03rem;}
