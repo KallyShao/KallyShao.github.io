@@ -17,6 +17,7 @@ section li{
 }
 #game-list .game-item p{
 	width: 86%;
+	// height: 100%;
 	 margin: 0 auto;
 	 font-size: 12px;
 	 line-height: 20px;
@@ -24,6 +25,7 @@ section li{
 	 top: 10px;
 	 left: -86%;
 	 color: #fff;
+	 // background: rgba(0, 0, 0, 0.5);
 }
 
 
