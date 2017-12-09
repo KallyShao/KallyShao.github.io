@@ -1,0 +1,205 @@
+header a,
+header span {
+  color: #666;
+}
+header .order-nav {
+  height: 1.2rem;
+  background: #5fc535;
+}
+header .order-nav .ord-nav-wrap {
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  position: relative;
+}
+header .order-nav .input-group {
+  width: 6.44rem;
+  height: 28px;
+  position: absolute;
+  right: 0;
+}
+header .order-nav .order-per-info {
+  height: 100%;
+  display: table;
+}
+header .order-nav .order-per-info li {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 14px;
+  padding-right: 1.4rem;
+}
+header .order-nav .order-per-info li a {
+  color: #fff;
+}
+header .order-nav .order-per-info li:first-child {
+  font-size: 0.6rem;
+}
+header .order-nav .form-control {
+  border-radius: 10px;
+}
+header .order-nav .input-group-addon {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.order-list table {
+  table-layout: fixed;
+}
+.order-list .left-nav {
+  width: 3.4rem;
+  margin-top: 0.6rem;
+}
+.order-list .left-nav li {
+  height: 0.7rem;
+}
+.order-list .left-nav li:first-child h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.order-list .left-nav li.active a {
+  color: #5fc535;
+}
+.order-list .left-nav a {
+  font-size: 14px;
+  width: 100%;
+  display: block;
+}
+.order-list .left-nav .glyphicon-menu-down {
+  font-weight: normal;
+  font-size: 12px;
+  float: right;
+  margin-right: 1.6rem;
+  color: #666;
+}
+.order-list .order-list-main {
+  width: 22.6rem;
+}
+.order-list .order-list-main .input-group {
+  width: 6.56rem;
+  margin: 0.4rem 0;
+}
+.order-list .order-list-main .input-group .form-control,
+.order-list .order-list-main .input-group .input-group-addon {
+  border-radius: 0;
+}
+.order-list .order-list-main .h1-wrap {
+  width: 100%;
+  border-bottom: 2px solid #e6e6e6;
+  box-sizing: border-box;
+  height: 0.8rem;
+  margin-top: 0.6rem;
+}
+.order-list .order-list-main .h1-wrap h1 {
+  width: 2.2rem;
+  color: #5fc535;
+  font-size: 0.32rem;
+  text-align: center;
+  margin-top: 0.6rem;
+  border-bottom: 2px solid #5fc535;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.order-list .order-list-main .parent-tab {
+  width: 100%;
+}
+.order-list .order-list-main .parent-tab .order-page {
+  height: 0.88rem;
+}
+.order-list .order-list-main .parent-tab .order-page td {
+  text-align: right;
+}
+.order-list .order-list-main .parent-tab .order-page .glyphicon {
+  border: 1px solid #e6e6e6;
+  color: #e6e6e6;
+  box-sizing: border-box;
+}
+.order-list .order-list-main .parent-tab .order-page span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  vertical-align: middle;
+}
+.order-list .order-list-main .parent-tab .order-page .order-page-num {
+  color: #fff;
+  background: #5fc535;
+  margin: 0 5px;
+  position: relative;
+  top: 1px;
+}
+.order-list .order-list-main .parent-tab thead tr,
+.order-list .order-list-main .parent-tab .sub-tab .seller-title {
+  height: 0.8rem;
+  border: 1px solid #e6e6e6;
+  background: #f2f2f2;
+  width: 100%;
+}
+.order-list .order-list-main .parent-tab thead th {
+  text-align: center;
+}
+.order-list .order-list-main .parent-tab thead th:first-child {
+  width: 9.36rem;
+}
+.order-list .order-list-main .parent-tab .sub-tab {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.order-list .order-list-main .parent-tab .sub-tab .glyphicon-trash {
+  color: #666;
+  cursor: pointer;
+}
+.order-list .order-list-main .parent-tab .sub-tab tr td:first-child :first-child {
+  margin-left: 0.4rem;
+  margin-right: 5px;
+}
+.order-list .order-list-main .parent-tab .sub-tab .seller-title td:first-child {
+  width: 9.36rem;
+}
+.order-list .order-list-main .parent-tab .sub-tab .seller-title .seller {
+  text-align: center;
+}
+.order-list .order-list-main .parent-tab .sub-tab .seller-title .del-order {
+  text-align: right;
+}
+.order-list .order-list-main .parent-tab .sub-tab .seller-title .del-order span {
+  margin-right: 20px;
+}
+.order-list .order-list-main .parent-tab .sub-tab .order-item {
+  height: 2.8rem;
+  border: 1px solid #e6e6e6;
+}
+.order-list .order-list-main .parent-tab .sub-tab .order-item .ord-status span,
+.order-list .order-list-main .parent-tab .sub-tab .order-item .tot-price span {
+  display: block;
+}
+.order-list .order-list-main .parent-tab .sub-tab .order-item .tot-price {
+  font-weight: bold;
+}
+.order-list .order-list-main .parent-tab .sub-tab .order-item-desc {
+  margin-left: 10px;
+}
+.order-list .order-list-main .parent-tab .sub-tab .order-item td:not(:first-child) {
+  text-align: center;
+}
+@media screen and (max-width: 1600px) {
+  .order-list .left-nav .glyphicon-menu-down {
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .order-list .left-nav .glyphicon-menu-down {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .order-list .left-nav .glyphicon-menu-down {
+    margin-right: 10px;
+  }
+}

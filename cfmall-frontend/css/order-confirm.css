@@ -1,0 +1,225 @@
+.order-status {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.order-status li {
+  display: inline-block;
+  position: relative;
+}
+.order-status .icon,
+.order-status i {
+  display: block;
+}
+.order-status .icon {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background: #d9d9d9;
+  font-size: 26px;
+  border-radius: 50%;
+  color: #fff;
+}
+.order-status .icon.active {
+  background: #379e4f;
+}
+.order-status .line {
+  display: block;
+  width: 182px;
+  height: 10px;
+  background: #d9d9d9;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+}
+.address h1 {
+  font-size: 14px;
+  line-height: 0.96rem;
+  height: 0.96rem;
+}
+.address .addr-item {
+  width: 4.76rem;
+  height: 2.3rem;
+  padding: 0.2rem;
+  opacity: 0.5;
+  background: url(../images/address-bg.png) no-repeat;
+  background-size: 4.76rem 2.3rem;
+  float: left;
+  margin-right: 0.3rem;
+}
+.address .addr-info {
+  font-size: 12px;
+}
+.address h2.addr-info {
+  line-height: 0.6rem;
+  border-bottom: 1px solid #f2f2f2;
+}
+.address p.addr-info {
+  line-height: 0.4rem;
+}
+.address .addr-item.active {
+  background: url(../images/address-active.png) no-repeat;
+  background-size: 4.76rem 2.3rem;
+  opacity: 1;
+}
+.address .edit {
+  color: #379e4f;
+  font-size: 12px;
+}
+.address .add-new-addr {
+  border: 1px solid #e6e6e6;
+  padding: 5px 10px;
+  margin-top: 15px;
+  display: inline-block;
+}
+.address .manage-addr {
+  margin-top: 15px;
+  color: #379e4f;
+}
+.confirm-order h3 {
+  line-height: 1.12rem;
+  font-size: 0.28rem;
+}
+.confirm-order th {
+  text-align: center;
+}
+.confirm-order .parent-tab,
+.confirm-order .sub-tab {
+  width: 100%;
+}
+.confirm-order tr.item-info {
+  height: 2.4rem;
+  background: #eff9ea;
+  border-top: 1px dashed #5fc535;
+  border-bottom: 1px solid #fff;
+}
+.confirm-order tr.seller-info {
+  height: 1rem;
+}
+.confirm-order .title th {
+  border-bottom: 3px solid #5fc535;
+}
+.confirm-order .title th:first-child,
+.confirm-order .item-info td:first-child,
+.confirm-order .check-info .invoice-info {
+  width: 11rem;
+}
+.confirm-order .title th:nth-child(2),
+.confirm-order .item-info td:nth-child(2) {
+  width: 4.12rem;
+}
+.confirm-order .item-info .item-des {
+  margin-left: 0.2rem;
+}
+.confirm-order .item-info td:not(:first-child) {
+  text-align: center;
+}
+.confirm-order .item-info td:first-child {
+  padding-left: 10px;
+}
+.confirm-order .item-info .input-group {
+  width: 2.5rem;
+  margin: 0 auto;
+}
+.confirm-order .item-info .input-group .input-sm {
+  padding: 5px;
+}
+.confirm-order .item-info .input-group .input-group-addon {
+  padding: 6px 8px;
+}
+.confirm-order .item-info .input-group .form-control {
+  text-align: center;
+}
+.confirm-order .item-info .unit-price,
+.confirm-order .item-info .tot-price {
+  width: 3.62rem;
+}
+.confirm-order .check-info {
+  background: #dff3d7;
+}
+.confirm-order .check-info .form-wrap {
+  padding-right: 0.4rem;
+}
+.confirm-order .check-info form {
+  display: inline-block;
+}
+.confirm-order .check-info tr {
+  height: 0.8rem;
+}
+.confirm-order .check-info td {
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+.confirm-order .check-info td.post-method,
+.confirm-order .check-info td.insurance {
+  padding-right: 1.4rem;
+}
+.confirm-order .check-info .postage,
+.confirm-order .check-info .ship-insurance,
+.confirm-order .check-info .total-money {
+  color: red;
+}
+.confirm-order .check-info .postage,
+.confirm-order .check-info .ship-insurance {
+  float: right;
+}
+.confirm-order .check-info .check-total td {
+  text-align: right;
+  padding-right: 1.4rem;
+}
+.confirm-order .submit-order {
+  margin-top: 15px;
+  margin-bottom: 1.7rem;
+  width: 8rem;
+  float: right;
+}
+.confirm-order .submit-order .p-wrap {
+  height: 2.48rem;
+  background: #f8fcff;
+  border: 1px solid #5fc535;
+  font-size: 12px;
+  text-align: right;
+  font-weight: bold;
+}
+.confirm-order .submit-order .p-wrap span {
+  font-weight: normal;
+}
+.confirm-order .submit-order .p-wrap p {
+  line-height: 0.4rem;
+  padding-right: 10px;
+}
+.confirm-order .submit-order .p-wrap p:first-child {
+  line-height: 1.4rem;
+}
+.confirm-order .submit-order .p-wrap .payment {
+  font-size: 0.48rem;
+  color: red;
+}
+.confirm-order .submit-order .sub-ord-btn {
+  float: right;
+  width: 3.6rem;
+  height: 0.76rem;
+  line-height: 0.76rem;
+  color: #fff;
+  background: #5fc535;
+  font-size: 0.28rem;
+  text-align: center;
+}
+@media screen and (max-width: 1440px) {
+  .confirm-order .check-info .form-wrap {
+    padding-right: 5px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .confirm-order .check-info .form-wrap {
+    padding-right: 0;
+  }
+}

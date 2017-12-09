@@ -1,0 +1,100 @@
+.logo ul li:first-child {
+  background: url(../images/index-top-logo_01.png) no-repeat top center / 1.24rem !important;
+}
+.logo ul li:nth-child(2) {
+  background: url(../images/logo_01.png) no-repeat top center / 1.24rem;
+}
+.logo ul li:nth-child(3) {
+  background: url(../images/logo_02.png) no-repeat top center / 1.24rem;
+}
+.logo ul li:nth-child(4) {
+  background: url(../images/logo_03.png) no-repeat top center / 1.24rem;
+}
+/*视频*/
+.vedio img {
+  width: 100%;
+}
+.main-con h1,
+.main-con h2,
+.main-con p {
+  text-align: center;
+}
+.main-con .text {
+  padding: 1rem 0;
+}
+.main-con h1 {
+  font-size: 0.72rem;
+  line-height: 1.2rem;
+}
+.main-con h2 {
+  font-size: 0.6rem;
+  line-height: 1rem;
+}
+.main-con p {
+  font-size: 0.48rem;
+  line-height: 0.9rem;
+}
+.main-con img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.main-con .sec-2 {
+  background: #22ac38;
+}
+.main-con .sec-2 h1,
+.main-con .sec-2 h2,
+.main-con .sec-2 p {
+  color: #fff;
+}
+.main-con .sec-2 .text-2 h1 {
+  width: 10.6rem;
+  margin: 0 auto;
+}
+.main-con .sec-2 .text-4 h1 {
+  width: 12.2rem;
+  margin: 0 auto;
+}
+.main-con .h24 img {
+  width: 4.3rem;
+  margin: 1.2rem auto;
+}
+.main-con img.growth {
+  width: 14.56rem;
+}
+.main-con .with-bg {
+  background: #f9ab00;
+}
+.main-con .climate-list {
+  margin: 0.7rem auto 0.3rem;
+  overflow: hidden;
+  padding: 0 3.6rem;
+}
+.main-con .climate-list li {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.6rem;
+  background: #097c25;
+  padding: 0.3rem 0.4rem;
+  margin-right: 2.64rem;
+  cursor: pointer;
+}
+.main-con .climate-list li:last-child {
+  margin-right: 0;
+}
+.main-con .climate-list .active {
+  background: #f9ab00;
+}
+.main-con .sec-3 .temperature {
+  background: #ededed;
+}
+.main-con .sec-3 .PM25 {
+  background: #fbfbfb;
+}
+.container1 {
+  width: 14.52rem;
+  margin: 0 auto;
+}
+.container1 img {
+  width: 100%;
+}

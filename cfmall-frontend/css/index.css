@@ -1,0 +1,32 @@
+.logo ul li:first-child {
+  background: url(../images/index-top-logo_01.png) no-repeat top center / 1.24rem !important;
+}
+.logo ul li:nth-child(2) {
+  background: url(../images/logo_01.png) no-repeat top center / 1.24rem;
+}
+.logo ul li:nth-child(3) {
+  background: url(../images/logo_02.png) no-repeat top center / 1.24rem;
+}
+.logo ul li:nth-child(4) {
+  background: url(../images/logo_03.png) no-repeat top center / 1.24rem;
+}
+.banner {
+  position: relative;
+}
+.banner img {
+  width: 100%;
+}
+.banner .carousel-indicators li {
+  width: 0.36rem;
+  height: 0.36rem;
+  border: none;
+  border-radius: 50%;
+  background: #a0a0a0;
+}
+.banner .carousel-indicators .active {
+  background: #f00;
+  margin: 1px;
+}
+.banner .banner-img-wrap {
+  display: block;
+}

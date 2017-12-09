@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>订单列表</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/order-list.css">
+    <script type="text/javascript">
+    (function() {
+        var html = document.documentElement;
+        var h_width = html.getBoundingClientRect().width;
+        html.style.fontSize = h_width / 38.4 + "px";
+    })()
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="nav-top">
+            <div class="container">
+                <ul class="clear fl">
+                    <li class="username"><a href="#">1234567890<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                    <li class="msg">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-envelope"></span> 消息
+                            <span class="glyphicon glyphicon-menu-down"></span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="clear fr">
+                    <li><a href="#">晨风商城首页</a> |</li> 
+                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>购物车<span class="glyphicon glyphicon-menu-down"></span></a> |</li>
+                    <li><a href="#"><span class="glyphicon glyphicon-star"></span>收藏夹<span class="glyphicon glyphicon-menu-down"></span></a> |</li>
+                    <li><a href="#">卖家中心<span class="glyphicon glyphicon-menu-down"></span></a> |</li>
+                    <li><a href="#">联系客服<span class="glyphicon glyphicon-menu-down"></span></a> |</li>
+                    <li><a href="#">网站导航<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="order-nav">
+            <div class="container ord-nav-wrap">
+                <ul class="order-per-info clear">
+                    <li><a href="#">个人中心</a></li>
+                    <li><a href="#">个人信息</a></li>
+                    <li><a href="#">消息</a></li>
+                </ul>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
+                    <span class="input-group-addon" id="basic-addon2">搜索</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="order-list">
+        <div class="container">
+            <ul class="left-nav fl">
+                <li><h2>全部功能</h2></li>
+                <li><a href="./user-center.html">个人信息<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li class="active"><a href="#">订单列表</a></li>
+                <li><a href="#">积分信息</a></li>
+                <li><a href="#">我的优惠券<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li><a href="#">我的关注<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li><a href="#">收货地址<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li><a href="#">请教专家<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li><a href="#">咨询建议<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li><a href="#">退货管理<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li><a href="#">订阅信息<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li><a href="#">缺货申请<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li><a href="#">预售登记<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li><a href="#">调查问卷<span class="glyphicon glyphicon-menu-down"></span></a></li>
+            </ul>
+            <div class="order-list-main fr">
+                <div class="h1-wrap">
+                    <h1>我的订单</h1>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="输入订单号/商品名称/时间进行搜索" aria-describedby="basic-addon2">
+                    <span class="input-group-addon" id="basic-addon2">订单搜索</span>
+                </div>
+                <table class="parent-tab">
+                    <thead>
+                        <tr>
+                            <th>商品</th>
+                            <th>规格</th>
+                            <th>单价</th>
+                            <th>数量</th>
+                            <th>状态</th>
+                            <th>总价</th>
+                            <th>物流</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="order-page"><td colspan="7"><span class="glyphicon glyphicon-menu-left"></span><span class="order-page-num">1</span><span class="glyphicon glyphicon-menu-right"></span></td></tr>
+                        <tr>
+                            <td colspan="7">
+                                <table class="sub-tab">
+                                    <tbody>
+                                         <tr class="seller-title">
+                                            <td><input type="checkbox" name=""><span class="order-time">2017-11-15</span> 订单号：<span class="order-num">85044126980675651</span></td>
+                                            <td colspan="2" class="seller">晨风商城</td>
+                                            <td colspan="4" class="del-order"><span class="glyphicon glyphicon-trash"></span></td>
+                                        </tr>
+                                        <tr class="order-item">
+                                            <td><img src="images/order-list_01.png"><span class="order-item-desc">产地直供安心优选香芒2斤装</span></td>
+                                            <td class="weight">1000g</td>
+                                            <td class="unit-price">￥19.9</td>
+                                            <td class="quantity">2</td>
+                                            <td class="ord-status">
+                                                <span>交易成功</span>
+                                                <a href="#">订单详情</a>
+                                            </td>
+                                            <td class="tot-price">
+                                                <span>39.8</span>
+                                                <span>（包邮）</span>
+                                            </td>
+                                            <td class="express">菜鸟物流</td>
+                                        </tr>
+                                        <tr class="order-item">
+                                            <td><img src="images/order-list_01.png"><span class="order-item-desc">产地直供安心优选香芒2斤装</span></td>
+                                            <td class="weight">1000g</td>
+                                            <td class="unit-price">￥19.9</td>
+                                            <td class="quantity">2</td>
+                                            <td class="ord-status">
+                                                <span>交易成功</span>
+                                                <a href="#">订单详情</a>
+                                            </td>
+                                            <td class="tot-price">
+                                                <span>39.8</span>
+                                                <span>（包邮）</span>
+                                            </td>
+                                            <td class="express">菜鸟物流</td>
+                                        </tr>
+                                    </tbody>
+                                </table>    <!-- .sub-tab -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="7">
+                                <table class="sub-tab">
+                                    <tbody>
+                                        <tr class="seller-title">
+                                            <td><input type="checkbox" name=""><span class="order-time">2017-11-15</span> 订单号：<span class="order-num">85044126980675651</span></td>
+                                            <td colspan="2" class="seller">晨风商城</td>
+                                            <td colspan="4" class="del-order"><span class="glyphicon glyphicon-trash"></span></td>
+                                        </tr>
+                                        <tr class="order-item">
+                                            <td><img src="images/order-list_02.png"><span class="order-item-desc">产地直供安心优选香芒2斤装</span></td>
+                                            <td class="weight">1000g</td>
+                                            <td class="unit-price">￥19.9</td>
+                                            <td class="quantity">2</td>
+                                            <td class="ord-status">
+                                                <span>交易成功</span>
+                                                <a href="#">订单详情</a>
+                                            </td>
+                                            <td class="tot-price">
+                                                <span>39.8</span>
+                                                <span>（包邮）</span>
+                                            </td>
+                                            <td class="express">菜鸟物流</td>
+                                        </tr>
+                                    </tbody>
+                                </table>    <!-- .sub-tab -->
+                            </td>
+                        </tr>
+                         <tr>
+                            <td colspan="7">
+                                <table class="sub-tab">
+                                    <tbody>
+                                        <tr class="seller-title">
+                                            <td><input type="checkbox" name=""><span class="order-time">2017-11-15</span> 订单号：<span class="order-num">85044126980675651</span></td>
+                                            <td colspan="2" class="seller">晨风商城</td>
+                                            <td colspan="4" class="del-order"><span class="glyphicon glyphicon-trash"></span></td>
+                                        </tr>
+                                        <tr class="order-item">
+                                            <td><img src="images/order-list_03.png"><span class="">产地直供安心优选香芒2斤装</span></td>
+                                            <td class="weight">1000g</td>
+                                            <td class="unit-price">￥19.9</td>
+                                            <td class="quantity">2</td>
+                                            <td class="ord-status">
+                                                <span>交易成功</span>
+                                                <a href="#">订单详情</a>
+                                            </td>
+                                            <td class="tot-price">
+                                                <span>39.8</span>
+                                                <span>（包邮）</span>
+                                            </td>
+                                            <td class="express">菜鸟物流</td>
+                                        </tr>
+                                    </tbody>
+                                </table>    <!-- .sub-tab -->
+                            </td>
+                        </tr>
+                        <tr class="order-page"><td colspan="7" style="vertical-align: middle;"><span class="glyphicon glyphicon-menu-left"></span><span class="order-page-num">1</span><span class="glyphicon glyphicon-menu-right"></span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="container foot-simple">
+        <ul class="foot-simple-list">
+            <li><a href="#">关于我们</a></li> |
+            <li><a href="#">帮助中心</a></li> |
+            <li><a href="#">常见问题</a></li> |
+            <li><a href="#">服务说明</a></li> |
+            <li><a href="#">配送服务</a></li> 
+        </ul>
+        <p class="copyright">
+            Copyright©2000-2017 晨风商城cfsc.com版权所有
+        </p>
+    </footer>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

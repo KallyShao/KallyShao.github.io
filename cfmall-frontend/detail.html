@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>详情页</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+ <![endif]-->
+    <script type="text/javascript">
+    (function() {
+        var html = document.documentElement;
+        var h_width = html.getBoundingClientRect().width;
+        html.style.fontSize = h_width / 38.4 + "px";
+    })()
+    </script>
+</head>
+
+<body>
+    <header class="head-simple head">
+            <div class="nav-top-simple">
+                <p>杭州[<a href="#">切换城市</a>]</p>
+                <ul class="clear">
+                    <li>企业 / 会员<a href="#">注册</a>或<a href="#">登录</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">手机版</a></li>
+                </ul>
+            </div>
+            <div class="container logo">
+                <div class="logo-l">
+                    <h1><span>LOGO</span> | 绿色 ·安全 ·快捷 ·省钱</h1>
+                    <h2>安全健康食品的购买平台</h2>
+                </div>
+                <ul class="head-list-r clear">
+                    <li>安心放心食品</li>
+                    <li>全程品质可追溯</li>
+                    <li>确保最新鲜</li>
+                    <li>生长时实监控</li>
+                </ul>
+            </div>
+        </header>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">蔬菜</a>
+                        <ul class="dropdown">
+                            <li><a href="#"><span></span>中山果园基地</a></li>
+                            <li><a href="#"><span></span>中山果园基地</a></li>
+                            <li><a href="#"><span></span>中山果园基地</a></li>
+                            <li><a href="#"><span></span>中山果园基地</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">水果</a>
+                    </li>
+                    <li>
+                        <a href="#">花卉</a>
+                    </li>
+                    <li><a href="#">商城活动</a></li>
+                    <li><a href="#">公告</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    
+    <div class="main-wrap">
+        <h3 class="detail-nav"><span>全部</span> > <span>新鲜水果</span> > <span>新到货</span></h3>
+        <div class="main">
+            <div class="container clear">
+                <div class="pro-purchase-wrap clear">
+                    <div class="pic fl">
+                        <div class="main-pic fl">
+                            <img src="images/detail-mango-main.png">
+                        </div>
+                        <ul class="pic-list fl">
+                            <li><img src="images/detail-small_03.png"></li>
+                            <li><img src="images/detail-small_01.png"></li>
+                            <li><img src="images/detail-small_02.png"></li>
+                        </ul>
+                    </div>
+                    <ul class="add-cart fr">
+                        <li class="det-pro-title">农场直供优选香芒2斤装（下单现场摘取）</li>
+                        <li class="det-pro-des">酸酸甜甜，口感Q弹</li>
+                        <li class="det-pro-weight"><span>1000g</span></li>
+                        <li class="pur-amount">
+                            <div class="input-group">
+                                <span class="input-group-addon minus">-</span>  
+                                <input type="text" class="number form-control input-sm" value="1" />  
+                                <span class="input-group-addon plus">+</span>  
+                            </div>
+                        </li>
+                        <li class="ship-to">
+                            配送至：
+                            <select>
+                                <option value="广州市">广州市</option>
+                                <option value="深圳市">深圳市</option>
+                                <option value="东莞市">东莞市</option>
+                            </select>
+                        </li>
+                        <li href="#" class="add-to-cart"><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>加入购物车</a></li>
+                         <li href="#" class="add-to-wish-list"><a href="#"><span class="glyphicon glyphicon-heart"></span>添加到心愿单</a></li>
+                    </ul>     <!--  .add-cart -->
+                </div>
+                <div class="pro-detail"> 
+                    <ul class="pro-detail-cat clear">
+                        <li><a href="#">商品介绍</a></li>
+                        <li class="active"><a href="#">规格参数</a></li>
+                        <li><a href="#">包装清单</a></li>
+                        <li><a href="#">售后服务</a></li>
+                    </ul>
+                    <div class="specifications">
+                        <table class="spec-t1">
+                            <th>基本参数</th>
+                            <tr><td><span>系列：</span><span>芒果</span></td></tr>
+                            <tr><td><span>产地：</span><span>中国大陆广东省</span></td></tr>
+                            <tr><td><span>厂名：</span><span>广东省宝清县八五二农场。。。库房</span></td></tr>
+                        </table>
+                        <table class="spec-t2">
+                            <th>其他参数</th>
+                            <tr><td><span>食品添加剂：</span><span>无</span></td></tr>
+                            <tr><td><span>配料表：</span><span>有机鲜果</span></td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>     <!--  .container -->
+        </div>
+    </div>
+    
+        <div class="bottom">
+            <div class="foot-list">
+                <div class="container">
+                    <ul class="clear">
+                        <li>
+                            <h3>专业配送</h3>
+                            <h4>与时俱进 鲜果速达</h4>
+                        </li>
+                        <li>
+                            <h3>专业配送</h3>
+                            <h4>与时俱进 鲜果速达</h4>
+                        </li>
+                        <li>
+                            <h3>专业配送</h3>
+                            <h4>与时俱进 鲜果速达</h4>
+                        </li>
+                        <li>
+                            <h3>专业配送</h3>
+                            <h4>与时俱进 鲜果速达</h4>
+                        </li>
+                        <li>
+                            <h3>专业配送</h3>
+                            <h4>与时俱进 鲜果速达</h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-list container">
+                <ul class="bottom-list-1 clear">
+                    <li>
+                        <ul>
+                            <li><a href="#">关于我们</a></li>
+                            <li><a href="#">关于我们</a></li>
+                            <li><a href="#">联系我们</a></li>
+                            <li><a href="#">服务条款</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">帮助中心</a></li>
+                            <li><a href="#">注册与订购</a></li>
+                            <li><a href="#">如何付款</a></li>
+                            <li><a href="#">注册流程</a></li>
+                            <li><a href="#">订购流程</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">常见问题</a></li>
+                            <li><a href="#">今天下单什么时候到...</a></li>
+                            <li><a href="#">怎么查看账户余额</a></li>
+                            <li><a href="#">如何充值</a></li>
+                            <li><a href="#">如何投诉与建议</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">服务说明</a></li>
+                            <li><a href="#">服务与付款说明</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href="#">配送服务</a></li>
+                            <li><a href="#">查看订单</a></li>
+                            <li><a href="#">配送说明</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="bottom-list-2 clear">
+                    <li>降低采购成本</li>
+                    <li>透明采购管理</li>
+                    <li>正规税票做账</li>
+                    <li>质量安全保证</li>
+                </ul>
+            </div>
+        </div>
+        <footer class="container foot-simple">
+            <ul class="foot-simple-list">
+                <li><a href="#">关于我们</a></li> |
+                <li><a href="#">帮助中心</a></li> |
+                <li><a href="#">常见问题</a></li> |
+                <li><a href="#">服务说明</a></li> |
+                <li><a href="#">配送服务</a></li>
+            </ul>
+            <p class="container copyright">
+                Copyright©2000-2017 晨风商城cfsc.com版权所有
+            </p>
+        </footer>
+        <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js
+    "></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/rem.js"></script>
+</body>
+
+</html>

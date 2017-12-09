@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>订单确认</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/order-confirm.css">
+    <script type="text/javascript">
+    (function() {
+        var html = document.documentElement;
+        var h_width = html.getBoundingClientRect().width;
+        html.style.fontSize = h_width / 38.4 + "px";
+    })()
+    </script>
+</head>
+
+<body>
+<header class="head">
+    <div class="nav-top">
+        <div class="container">
+            <ul class="clear fl">
+                <li class="username"><a href="#">1234567890<span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li class="msg">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-envelope"></span> 消息
+                        <span class="glyphicon glyphicon-menu-down"></span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="clear fr">
+                <li><a href="#">晨风商城首页</a> |</li> 
+                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>购物车<span class="glyphicon glyphicon-menu-down"></span></a> |</li>
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span>收藏夹<span class="glyphicon glyphicon-menu-down"></span></a> |</li>
+                <li><a href="#">卖家中心<span class="glyphicon glyphicon-menu-down"></span></a> |</li>
+                <li><a href="#">联系客服<span class="glyphicon glyphicon-menu-down"></span></a> |</li>
+                <li><a href="#">网站导航<span class="glyphicon glyphicon-menu-down"></span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ord-confirm-head container logo">
+        <div class="logo-l">
+            <h1><span>LOGO</span> | 绿色 ·安全 ·快捷 ·省钱</h1>
+            <h2>安全健康食品的购买平台</h2>
+        </div>
+        <!-- <ul class="order-status">
+            <li>
+                <span>拍下商品</span>
+                <span class="icon active">
+                    <i class="fa fa-check"></i>
+                </span>
+                <span class="line"></span>
+            </li>
+            <li>
+                <span>付款</span>
+                <span class="icon">2</span>
+            </li>
+            <li>
+                <span>确认收货</span>
+                <span class="icon">3</span>
+            </li> 
+        </ul> -->
+    </div>
+</header> 
+<div class="container address">
+    <h1>选择收货地址</h1>
+    <ul class="clear">
+        <li class="addr-item default-addr active">
+            <h2 class="addr-info">广东广州<span class="recipient">收件人</span>收</h2>
+            <p class="addr-info">萝岗 科学城 创意大厦B座，B2 4楼 413 1234567890</p>
+            <a href="#" class="edit">修改</a>
+        </li>
+         <li class="addr-item default-addr">
+            <h2 class="addr-info">广东广州<span class="recipient">收件人</span>收</h2>
+            <p class="addr-info">萝岗 科学城 创意大厦B座，B2 4楼 413 1234567890</p>
+            <a href="#" class="edit">修改</a>
+        </li>
+         <li class="addr-item default-addr">
+            <h2 class="addr-info">广东广州<span class="recipient">收件人</span>收</h2>
+            <p class="addr-info">萝岗 科学城 创意大厦B座，B2 4楼 413 1234567890</p>
+            <a href="#" class="edit">修改</a>
+        </li>
+    </ul>
+    <a href="#" class="add-new-addr">添加新地址</a>
+    <a href="#" class="manage-addr fr">管理收货地址</a>
+</div>
+<div class="container confirm-order clear">
+    <h3>确认订单信息</h3>
+    <table class="parent-tab">
+        <tbody>
+            <tr class="title">
+                <th>商品信息</th>
+                <th>商品规格</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>总价</th>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <table class="sub-tab">
+                        <tr class="seller-info"><td>店铺：<span class="seller">晨风商城</span></td></tr>
+                        <tr class="item-info">
+                            <td><img src="images/order-list_01.png" alt="img1" class="item-img"><span class="item-des">产地直供安心优选香芒2斤装</span>
+                            </td>
+                            <td class="weight">1000g</td>
+                            <td class="unit-price">￥19.9</td>
+                            <td class="count">
+                                <div class="input-group">
+                                    <span class="input-group-addon minus">-</span>  
+                                    <input type="text" class="number form-control input-sm" value="1" />  
+                                    <span class="input-group-addon plus">+</span>  
+                                </div>
+                            </td>
+                            <td class="tot-price">总价</td>
+                        </tr>
+                        <tr class="item-info">
+                            <td><img src="images/order-list_01.png" alt="img1" class="item-img"><span class="item-des">产地直供安心优选香芒2斤装</span>
+                            </td>
+                            <td class="weight">1000g</td>
+                            <td class="unit-price">￥19.9</td>
+                            <td class="count">
+                                <div class="input-group">
+                                    <span class="input-group-addon minus">-</span>  
+                                    <input type="text" class="number form-control input-sm" value="1" />  
+                                    <span class="input-group-addon plus">+</span>  
+                                </div>
+                            </td>
+                            <td class="tot-price">总价</td>
+                        </tr>
+                        <tr class="item-info">
+                            <td><img src="images/order-list_01.png" alt="img1" class="item-img"><span class="item-des">产地直供安心优选香芒2斤装</span>
+                            </td>
+                            <td class="weight">1000g</td>
+                            <td class="unit-price">￥19.9</td>
+                            <td class="count">
+                                <div class="input-group">
+                                    <span class="input-group-addon minus">-</span>  
+                                    <input type="text" class="number form-control input-sm" value="1" />  
+                                    <span class="input-group-addon plus">+</span>  
+                                </div>
+                            </td>
+                            <td class="tot-price">总价</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <table class="sub-tab">
+                        <tr class="seller-info"><td>店铺：<span class="seller">晨风商城</span></td></tr>
+                        <tr class="item-info">
+                            <td><img src="images/order-list_01.png" alt="img1" class="item-img"><span class="item-des">产地直供安心优选香芒2斤装</span>
+                            </td>
+                            <td class="weight">1000g</td>
+                            <td class="unit-price">￥19.9</td>
+                            <td class="count">
+                                <div class="input-group">
+                                    <span class="input-group-addon minus">-</span>  
+                                    <input type="text" class="number form-control input-sm" value="1" />  
+                                    <span class="input-group-addon plus">+</span>  
+                                </div>
+                            </td>
+                            <td class="tot-price">总价</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot class="check-info">
+            <tr>
+                <td rowspan="2" class="invoice-info">
+                    <div class="form-wrap">
+                        <form>
+                            <label>发票抬头类型：</label>
+                            <input type="radio" name="invoice-title">个人
+                            <input type="radio" name="invoice-title">企业
+                        </form>
+                        <form style="float: right;">
+                            <label>发票类型：</label>
+                            <input type="radio" name="invoice-type">电子
+                            <input type="radio" name="invoice-type">纸质
+                        </form>
+                    </div>
+                    <P>发票抬头：<span class="invo-title" style="margin-right: 5px;">xxx公司</span><a href="#" class="edit" style="color: #379e4f;">修改</a></P>
+                </td>
+                <td colspan="4" class="post-method">运送方式：<span>普通配送 物流 免邮</span><span class="postage">￥0.0</span></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="insurance">
+                    运费险：
+                    <input type="checkbox" name="运费险">
+                    <span style="background: #379e4f; color: #fff;">运费险</span>
+                    <span>卖家送，确认收货前退货可赔</span>
+                    <span class="ship-insurance">￥0.0</span>
+                </td>
+            </tr>
+            <tr class="check-total">
+                <td colspan="5">店铺合计（含运费）<span class="total-money">￥19.9</span></td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="submit-order">
+        <div class="p-wrap">
+            <p>实付款：￥<span class="payment">19.0</span></p>
+            <p>寄送至：<span class="addr">萝岗 科学城 创意大厦B座，B2 4楼 413</span></p>
+            <p>收货人：<span class="receiver">张三</span></p>
+        </div>
+        <a href="./check.html" class="sub-ord-btn">提交订单</a>
+    </div>
+</div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

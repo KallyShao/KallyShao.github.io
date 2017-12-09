@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/user-login.css">
+    <script type="text/javascript">
+    (function() {
+        var html = document.documentElement;
+        var h_width = html.getBoundingClientRect().width;
+        html.style.fontSize = h_width / 38.4 + "px";
+    })()
+    </script>
+</head>
+
+<body>
+    <header class="head">
+        <div class="container logo">
+            <a class="logo-l" href="./index.html">
+                <h1><span>LOGO</span> | 绿色 ·安全 ·快捷 ·省钱</h1>
+                <h2>安全健康食品的购买平台</h2>
+            </a>
+            <h1 class="welcome">欢迎登录</h1>
+        </div>
+    </header>
+    <p class="verify-tip"><i class="fa fa-info-circle" aria-hidden="true"></i> 依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！</p>
+    <div class="main-body">
+        <div class="container">
+            <div class="login">
+                <h1 class="login-title">登录</h1>
+                <div class="error-item">
+                    <i class="fa fa-minus-circle error-icon"></i>
+                    <p class="err-msg">Error</p>
+                </div>
+                <div class="input">
+                    <div class="input-group">
+                        <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
+                        <input id="username" type="text" class="form-control" placeholder="用户名/邮箱/手机号" aria-describedby="basic-addon1" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon glyphicon glyphicon-lock" id="basic-addon1"></span>
+                        <input id="password" type="text" class="form-control" placeholder="密码" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="verify-code-wrap">
+                    <!-- <input type="text" name="" placeholder="请输入验证码" class="put-code">
+                    <span class="verify-code">验证码</span> -->
+                    <a href="./user-pass-reset.html" class="forget-pass" target="_blank">忘记密码</a>
+                </div>
+                <a href="#" class="login-submit" id="submit">登录</a>
+                <div class="login-bottom">
+                    <ul>
+                        <li class="link link-text"><span class="fa-wrap"><i class="fa fa-qq" aria-hidden="true"></i></span><span>QQ</span></li> |
+                        <li class="link link-text"><span class="fa-wrap"><i class="fa fa-weixin" aria-hidden="true"></i></span><span>微信</span></li> |
+                        <li class="link link-text"><i class="fa fa-weibo" aria-hidden="true"></i><span>微博</span></li>
+                        <li class="register-now fr"><span class="glyphicon glyphicon-menu-right"></span><a href="./user-register.html" target="_blank">立即注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <footer class="container foot-simple">
+       <ul class="foot-simple-list">
+           <li><a href="#">关于我们</a></li> |
+           <li><a href="#">帮助中心</a></li> |
+           <li><a href="#">常见问题</a></li> |
+           <li><a href="#">服务说明</a></li> |
+           <li><a href="#">配送服务</a></li>
+       </ul>
+       <p class="container copyright">
+           Copyright©2000-2017 晨风商城cfsc.com版权所有
+       </p>
+   </footer>
+</body>
+
+</html>

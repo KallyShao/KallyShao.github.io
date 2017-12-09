@@ -1,0 +1,49 @@
+html, body, ul, li, p, h1, h2, h3, h4, h5, h6 { 
+       padding: 0; 
+       margin: 0; 
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: none;
+    cursor: auto;
+}
+a:link, a:visited, a:hover, a:active{
+	text-decoration: none;
+	color: #000;
+}
+a img, :link img, :visited img {
+       border:0px;
+} 
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear:after{
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+.link{
+    color: #999;
+    cursor: pointer;
+    text-decoration: none;
+}
+.link:hover{
+    color: #e80012;
+}
+.link-text{
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/**/

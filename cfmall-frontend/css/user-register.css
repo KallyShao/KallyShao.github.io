@@ -1,0 +1,93 @@
+.register-main .register-title {
+  height: 0.7rem;
+  border-bottom: 2px solid #e6e6e6;
+}
+.register-main .register-title .title-wrap {
+  width: 8rem;
+  margin: 0 auto;
+  height: 0.7rem;
+}
+.register-main .register-title .title-wrap .num {
+  display: inline-block;
+  margin-right: 5px;
+  width: 0.48rem;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  color: #fff;
+  background: #ccc;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+}
+.register-main .register-title h1 {
+  height: 0.7rem;
+  line-height: 0.7rem;
+  font-size: 0.32rem;
+  float: left;
+  padding: 0 0.56rem;
+  vertical-align: middle;
+}
+.register-main .register-title .fa-check-circle {
+  margin-right: 5px;
+  margin-top: -1px;
+  font-size: 0.48rem;
+  color: #ccc;
+  font-weight: normal;
+}
+.register-main .register-title h1.active {
+  border-bottom: 2px solid #5fc535;
+}
+.register-main .register-title h1.active .num {
+  background: #5fc535;
+}
+.register-main .register-title h1.active .fa-check-circle {
+  color: #5fc535;
+}
+.register-main .input-wrap {
+  margin: 1rem auto 0.4rem;
+  width: 8rem;
+}
+.register-main .input-wrap .input-group {
+  height: 1.1rem;
+  margin-bottom: 0.6rem;
+  width: 100%;
+}
+.register-main .input-wrap .input-group .input-group-addon {
+  width: 2.4rem;
+  padding: 0;
+  border-radius: 0;
+}
+.register-main .input-wrap .input-group .form-control {
+  height: 100%;
+  border-radius: 0;
+}
+.register-main .input-wrap .input-group .get-code {
+  width: 2.6rem;
+  height: 1.1rem;
+  background: #f2f2f2;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  border-left: none;
+}
+.register-main .input-wrap .reg-now {
+  display: block;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  text-align: center;
+  font-size: 0.32rem;
+  color: #fff;
+  background: #5fc535;
+}
+.register-main .input-wrap .verify-code .form-control {
+  width: 3rem;
+  padding: 6px 0 6px 12px;
+  border-right: none;
+}
+.register-main .input-wrap .verify-code input {
+  outline: none;
+}
+.register-main .input-wrap .verify-code input:focus {
+  outline: none;
+}

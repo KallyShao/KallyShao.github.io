@@ -1,0 +1,167 @@
+.verify-tip {
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #fff;
+  font-size: 14px;
+  background: #5fc535;
+  text-align: center;
+}
+.main-body {
+  height: 11.28rem;
+  background: url(../images/login-bg_02.png) no-repeat 0 0%;
+}
+.main-body .login {
+  width: 9.2rem;
+  min-width: 315px;
+  min-height: 350px;
+  height: 10.2rem;
+  float: right;
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.main-body .login .error-item {
+  width: 8rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  padding-left: 0.3rem;
+  margin: 0.2rem auto 0;
+  display: none;
+  border: 1px solid red;
+  color: red;
+  background: #fde9e9;
+}
+.main-body .login .error-icon {
+  display: table-cell;
+  margin-left: 0.2rem;
+  width: 1rem;
+}
+.main-body .login .err-msg {
+  display: table-cell;
+}
+.main-body .login-title {
+  height: 1.96rem;
+  line-height: 1.96rem;
+  color: #5fc535;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid #f2f2f2;
+}
+.main-body .input {
+  margin-top: 0.6rem;
+  text-align: center;
+  width: 100%;
+}
+.main-body .input-group {
+  width: 8rem;
+  height: 1rem;
+  margin-bottom: 0.6rem;
+  margin-left: 0.6rem;
+}
+.main-body .input-group .form-control {
+  height: 100%;
+}
+.main-body .input-group .glyphicon {
+  position: static;
+}
+.main-body .login-bottom li {
+  display: inline-block;
+}
+.main-body .login-submit {
+  width: 8rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  font-size: 0.48rem;
+  background: #5fc535;
+  color: #fff;
+  display: block;
+  letter-spacing: 0.6rem;
+  border-radius: 5px;
+  margin: 0 auto 0.4rem;
+}
+.main-body .verify-code-wrap {
+  width: 8rem;
+  height: 0.6rem;
+  margin: 0 auto;
+}
+.main-body .verify-code-wrap .forget-pass {
+  font-size: 0.32rem;
+  float: right;
+}
+.main-body .verify-code-wrap input::-webkit-input-placehoder {
+  font-size: 12px;
+}
+.main-body .login-bottom {
+  height: 0.96rem;
+  border-top: 1px solid #f2f2f2;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.main-body .login-bottom ul,
+.main-body .login-bottom span {
+  color: #666;
+}
+.main-body .login-bottom .fa-wrap {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background: #999;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-right: 5px;
+}
+.main-body .login-bottom .fa-qq,
+.main-body .login-bottom .fa-weixin {
+  color: #fff;
+  font-size: 12px;
+}
+.main-body .login-bottom .fa-weibo {
+  color: #999;
+  font-size: 18px;
+  margin-right: 5px;
+}
+.main-body .login-bottom ul {
+  margin-left: 0.6rem;
+  width: 8rem;
+}
+.main-body .login-bottom li {
+  margin: 0 5px;
+}
+.main-body .login-bottom .register-now a {
+  font-size: 0.28rem;
+  color: #5fc535;
+}
+.main-body .login-bottom .register-now .glyphicon {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #fff;
+  background: #5fc535;
+  border-radius: 50%;
+  font-size: 14px;
+  margin-right: 0.2rem;
+}
+footer.foot-simple {
+  border-top: none;
+}
+@media screen and (max-width: 1400px) {
+  .main-body .login-bottom li {
+    margin: 0;
+  }
+  .main-body .login-bottom ul {
+    width: 100%;
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .main-body .login {
+    margin-top: 0;
+  }
+}
